@@ -1,0 +1,98 @@
+<Page
+    class="page"
+    navigatingTo="onNavigatingTo"  
+    xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
+    xmlns:myDrawer="shared/my-drawer" 
+    xmlns="http://www.nativescript.org/tns.xsd"
+  xmlns:home="/home/home"
+  xmlns:search="/home/search"
+  >
+	
+    <ActionBar class="action-bar">
+        <!-- 
+        Use the NavigationButton as a side-drawer button in Android because ActionItems are shown on the right side of the ActionBar
+        -->
+        <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"></NavigationButton>
+        <!-- 
+        Use the ActionItem for IOS with position set to left. Using the NavigationButton as a side-drawer button in iOS is not possible, because its function is to always navigate back in the application.
+        -->
+        <ActionItem icon="res://navigation/menu" 
+            android:visibility="collapsed" 
+            tap="onDrawerButtonTap"
+            ios.position="left">
+        </ActionItem>
+        <Label class="action-bar-title" text="Home"></Label>
+    </ActionBar>
+
+	<!--
+    RadSideDrawer is a UI component part of the Progress NativeScript UI set of components.
+    Learn more about the RadSideDrawer UI component and how it can be customized in this documentation article:
+    http://docs.telerik.com/devtools/nativescript-ui/Controls/NativeScript/SideDrawer/getting-started
+    The RadSideDrawer component is designed to be used as a root element to the <Page> and
+    it shouldn't have any other siblings other than the <ActionBar> component.
+    -->
+    <nsDrawer:RadSideDrawer id="sideDrawer" showOverNavigation="true">
+        <!--
+        Use the RadSideDrawer.drawerTransition component to change the open/close animation of the drawer.
+        -->
+        <nsDrawer:RadSideDrawer.drawerTransition>
+            <nsDrawer:SlideInOnTopTransition/>
+        </nsDrawer:RadSideDrawer.drawerTransition>
+
+        <!--
+        Use the RadSideDrawer.drawerContent component to display the content of the app drawer on this page.
+        Always wrap content in a layout component.
+        -->
+        <nsDrawer:RadSideDrawer.drawerContent>
+            <StackLayout>
+                <!--
+                Use {N} custom components to reuse UI across your mobile app.
+                The MyDrawer custom component defined in "/shared/my-drawer" holds the contents of the app drawer.
+                Learn more about custom components and how they can be used in this documentation article:
+                http://docs.nativescript.org/ui/basics#custom-components
+                -->
+                <myDrawer:MyDrawer selectedPage="Home"/>
+            </StackLayout>
+        </nsDrawer:RadSideDrawer.drawerContent>
+
+        <!--
+        Use the RadSideDrawer.mainContent component to display the content of the page when you have an app drawer.
+        Always wrap content in a layout component.
+        -->
+        <nsDrawer:RadSideDrawer.mainContent>
+            <!--
+    The TabView component provides a simple way to navigate between different views by
+    tapping on some of the tabs or by swiping between the views.
+    Learn more about the TabView component in this documentation article:
+    http://docs.nativescript.org/cookbook/ui/tab-view
+    -->
+			<TabView selectedIndexChanged="onSelectedIndexChanged">
+			  <TabView.items>
+				<!--
+				To add a new TabView item, simply add a new <TabViewItem> component to the <TabView.items> collection.
+				Assign the <TabViewItem> component a "title" that will be displayed as the text of the tab item button.
+				-->
+				<TabViewItem title="My Notes" ios:iconSource="res://tabIcons/home">
+				  <TabViewItem.view>
+					<!--
+					You can declare the layout and components of each view inside the <TabViewItem.view> directly.
+					In this case the view contents and back end logic are separated in custom components.
+					You can find these components in their respective folders /home, /browse etc.
+					-->
+					<home:HomeView/>
+				  </TabViewItem.view>
+				</TabViewItem>
+
+				<TabViewItem title="My Library" ios:iconSource="res://tabIcons/search">
+				  <TabViewItem.view>
+					 <search:SearchView/>
+				  </TabViewItem.view>
+				</TabViewItem>
+
+			  </TabView.items>
+			</TabView> 
+        </nsDrawer:RadSideDrawer.mainContent>
+    </nsDrawer:RadSideDrawer>
+	
+	
+</Page>
