@@ -1,0 +1,4 @@
+#Wed Nov 08 09:10:11 CET 2017
+base.0=C\:\\Users\\Angelo\\Desktop\\TNS\\navigation_menu\\platforms\\android\\build\\intermediates\\transforms\\dex\\F0F1F2\\debug\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=C\:\\Users\\Angelo\\Desktop\\TNS\\navigation_menu\\platforms\\android\\build\\intermediates\\transforms\\dex\\F0F1F2\\debug\\folders\\1000\\1f\\main\\classes.dex

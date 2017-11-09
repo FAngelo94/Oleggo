@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\Angelo\\Desktop\\TNS\\navigation_menu\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\drawable-xhdpi\\icon.png",
+        "source": "C:\\Users\\Angelo\\Desktop\\TNS\\navigation_menu\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Angelo\\Desktop\\TNS\\navigation_menu\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\drawable-xhdpi\\background.png",
+        "source": "C:\\Users\\Angelo\\Desktop\\TNS\\navigation_menu\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\background.png"
+    },
+    {
+        "merged": "C:\\Users\\Angelo\\Desktop\\TNS\\navigation_menu\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\drawable-xhdpi\\menu.png",
+        "source": "C:\\Users\\Angelo\\Desktop\\TNS\\navigation_menu\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\menu.png"
+    },
+    {
+        "merged": "C:\\Users\\Angelo\\Desktop\\TNS\\navigation_menu\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\drawable-xhdpi\\launcher_icon.png",
+        "source": "C:\\Users\\Angelo\\Desktop\\TNS\\navigation_menu\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\drawable-xhdpi\\launcher_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Angelo\\Desktop\\TNS\\navigation_menu\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\drawable-xhdpi\\logo.png",
+        "source": "C:\\Users\\Angelo\\Desktop\\TNS\\navigation_menu\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\logo.png"
+    }
+]

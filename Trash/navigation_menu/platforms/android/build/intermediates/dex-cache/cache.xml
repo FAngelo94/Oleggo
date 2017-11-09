@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\barcodescanner-release-2.1.6\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2d4f602a67efec62a1db4e4b2e695e8270fd0a1c">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\intermediates-exploded-aar-barcodescanner-release-2.1.6_a1252ed01926d9b7c151534ad6a5d92f86845abb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\Data-2017.1.1030-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="31ecd0832f76d83defcff7f8b395008bf3b153bd">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Data-2017.1.1030-dev-release_b6de71a317aabb893c0ab8c1ab17bf84434fd3ba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\List-2017.1.1030-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cd3872a778741ba6ef9d5452e122a54d16b0564f">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-List-2017.1.1030-dev-release_e3ee2c2b3c5509b46148b53f0a0f9cedec426f4a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-media-compat-25.3.1_84d081f16b6e0ea9e84176bdced990a11e3aeed4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-core-utils-25.3.1_c5571cdd9f92c2cb1581bbd01cc5348932b18c9f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\support-annotations-25.3.1_07cc1bdab6386cc71ca9e51c0b2d242e9420314e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\Chart-2017.1.1030-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="67070b6d74d76c40032b857e9fcf25b196fd07f5">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Chart-2017.1.1030-dev-release_48646313af51fafd31251647847dd89ddaa3a16d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\Primitives-2017.1.1030-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9001cb8dbd0c0f46e73929f0b0667c00c2835880">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Primitives-2017.1.1030-dev-release_42e93c0e4577d2dfec4803c830775fb9fcdda3c1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\com.android.support\transition\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-transition-25.3.1_db5081b00294f19cda70c2d3f7cf8d718cb9ffe4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\com.android.support\design\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-design-25.3.1_b09786046820276cdf480e0fa55aa703546175f8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-recyclerview-v7-25.3.1_629b9d3fbc37cefa1b930519bfa5b00fb11775be.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\Common-2017.1.1030-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="23e24cb11d199bb64e56968563bb6ea219204cec">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Common-2017.1.1030-dev-release_f8fbe007caa3ee2656ed47227ca4aae95556ec77.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\Feedback-2017.1.1030-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="912812cca1fdace3ef9ba9c0a7081db4155767d5">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Feedback-2017.1.1030-dev-release_90e8d0c57796661fe3786ec67b09c63961c4cce1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-fragment-25.3.1_83e1307317108644ed7afae674d0649528860491.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\Input-2017.1.1030-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a973d2e002f236d63e4b0b3bb95454b2ed4dc790">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Input-2017.1.1030-dev-release_c47c07cc4946fa9370ce096c327a64e663d78633.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\nativescript-optimized\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="746274223beb11b1cda7854d7eec3038695c2c93">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-nativescript-optimized_51a33215965f9e4d7d431ca77262371e59b6bf05.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\Gauges-2017.1.1030-dev-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bb5e99e8a8b94d66179ccbf5f2fbe41ba084fbe9">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Gauges-2017.1.1030-dev-release_4630db10d32fadfe792866fb17b90071888ea7e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-appcompat-v7-25.3.1_6ab7c2054e6ae83a6e611b7a32d75f91e29fd8ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-animated-vector-drawable-25.3.1_c4d5f6db1b78b949f082e607ea0f6d4ec09a19a0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-core-ui-25.3.1_bc9454ac6453fa4f86346f2d942a1539fb3ee708.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-v4-25.3.1_0d24a96c1930215e664722ecf5ca563742d039c2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-vector-drawable-25.3.1_a5224f90d43063339ca3b9e787cf6983b1224998.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-compat-25.3.1_cf334fbd50ecb7fa8fee142efe94f9441bff8f4f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\exploded-aar\widgets-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
+        <dex dex="C:\Users\Angelo\Desktop\TNS\navigation_menu\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-widgets-release_cd213fd34c8c9c32b560100ed90ee87eae45139e.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,67 @@
+<!--
+This is the component view that represents the 'Home' tab.
+Feel free to customize layouts and components to change how the tab view looks.
+-->
+<GridLayout rows="*" columns="*">
+    <ScrollView row="0" col="0">
+        <GridLayout rows="*" columns="*">
+            <StackLayout class="form">
+                <StackLayout class="input-field" id="campo">
+                    <Label class="label" text="Saved at 10:30 PM" row="1" col="0" textWrap="true"></Label>
+                    <TextView hint="Enter some notes" ></TextView>
+					<Label class="label" text="It, Stephen King, pag. 500" row="1" col="0" textWrap="true"></Label>
+					<Button text="Save Changes" class="btn btn-primary btn-active" tap="onTap"/>
+					
+				</StackLayout>
+				<StackLayout class="input-field" id="campo">
+                    <Label class="label" text="Saved at 10:30 PM" row="1" col="0" textWrap="true"></Label>
+                    <TextView hint="Enter some notes" ></TextView>
+					<Label class="label" text="It, Stephen King, pag. 500" row="1" col="0" textWrap="true"></Label>
+					<Button text="Save Changes" class="btn btn-primary btn-active" tap="onTap"/>
+					
+				</StackLayout>
+				<StackLayout class="input-field" id="campo">
+                    <Label class="label" text="Saved at 10:30 PM" row="1" col="0" textWrap="true"></Label>
+                    <TextView hint="Enter some notes" ></TextView>
+					<Label class="label" text="It, Stephen King, pag. 500" row="1" col="0" textWrap="true"></Label>
+					<Button text="Save Changes" class="btn btn-primary btn-active" tap="onTap"/>
+					
+				</StackLayout>
+				<StackLayout class="input-field" id="campo">
+                    <Label class="label" text="Saved at 10:30 PM" row="1" col="0" textWrap="true"></Label>
+                    <TextView hint="Enter some notes" ></TextView>
+					<Label class="label" text="It, Stephen King, pag. 500" row="1" col="0" textWrap="true"></Label>
+					<Button text="Save Changes" class="btn btn-primary btn-active" tap="onTap"/>
+					
+				</StackLayout><StackLayout class="input-field" id="campo">
+                    <Label class="label" text="Saved at 10:30 PM" row="1" col="0" textWrap="true"></Label>
+                    <TextView hint="Enter some notes" ></TextView>
+					<Label class="label" text="It, Stephen King, pag. 500" row="1" col="0" textWrap="true"></Label>
+					<Button text="Save Changes" class="btn btn-primary btn-active" tap="onTap"/>
+					
+				</StackLayout>
+				<StackLayout class="input-field" id="campo">
+                    <Label class="label" text="Saved at 10:30 PM" row="1" col="0" textWrap="true"></Label>
+                    <TextView hint="Enter some notes" ></TextView>
+					<Label class="label" text="It, Stephen King, pag. 500" row="1" col="0" textWrap="true"></Label>
+					<Button text="Save Changes" class="btn btn-primary btn-active" tap="onTap"/>
+					
+				</StackLayout>
+				<StackLayout class="input-field" id="campo">
+                    <Label class="label" text="Saved at 10:30 PM" row="1" col="0" textWrap="true"></Label>
+                    <TextView hint="Enter some notes" ></TextView>
+					<Label class="label" text="It, Stephen King, pag. 500" row="1" col="0" textWrap="true"></Label>
+					<Button text="Save Changes" class="btn btn-primary btn-active" tap="onTap"/>
+					
+				</StackLayout>
+				<StackLayout class="input-field" id="campo">
+                    <Label class="label" text="Saved at 10:30 PM" row="1" col="0" textWrap="true"></Label>
+                    <TextView hint="Enter some notes" ></TextView>
+					<Label class="label" text="It, Stephen King, pag. 500" row="1" col="0" textWrap="true"></Label>
+					<Button text="Save Changes" class="btn btn-primary btn-active" tap="onTap"/>
+					
+				</StackLayout>
+            </StackLayout>
+        </GridLayout>
+    </ScrollView>
+</GridLayout>
