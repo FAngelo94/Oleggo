@@ -13,25 +13,25 @@ Feel free to customize layouts and components to change how your app drawer look
     <ScrollView row="1">
         <StackLayout class="sidedrawer-content" row="1">
             <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Home' ? ' selected': '') }}"
-                route="home/home-page" tap="onNavigationItemTap">
+                route="pages/home/home-page" tap="onNavigationItemTap">
                 <Label row="0" col="0" text="&#xf015;" class="fa" />
                 <Label row="0" col="1" text="Home" class="p-r-10" />
             </GridLayout>
 
-            <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Browse' ? ' selected': '') }}"
-                route="reading-books/browse-page" tap="onNavigationItemTap">
+            <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'ReadingBooks' ? ' selected': '') }}"
+                route="pages/reading-books/reading-books-page" tap="onNavigationItemTap">
                 <Label row="0" col="0" text="&#xf1ea;" class="fa" />
                 <Label row="0" col="1" text="Reading Books" class="p-r-10" />
             </GridLayout>
 
-            <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Search' ? ' selected': '') }}"
-                route="my-dictionary/search-page" tap="onNavigationItemTap">
+            <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'MyDictionary' ? ' selected': '') }}"
+                route="pages/my-dictionary/my-dictionary-page" tap="onNavigationItemTap">
                 <Label row="0" col="0" text="&#xf002;" class="fa" />
                 <Label row="0" col="1" text="My Dictionary" class="p-r-10" />
             </GridLayout>
 
-            <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Featured' ? ' selected': '') }}"
-                route="add-new-books/featured-page" tap="onNavigationItemTap">
+            <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'AddNewBooks' ? ' selected': '') }}"
+                route="pages/add-new-books/add-new-books-page" tap="onNavigationItemTap">
                 <Label row="0" col="0" text="&#xf005;" class="fa" />
                 <Label row="0" col="1" text="Add New Books" class="p-r-10" />
             </GridLayout>

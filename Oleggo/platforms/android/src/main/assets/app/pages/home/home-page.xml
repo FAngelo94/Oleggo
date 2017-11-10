@@ -3,13 +3,17 @@
     navigatingTo="onNavigatingTo"  
     xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
     xmlns:myDrawer="shared/my-drawer"
-    xmlns="http://www.nativescript.org/tns.xsd">
+    xmlns="http://www.nativescript.org/tns.xsd"
+	xmlns:home="/pages/home/my-notes"
+	xmlns:search="/pages/home/my-library">
 
     <ActionBar class="action-bar">
         <!-- 
         Use the NavigationButton as a side-drawer button in Android because ActionItems are shown on the right side of the ActionBar
         -->
         <NavigationButton ios:visibility="collapsed" icon="res://menu" tap="onDrawerButtonTap"></NavigationButton>
+		
+		
         <!-- 
         Use the ActionItem for IOS with position set to left. Using the NavigationButton as a side-drawer button in iOS is not possible, because its function is to always navigate back in the application.
         -->
@@ -18,6 +22,14 @@
             tap="onDrawerButtonTap"
             ios.position="left">
         </ActionItem>
+		
+		<ActionItem 
+			icon="res://menu"
+			tap="onDelete"
+			ios.systemIcon="16" 
+			ios.position="right" 
+			android.position="right"/>
+		
         <Label class="action-bar-title" text="Home"></Label>
     </ActionBar>
 
@@ -57,10 +69,37 @@
         Always wrap content in a layout component.
         -->
         <nsDrawer:RadSideDrawer.mainContent>
-            <GridLayout class="page-content">
-                <Label class="page-icon fa" text="&#xf015;"></Label>
-                <Label class="page-placeholder" text="<!-- Page content goes here -->"></Label>
-            </GridLayout>
+            <!--
+			The TabView component provides a simple way to navigate between different views by
+			tapping on some of the tabs or by swiping between the views.
+			Learn more about the TabView component in this documentation article:
+			http://docs.nativescript.org/cookbook/ui/tab-view
+			-->
+			<TabView selectedIndexChanged="onSelectedIndexChanged">
+			  <TabView.items>
+				<!--
+				To add a new TabView item, simply add a new <TabViewItem> component to the <TabView.items> collection.
+				Assign the <TabViewItem> component a "title" that will be displayed as the text of the tab item button.
+				-->
+				<TabViewItem title="My Notes">
+				  <TabViewItem.view>
+					<!--
+					You can declare the layout and components of each view inside the <TabViewItem.view> directly.
+					In this case the view contents and back end logic are separated in custom components.
+					You can find these components in their respective folders /home, /browse etc.
+					-->
+					<home:my-notes/>
+				  </TabViewItem.view>
+				</TabViewItem>
+
+				<TabViewItem title="My Library">
+				  <TabViewItem.view>
+					 <search:my-library/>
+				  </TabViewItem.view>
+				</TabViewItem>
+
+			  </TabView.items>
+			</TabView> 
         </nsDrawer:RadSideDrawer.mainContent>
     </nsDrawer:RadSideDrawer>
 </Page>

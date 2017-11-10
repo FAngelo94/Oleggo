@@ -29,5 +29,20 @@ function onDrawerButtonTap(args) {
     sideDrawer.showDrawer();
 }
 
+/* ***********************************************************
+ * Get the current tab view title and set it as an ActionBar title.
+ * Learn more about the onSelectedIndexChanged event here:
+ * https://docs.nativescript.org/cookbook/ui/tab-view#using-selectedindexchanged-event-from-xml
+ *************************************************************/
+function onSelectedIndexChanged(args) {
+    const tabView = args.object;
+    const bindingContext = tabView.bindingContext;
+    const selectedTabViewItem = tabView.items[args.newIndex];
+
+    bindingContext.set("title", selectedTabViewItem.title);
+}
+
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
+exports.onSelectedIndexChanged = onSelectedIndexChanged;
+
