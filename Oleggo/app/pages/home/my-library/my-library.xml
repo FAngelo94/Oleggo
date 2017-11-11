@@ -2,17 +2,19 @@
 This is the component view that represents the 'Search' tab.
 Feel free to customize layouts and components to change how the tab view looks.
 -->
-<!-- <lv:RadListView items="{{ BookList }}" >
-    <lv:RadListView.listViewLayout>
-        <lv:ListViewStaggeredLayout itemHeight="160" spanCount="3"/>
-    </lv:RadListView.listViewLayout>
-    <lv:RadListView.itemTemplate>
-        <GridLayout rows="*,auto">
-            <Image src="{{ image }}" stretch="aspectFill" row="0"/>
-            <StackLayout row="1" class="BookContainer" orientation="vertical">
-                <Label text="{{ title }}" class="BookTitle"/>
-                <Label text="{{ author, 'by ' + author }}" class="BookAuthor"/>
-            </StackLayout>
-        </GridLayout>
-    </lv:RadListView.itemTemplate>
-</lv:RadListView>  -->
+<GridLayout rows="*" columns="*" xmlns:lv="nativescript-pro-ui/listview" loaded="loaded">
+	<lv:RadListView items="{{ BookList }}" >
+		<lv:RadListView.listViewLayout>
+			<lv:ListViewStaggeredLayout itemHeight="160" spanCount="3"/>
+		</lv:RadListView.listViewLayout>
+		<lv:RadListView.itemTemplate>
+			<GridLayout rows="*,auto">
+				<Image src="{{ image }}" stretch="aspectFill" row="0"/>
+				<StackLayout row="1" class="BookContainer" orientation="vertical">
+					<Label text="{{ title }}" class="BookTitle"/>
+					<Label text="{{ author, 'by ' + author }}" class="BookAuthor"/>
+				</StackLayout>
+			</GridLayout>
+		</lv:RadListView.itemTemplate>
+	</lv:RadListView>  
+</GridLayout>

@@ -1,11 +1,9 @@
 <Page
     class="page"
-    loaded="loaded"
     navigatingTo="onNavigatingTo"  
     xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
     xmlns:myDrawer="shared/my-drawer"
     xmlns="http://www.nativescript.org/tns.xsd"
-    xmlns:lv="nativescript-pro-ui/listview"
     cssFile="~/pages/home/home-page.css"
 	xmlns:my-notes="/pages/home/my-notes"
 	xmlns:my-library="/pages/home/my-library">
@@ -94,22 +92,12 @@
 					<my-notes:my-notes/>
 				  </TabViewItem.view>
 				</TabViewItem>
+				
 				<TabViewItem title="My Library">
 				  <TabViewItem.view>
-					 <lv:RadListView items="{{ BookList }}" >
-                        <lv:RadListView.listViewLayout>
-                            <lv:ListViewStaggeredLayout itemHeight="160" spanCount="3"/>
-                        </lv:RadListView.listViewLayout>
-                        <lv:RadListView.itemTemplate>
-                            <GridLayout rows="*,auto">
-                                <Image src="{{ image }}" stretch="aspectFill" row="0"/>
-                                <StackLayout row="1" class="BookContainer" orientation="vertical">
-                                    <Label text="{{ title }}" class="BookTitle"/>
-                                    <Label text="{{ author, 'by ' + author }}" class="BookAuthor"/>
-                                </StackLayout>
-                            </GridLayout>
-                        </lv:RadListView.itemTemplate>
-                    </lv:RadListView> 
+					 
+						<my-library:my-library/>
+					 
 				  </TabViewItem.view>
 				</TabViewItem>
 			  </TabView.items>
