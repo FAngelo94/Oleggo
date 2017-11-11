@@ -12,3 +12,6 @@ DB lite = https://www.npmjs.com/package/nativescript-sqlite
 ### Native Script app example
 
 https://github.com/NativeScript/nativescript-marketplace-demo
+
+### Template used
+https://github.com/NativeScript/template-drawer-navigation
