@@ -1,4 +1,10 @@
 {
+  "_args": [
+    [
+      "tns-core-modules@3.3.0",
+      "/home/julian/WorkspaceNS/Oleggo/Oleggo"
+    ]
+  ],
   "_from": "tns-core-modules@3.3.0",
   "_id": "tns-core-modules@3.3.0",
   "_inBundle": false,
@@ -16,17 +22,14 @@
     "fetchSpec": "3.3.0"
   },
   "_requiredBy": [
-    "/tns-template-drawer-navigation"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/tns-core-modules/-/tns-core-modules-3.3.0.tgz",
-  "_shasum": "4feb1f31113c554f0bb47984ac496fccdb5af156",
-  "_spec": "tns-core-modules@3.3.0",
-  "_where": "C:\\Users\\Angelo\\Desktop\\TNS\\Oleggo\\node_modules\\tns-template-drawer-navigation",
-  "bundleDependencies": false,
+  "_spec": "3.3.0",
+  "_where": "/home/julian/WorkspaceNS/Oleggo/Oleggo",
   "dependencies": {
     "tns-core-modules-widgets": "3.3.0"
   },
-  "deprecated": false,
   "description": "Telerik NativeScript Core Modules",
   "devDependencies": {
     "@types/node": "~7.0.5",

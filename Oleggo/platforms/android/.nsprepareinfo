@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 	"time": "Sat Nov 11 2017 11:07:34 GMT+0100 (ora solare Europa occidentale)",
 	"nativePlatformStatus": "3",
 	"bundle": false,
@@ -6,4 +7,13 @@
 	"changesRequireBuild": false,
 	"projectFileHash": "267ef2b23a5f8c8c817d72a0dd4d1fe5c467618ada903d9e980750fde1b61b37",
 	"changesRequireBuildTime": "Sat Nov 11 2017 10:46:39 GMT+0100 (ora solare Europa occidentale)"
+=======
+	"time": "Sat Nov 11 2017 10:50:41 GMT+0100 (CET)",
+	"nativePlatformStatus": "3",
+	"bundle": false,
+	"release": false,
+	"changesRequireBuild": true,
+	"projectFileHash": "f77623658f51bd964f16de3c2277e1493892cfbf434c35ff37ce6b3c886958dd",
+	"changesRequireBuildTime": "Sat Nov 11 2017 10:50:41 GMT+0100 (CET)"
+>>>>>>> 9366bea711a290cae89711594deab7d37646de68
 }

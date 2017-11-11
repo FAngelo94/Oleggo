@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 android {
 	productFlavors {
 		"F1" {
@@ -10,3 +11,17 @@ dependencies {
 	compile "com.android.support:appcompat-v7:23.1.0"
 	compile "com.android.support:recyclerview-v7:23.1.0"
 }
+=======
+android {
+	productFlavors {
+		"F0" {
+			dimension "nativescriptproui"
+		}
+	}
+}
+
+dependencies {
+	compile "com.android.support:appcompat-v7:23.1.0"
+	compile "com.android.support:recyclerview-v7:23.1.0"
+}
+>>>>>>> 9366bea711a290cae89711594deab7d37646de68

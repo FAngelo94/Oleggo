@@ -3,42 +3,52 @@
 
     <item
         is-multidex="false"
+<<<<<<< HEAD
         jar="C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
         <dex dex="C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-v4-25.3.1_69fc1b18e43ac8ccafd1ddc97c54635e021654c0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\jars\classes.jar"
+=======
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/Common-2017.1.1030-dev-release/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-v4-25.3.1_caa20a5ef7ac6a54769f7b27b02526643c7390d3.jar" />
+        revision="26.0.2"
+        sha1="23e24cb11d199bb64e56968563bb6ea219204cec">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/intermediates-exploded-aar-Common-2017.1.1030-dev-release_6582813eed4f9ad72f9337c82d245a35f977f2cd.jar" />
+>>>>>>> 9366bea711a290cae89711594deab7d37646de68
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\exploded-aar\widgets-release\jars\classes.jar"
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-utils/26.0.0-alpha1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
-        <dex dex="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-widgets-release_92d20df4e9799eee281cc9ce13f533e0ae8f14b8.jar" />
+        revision="26.0.2"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-support-core-utils-26.0.0-alpha1_b110006fc5c968190b8680c869c1822c08caa51a.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\exploded-aar\Gauges-2017.1.1030-dev-release\jars\classes.jar"
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/Feedback-2017.1.1030-dev-release/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="bb5e99e8a8b94d66179ccbf5f2fbe41ba084fbe9">
-        <dex dex="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Gauges-2017.1.1030-dev-release_7165ffda4fe895cd99bb243167708f0669fc1733.jar" />
+        revision="26.0.2"
+        sha1="912812cca1fdace3ef9ba9c0a7081db4155767d5">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/intermediates-exploded-aar-Feedback-2017.1.1030-dev-release_30b84990cd95246388d8ed2e6b55a522c941367f.jar" />
     </item>
     <item
         is-multidex="false"
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-animated-vector-drawable-26.0.0-alpha1_e807186ef27cb94623ebaf02d20418eea694045f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+<<<<<<< HEAD
         jar="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -184,41 +194,54 @@
     <item
         is-multidex="false"
         jar="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\exploded-aar\List-2017.1.1030-dev-release\jars\classes.jar"
+=======
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/com.android.support/design/26.0.0-alpha1/jars/classes.jar"
+>>>>>>> 9366bea711a290cae89711594deab7d37646de68
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="cd3872a778741ba6ef9d5452e122a54d16b0564f">
-        <dex dex="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-List-2017.1.1030-dev-release_41811b0d99fc55e401af125d6c2c5ce16849e0b7.jar" />
+        revision="26.0.2"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-design-26.0.0-alpha1_19442f40709b07fb3671985b03f9b22852b64e61.jar" />
     </item>
     <item
         is-multidex="false"
+<<<<<<< HEAD
         jar="C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\build\intermediates\exploded-aar\nativescript-optimized\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="746274223beb11b1cda7854d7eec3038695c2c93">
         <dex dex="C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\intermediates-exploded-aar-nativescript-optimized_30f0a83ac57c8f006c3b4656d8c92bd451ad028f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.3.1\jars\classes.jar"
+=======
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/Primitives-2017.1.1030-dev-release/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="95519720620b553f63afc789beba9ad582807f7c">
-        <dex dex="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-recyclerview-v7-25.3.1_3368b58829933de78cc299070c462c52d0e63d49.jar" />
+        revision="26.0.2"
+        sha1="9001cb8dbd0c0f46e73929f0b0667c00c2835880">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/intermediates-exploded-aar-Primitives-2017.1.1030-dev-release_211c5b097a25ef943f8c0e1cde97428088accdf1.jar" />
+>>>>>>> 9366bea711a290cae89711594deab7d37646de68
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\jars\classes.jar"
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/widgets-release/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-animated-vector-drawable-25.3.1_d9bb29525f8390bf5551ad93012f6672a5bf94d5.jar" />
+        revision="26.0.2"
+        sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/intermediates-exploded-aar-widgets-release_eeec4e8f6d3e461cf0c369ea0de6924a3d81bbb5.jar" />
     </item>
     <item
         is-multidex="false"
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/Gauges-2017.1.1030-dev-release/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="bb5e99e8a8b94d66179ccbf5f2fbe41ba084fbe9">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/intermediates-exploded-aar-Gauges-2017.1.1030-dev-release_baddfeed1774940aef11ca04f90a4b45ac039e9b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+<<<<<<< HEAD
         jar="C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\build\intermediates\exploded-aar\Primitives-2017.1.1030-dev-release\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -243,18 +266,36 @@
         revision="25.0.2"
         sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
         <dex dex="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-core-ui-25.3.1_15ba3160ebd38c71dcb89ac333232f900cb99c26.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\exploded-aar\Feedback-2017.1.1030-dev-release\jars\classes.jar"
+=======
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-fragment/26.0.0-alpha1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="912812cca1fdace3ef9ba9c0a7081db4155767d5">
-        <dex dex="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Feedback-2017.1.1030-dev-release_3b9cb543a0b799c09140e68cd3a46ae753096f2e.jar" />
+        revision="26.0.2"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-support-fragment-26.0.0-alpha1_df8595176e0919092c7b2b85e2f32584692df97f.jar" />
     </item>
     <item
         is-multidex="false"
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/Input-2017.1.1030-dev-release/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a973d2e002f236d63e4b0b3bb95454b2ed4dc790">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/intermediates-exploded-aar-Input-2017.1.1030-dev-release_33d495087f8b0af7557d314dba4d368e99e45e55.jar" />
+>>>>>>> 9366bea711a290cae89711594deab7d37646de68
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-appcompat-v7-26.0.0-alpha1_4703884737693cbfba8f521418e8ad8756d53201.jar" />
+    </item>
+    <item
+        is-multidex="false"
+<<<<<<< HEAD
         jar="C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -274,14 +315,18 @@
     <item
         is-multidex="false"
         jar="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\jars\classes.jar"
+=======
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/com.android.support/transition/26.0.0-alpha1/jars/classes.jar"
+>>>>>>> 9366bea711a290cae89711594deab7d37646de68
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-vector-drawable-25.3.1_df136b0667ad95771beb3f862c7fad42800935b3.jar" />
+        revision="26.0.2"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-transition-26.0.0-alpha1_80d19d25f580918cbfadecf615a585a5f59c5d78.jar" />
     </item>
     <item
         is-multidex="false"
+<<<<<<< HEAD
         jar="C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\build\intermediates\exploded-aar\Chart-2017.1.1030-dev-release\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -292,41 +337,45 @@
     <item
         is-multidex="false"
         jar="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\exploded-aar\Input-2017.1.1030-dev-release\jars\classes.jar"
+=======
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/26.0.0-alpha1/jars/classes.jar"
+>>>>>>> 9366bea711a290cae89711594deab7d37646de68
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="a973d2e002f236d63e4b0b3bb95454b2ed4dc790">
-        <dex dex="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Input-2017.1.1030-dev-release_38655713a59c746c0c899c68ecf85b58e660f906.jar" />
+        revision="26.0.2"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-support-compat-26.0.0-alpha1_a230db8ebf42775681d92692fc247c9377de4c48.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\jars\classes.jar"
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/26.0.0-alpha1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-fragment-25.3.1_1906c9956817801bdf2810c57b37e60dd698739c.jar" />
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-support-v4-26.0.0-alpha1_c42a485d2d0abb59c16fd3fdb6b420b771674c45.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\jars\classes.jar"
+        jar="/home/julian/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/26.0.0-alpha1/support-annotations-26.0.0-alpha1.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-appcompat-v7-25.3.1_d5d7a6fa13a4676f17eb71f70071d72663f21972.jar" />
+        revision="26.0.2"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/support-annotations-26.0.0-alpha1_ab46ffb7f394f32f4808cc5143a558e98ec98527.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\exploded-aar\Data-2017.1.1030-dev-release\jars\classes.jar"
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-ui/26.0.0-alpha1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="31ecd0832f76d83defcff7f8b395008bf3b153bd">
-        <dex dex="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Data-2017.1.1030-dev-release_68b02d0d3b6d411e3dd3c131cef496d6130a35c6.jar" />
+        revision="26.0.2"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-support-core-ui-26.0.0-alpha1_62daa769d24ceecb79086421f65ff7d8486e53aa.jar" />
     </item>
     <item
         is-multidex="false"
+<<<<<<< HEAD
         jar="C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -337,32 +386,45 @@
     <item
         is-multidex="false"
         jar="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\exploded-aar\com.android.support\transition\25.3.1\jars\classes.jar"
+=======
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/List-2017.1.1030-dev-release/jars/classes.jar"
+>>>>>>> 9366bea711a290cae89711594deab7d37646de68
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
-        <dex dex="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-transition-25.3.1_53f39c0a23a10fc812271a829f4aa8a6a396638f.jar" />
+        revision="26.0.2"
+        sha1="cd3872a778741ba6ef9d5452e122a54d16b0564f">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/intermediates-exploded-aar-List-2017.1.1030-dev-release_44c2bfe58df26f450b6bf2193070a0b15a361c84.jar" />
     </item>
     <item
         is-multidex="false"
+<<<<<<< HEAD
         jar="C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\build\intermediates\exploded-aar\com.android.support\transition\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
         <dex dex="C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-transition-25.3.1_14622581ed6f4f402660830b173225f16f8eedf0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\exploded-aar\Primitives-2017.1.1030-dev-release\jars\classes.jar"
+=======
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/Chart-2017.1.1030-dev-release/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="9001cb8dbd0c0f46e73929f0b0667c00c2835880">
-        <dex dex="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-Primitives-2017.1.1030-dev-release_b78200c5204bd85f72317e108a518b508344bed4.jar" />
+        revision="26.0.2"
+        sha1="67070b6d74d76c40032b857e9fcf25b196fd07f5">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/intermediates-exploded-aar-Chart-2017.1.1030-dev-release_97b62ff25a7d533a4827b6eb5a4985d9f9696bb4.jar" />
+>>>>>>> 9366bea711a290cae89711594deab7d37646de68
     </item>
     <item
         is-multidex="false"
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-support-media-compat-26.0.0-alpha1_639678b3993e76f62e5b361d25ffab9e341fafe9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+<<<<<<< HEAD
         jar="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\exploded-aar\Chart-2017.1.1030-dev-release\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -378,24 +440,41 @@
         revision="25.0.2"
         sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
         <dex dex="C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1F2\debug\com.android.support-support-core-utils-25.3.1_310c3286b6971c5f3286e5d66a2e7b6d1f502542.jar" />
+=======
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/Data-2017.1.1030-dev-release/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="31ecd0832f76d83defcff7f8b395008bf3b153bd">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/intermediates-exploded-aar-Data-2017.1.1030-dev-release_bf7908b813a1b97512b671014c96a2a34e9ba360.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\jars\classes.jar"
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/26.0.0-alpha1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-compat-25.3.1_0c4d2a66b53e64fce1204cc329cfe9ac9d409aca.jar" />
+        revision="26.0.2"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-recyclerview-v7-26.0.0-alpha1_170a8fd85e387b40556a38896f7cb54e09dc7650.jar" />
+>>>>>>> 9366bea711a290cae89711594deab7d37646de68
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\exploded-aar\com.android.support\design\25.3.1\jars\classes.jar"
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/nativescript-optimized/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
-        <dex dex="C:\Users\Angelo\Desktop\TNS\Oleggo\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-design-25.3.1_4f08dc5f9c5d4ca388a19de433f516d47ca5f8bb.jar" />
+        revision="26.0.2"
+        sha1="746274223beb11b1cda7854d7eec3038695c2c93">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/intermediates-exploded-aar-nativescript-optimized_b9dca2afd062b40fdfe4076384910c2374143769.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-support-vector-drawable-26.0.0-alpha1_1792ae7607b4f4a4c638e69033332329b1429b88.jar" />
     </item>
     <item
         is-multidex="false"

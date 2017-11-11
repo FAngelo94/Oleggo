@@ -1,4 +1,10 @@
 {
+  "_args": [
+    [
+      "nativescript-pro-ui@3.2.0",
+      "/home/julian/WorkspaceNS/Oleggo/Oleggo"
+    ]
+  ],
   "_from": "nativescript-pro-ui@3.2.0",
   "_id": "nativescript-pro-ui@3.2.0",
   "_inBundle": false,
@@ -16,20 +22,17 @@
     "fetchSpec": "3.2.0"
   },
   "_requiredBy": [
-    "/tns-template-drawer-navigation"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-pro-ui/-/nativescript-pro-ui-3.2.0.tgz",
-  "_shasum": "198c6b71952cd742070e6352e870d7fabba1fb93",
-  "_spec": "nativescript-pro-ui@3.2.0",
-  "_where": "C:\\Users\\Angelo\\Desktop\\TNS\\Oleggo\\node_modules\\tns-template-drawer-navigation",
+  "_spec": "3.2.0",
+  "_where": "/home/julian/WorkspaceNS/Oleggo/Oleggo",
   "author": {
     "name": "Progress"
   },
   "bugs": {
     "url": "https://github.com/telerik/nativescript-ui-feedback/issues"
   },
-  "bundleDependencies": false,
-  "deprecated": false,
   "description": "Progress NativeScript Pro UI is a suite of rich user interface components based on the native iOS and Android implementations.",
   "devDependencies": {
     "@angular/common": "4.4.1",
