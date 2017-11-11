@@ -17,6 +17,7 @@ C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\src\main\
 C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\src\main\assets\app\tns_modules\nativescript-barcodescanner\barcodescanner-common.js
 C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\src\main\assets\app\tns_modules\nativescript-barcodescanner\barcodescanner.js
 C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\src\main\assets\app\tns_modules\nativescript-pro-ui\scripts\eula-prompt.js
+C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\src\main\assets\app\tns_modules\nativescript-sqlite\sqlite.js
 C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\bundle-entry-points.js
 C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\application\application-common.js
 C:\Users\Angelo\Desktop\TNS\Repository Online\Oleggo\platforms\android\src\main\assets\app\tns_modules\tns-core-modules\application\application.js
