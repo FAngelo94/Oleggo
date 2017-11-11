@@ -59,6 +59,7 @@
         <nsDrawer:RadSideDrawer.mainContent>
             <StackLayout>
 				<Button text="Read QR Code ISBN" tap="openQR" class="btn btn-primary"/>
+				<TextField class="input input-border" maxLength="13" hint="Insert ISBN" autocapitalizationType="numbers"></TextField>
 				<Button text="Send ISBN" class="btn btn-primary"/>
             </StackLayout>
         </nsDrawer:RadSideDrawer.mainContent>

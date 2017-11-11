@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat Nov 11 10:49:18 CET 2017
+#Sat Nov 11 11:23:03 CET 2017
 1073.file=C\:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\assets\\F0F1F2\\debug\\html-ru\\scanning.html
 1090.base=C\:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\assets\\F0F1F2\\debug
 1007.base=C\:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\assets\\F0F1F2\\debug
