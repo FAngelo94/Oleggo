@@ -1,5 +1,8 @@
 <Page
     class="page"
+    loaded="loaded" 
+    xmlns:lv="nativescript-pro-ui/listview"
+    cssFile="~/pages/reading-books/reading-books.css"
     navigatingTo="onNavigatingTo"  
     xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
     xmlns:myDrawer="shared/my-drawer"
@@ -18,6 +21,7 @@
             tap="onDrawerButtonTap"
             ios.position="left">
         </ActionItem>
+        <ActionItem id="exampleMenuButton" icon="res://logo" automationText="ExampleMenu" />
         <Label class="action-bar-title" text="Reading Books"></Label>
     </ActionBar>
 
@@ -57,10 +61,39 @@
         Always wrap content in a layout component.
         -->
         <nsDrawer:RadSideDrawer.mainContent>
-            <GridLayout class="page-content">
-                <Label class="page-icon fa" text="&#xf1ea;"></Label>
-                <Label class="page-placeholder" text="<!-- Page content goes here -->"></Label>
-            </GridLayout>
+            <StackLayout orientation="vertical">
+            <ScrollView orientation="horizontal" height="220">
+                <StackLayout orientation="horizontal" class="scroll-menu" style="padding:40 0 30 0; background-color:rgb(34, 84, 124)">
+                    <StackLayout class="scroll-pane">
+                        <Label text="Cool Slide"  style="horizontal-align: center;"/>                    
+                    </StackLayout>
+                    <StackLayout class="scroll-pane">
+                        <Button text="Button" />                  
+                    </StackLayout>
+                    <StackLayout class="scroll-pane">
+                        <Button text="Button" />                  
+                    </StackLayout>
+                    <StackLayout class="scroll-pane">
+                        <Button text="Button" />                  
+                    </StackLayout>
+                    <StackLayout class="scroll-pane">
+                        <Button text="Button" />                  
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+            <Label text="Tittle" style="padding:40 0 10 0;horizontal-align: center;"/>
+            <Label text="Author" style="padding:0 0 30 0;horizontal-align: center;"/>
+            <StackLayout orientation="horizontal" style="horizontal-align: center;">
+            <Label text="50%" style="padding:0 10"/>
+            <Progress value="50%" width="50%"/>
+            </StackLayout>
+                                    
+            <StackLayout orientation="horizontal" style="horizontal-align: center;">
+                <Button style="background-image:res://logo;"/>   
+                <Button text="B" style="height: 50;width: 50;" tap="other" /> 
+                <Button text="B" />
+            </StackLayout>
+        </StackLayout>
         </nsDrawer:RadSideDrawer.mainContent>
     </nsDrawer:RadSideDrawer>
 </Page>

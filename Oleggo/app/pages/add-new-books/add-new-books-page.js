@@ -2,6 +2,8 @@ const frameModule = require("ui/frame");
 var viewModule=require("ui/core/view");
 const AddNewBooksViewModel = require("./add-new-books-view-model");
 var dialogs = require("ui/dialogs");
+//const isbn = require('node-isbn')
+var BarcodeScanner = require("nativescript-barcodescanner").BarcodeScanner;
 
 /* ***********************************************************
 * Use the "onNavigatingTo" handler to initialize the page binding context.
@@ -32,7 +34,7 @@ function onDrawerButtonTap(args) {
 
 //Function for QR
 function read_qr() {
-    var BarcodeScanner = require("nativescript-barcodescanner").BarcodeScanner;
+    
 	var barcodescanner = new BarcodeScanner();
 
 	  barcodescanner.scan({
@@ -68,14 +70,19 @@ function readISBN(args){
 	var page=args.object.page;
 	var isbn=viewModule.getViewById(page,"isbn");
 	console.info(isbn.text);
-	tryAddBook(isbn.text);
+/* 	isbn.resolve(isbn.text, function (err, book) {
+		if (err) {
+			tryAddBook('Book not found' + err)
+		} else {
+			tryAddBook('Book found: ' + book.title)
+		}
+	})
+	 */
 }
 
 function tryAddBook(isbn){
-	
-	
-	dialogs.alert("Book added").then(function() {
-		
+
+	dialogs.alert("Book added").then( function () {
 	});
 
 }

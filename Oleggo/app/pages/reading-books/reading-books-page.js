@@ -2,6 +2,10 @@ const frameModule = require("ui/frame");
 
 const ReadingBooksViewModel = require("./reading-books-view-model");
 
+exports.other = function () {
+    //frameModule.topmost().navigate("views/library/library");
+};
+
 /* ***********************************************************
 * Use the "onNavigatingTo" handler to initialize the page binding context.
 *************************************************************/

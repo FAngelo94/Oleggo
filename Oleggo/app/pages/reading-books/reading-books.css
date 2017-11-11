@@ -1,0 +1,20 @@
+.scroll-menu {
+    height: 220;
+    padding: 10;
+}
+
+.scroll-pane {
+    background-color: rgb(204, 248, 242);
+    width: 120;
+    height: 240;
+    margin: 10;
+}
+
+Button {
+    height: 40;
+    width: 40;
+    border-radius: 50%;
+    background-color: #FF4082;
+    background-repeat: no-repeat;
+    background-position: center;
+}
