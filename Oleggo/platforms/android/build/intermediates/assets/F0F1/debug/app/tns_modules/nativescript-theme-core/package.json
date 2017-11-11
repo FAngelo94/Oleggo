@@ -1,4 +1,10 @@
 {
+  "_args": [
+    [
+      "nativescript-theme-core@1.0.4",
+      "/home/julian/WorkspaceNS/Oleggo/Oleggo"
+    ]
+  ],
   "_from": "nativescript-theme-core@1.0.4",
   "_id": "nativescript-theme-core@1.0.4",
   "_inBundle": false,
@@ -16,12 +22,11 @@
     "fetchSpec": "1.0.4"
   },
   "_requiredBy": [
-    "/tns-template-drawer-navigation"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-theme-core/-/nativescript-theme-core-1.0.4.tgz",
-  "_shasum": "cf2880c7fbf2fe5f43e2235d309750790803efe1",
-  "_spec": "nativescript-theme-core@1.0.4",
-  "_where": "C:\\Users\\Angelo\\Desktop\\TNS\\Oleggo\\node_modules\\tns-template-drawer-navigation",
+  "_spec": "1.0.4",
+  "_where": "/home/julian/WorkspaceNS/Oleggo/Oleggo",
   "author": {
     "name": "Telerik",
     "email": "support@telerik.com"
@@ -29,8 +34,6 @@
   "bugs": {
     "url": "https://github.com/NativeScript/theme/issues"
   },
-  "bundleDependencies": false,
-  "deprecated": false,
   "description": "Telerik NativeScript Core Theme",
   "homepage": "https://www.nativescript.org",
   "license": "Apache-2.0",

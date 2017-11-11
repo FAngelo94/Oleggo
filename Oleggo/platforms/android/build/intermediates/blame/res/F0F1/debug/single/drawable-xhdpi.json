@@ -1,18 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\Angelo\\Desktop\\TNS\\Oleggo\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\icon.png",
-        "source": "C:\\Users\\Angelo\\Desktop\\TNS\\Oleggo\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\icon.png"
+        "merged": "/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/res/merged/F0F1/debug/drawable-xhdpi/menu.png",
+        "source": "/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/src/main/res/drawable-xhdpi/menu.png"
     },
     {
-        "merged": "C:\\Users\\Angelo\\Desktop\\TNS\\Oleggo\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\logo.png",
-        "source": "C:\\Users\\Angelo\\Desktop\\TNS\\Oleggo\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\logo.png"
+        "merged": "/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/res/merged/F0F1/debug/drawable-xhdpi/background.png",
+        "source": "/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/src/main/res/drawable-xhdpi/background.png"
     },
     {
-        "merged": "C:\\Users\\Angelo\\Desktop\\TNS\\Oleggo\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\background.png",
-        "source": "C:\\Users\\Angelo\\Desktop\\TNS\\Oleggo\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\background.png"
+        "merged": "/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/res/merged/F0F1/debug/drawable-xhdpi/logo.png",
+        "source": "/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/src/main/res/drawable-xhdpi/logo.png"
     },
     {
-        "merged": "C:\\Users\\Angelo\\Desktop\\TNS\\Oleggo\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-xhdpi\\menu.png",
-        "source": "C:\\Users\\Angelo\\Desktop\\TNS\\Oleggo\\platforms\\android\\src\\main\\res\\drawable-xhdpi\\menu.png"
+        "merged": "/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/build/intermediates/res/merged/F0F1/debug/drawable-xhdpi/icon.png",
+        "source": "/home/julian/WorkspaceNS/Oleggo/Oleggo/platforms/android/src/main/res/drawable-xhdpi/icon.png"
     }
 ]
