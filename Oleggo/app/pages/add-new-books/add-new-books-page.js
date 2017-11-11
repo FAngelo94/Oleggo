@@ -58,7 +58,7 @@ function read_qr() {
 		  function(error) {
 			console.info("No scan: " + error);
 		  }
-	  );
+	  ); 
 }
 function openQR(eventData) {
 	read_qr()
