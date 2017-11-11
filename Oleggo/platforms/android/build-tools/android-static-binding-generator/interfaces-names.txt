@@ -877,6 +877,12 @@ org.xml.sax.ext.EntityResolver2
 org.xml.sax.DTDHandler
 org.xmlpull.v1.XmlSerializer
 org.xmlpull.v1.XmlPullParser
+com.google.zxing.Reader
+com.google.zxing.ResultPointCallback
+com.google.zxing.Writer
+com.google.zxing.client.android.encode.Formatter
+com.google.zxing.datamatrix.encoder.Encoder
+com.google.zxing.multi.MultipleBarcodeReader
 com.telerik.widget.chart.engine.axes.categorical.AxisSupportsCombinedSeriesPlot
 com.telerik.widget.chart.engine.axes.common.SeriesModelWithAxes
 com.telerik.widget.chart.engine.axes.continuous.ContinuousAxisModel

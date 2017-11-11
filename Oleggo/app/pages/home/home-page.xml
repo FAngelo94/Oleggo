@@ -79,7 +79,7 @@
 			  <TabView.items>
 				<!--
 				To add a new TabView item, simply add a new <TabViewItem> component to the <TabView.items> collection.
-				Assign the <TabViewItem> component a "title" that will be displayed as the text of the tab item button.
+				Assign the <TabViewItem> component a "title" that will be displayed as the text of the tab item button. 
 				-->
 				<TabViewItem title="My Notes">
 				  <TabViewItem.view>

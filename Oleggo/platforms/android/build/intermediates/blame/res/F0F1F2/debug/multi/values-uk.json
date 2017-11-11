@@ -1,0 +1,2762 @@
+[
+    {
+        "outputFile": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\incremental\\mergeF0F1F2DebugResources\\merged.dir\\values-uk\\values-uk.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 109,
+                    "endOffset": 160
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 109,
+                        "endOffset": 160
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 165,
+                    "endColumn": 107,
+                    "endOffset": 268
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 165,
+                        "endColumn": 107,
+                        "endOffset": 268
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 273,
+                    "endColumn": 122,
+                    "endOffset": 391
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 273,
+                        "endColumn": 122,
+                        "endOffset": 391
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 396,
+                    "endColumn": 101,
+                    "endOffset": 493
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 396,
+                        "endColumn": 101,
+                        "endOffset": 493
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 498,
+                    "endColumn": 105,
+                    "endOffset": 599
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 498,
+                        "endColumn": 105,
+                        "endOffset": 599
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 604,
+                    "endColumn": 85,
+                    "endOffset": 685
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 604,
+                        "endColumn": 85,
+                        "endOffset": 685
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 690,
+                    "endColumn": 107,
+                    "endOffset": 793
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 690,
+                        "endColumn": 107,
+                        "endOffset": 793
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 798,
+                    "endColumn": 117,
+                    "endOffset": 911
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 798,
+                        "endColumn": 117,
+                        "endOffset": 911
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 916,
+                    "endColumn": 78,
+                    "endOffset": 990
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 916,
+                        "endColumn": 78,
+                        "endOffset": 990
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 995,
+                    "endColumn": 79,
+                    "endOffset": 1070
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 995,
+                        "endColumn": 79,
+                        "endOffset": 1070
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1075,
+                    "endColumn": 80,
+                    "endOffset": 1151
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1075,
+                        "endColumn": 80,
+                        "endOffset": 1151
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1156,
+                    "endColumn": 105,
+                    "endOffset": 1257
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1156,
+                        "endColumn": 105,
+                        "endOffset": 1257
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1262,
+                    "endColumn": 106,
+                    "endOffset": 1364
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1262,
+                        "endColumn": 106,
+                        "endOffset": 1364
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1369,
+                    "endColumn": 97,
+                    "endOffset": 1462
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1369,
+                        "endColumn": 97,
+                        "endOffset": 1462
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1467,
+                    "endColumn": 107,
+                    "endOffset": 1570
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1467,
+                        "endColumn": 107,
+                        "endOffset": 1570
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1575,
+                    "endColumn": 105,
+                    "endOffset": 1676
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1575,
+                        "endColumn": 105,
+                        "endOffset": 1676
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1681,
+                    "endColumn": 108,
+                    "endOffset": 1785
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1681,
+                        "endColumn": 108,
+                        "endOffset": 1785
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1790,
+                    "endColumn": 123,
+                    "endOffset": 1909
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1790,
+                        "endColumn": 123,
+                        "endOffset": 1909
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1914,
+                    "endColumn": 99,
+                    "endOffset": 2009
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1914,
+                        "endColumn": 99,
+                        "endOffset": 2009
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 2014,
+                    "endColumn": 52,
+                    "endOffset": 2062
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 203,
+                        "endColumn": 52,
+                        "endOffset": 251
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2067,
+                    "endColumn": 57,
+                    "endOffset": 2120
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 256,
+                        "endColumn": 57,
+                        "endOffset": 309
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2125,
+                    "endColumn": 65,
+                    "endOffset": 2186
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 314,
+                        "endColumn": 65,
+                        "endOffset": 375
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2191,
+                    "endColumn": 61,
+                    "endOffset": 2248
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 380,
+                        "endColumn": 61,
+                        "endOffset": 437
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2253,
+                    "endColumn": 58,
+                    "endOffset": 2307
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 442,
+                        "endColumn": 58,
+                        "endOffset": 496
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2312,
+                    "endColumn": 49,
+                    "endOffset": 2357
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 501,
+                        "endColumn": 49,
+                        "endOffset": 546
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2362,
+                    "endColumn": 77,
+                    "endOffset": 2435
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 551,
+                        "endColumn": 77,
+                        "endOffset": 624
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2440,
+                    "endColumn": 53,
+                    "endOffset": 2489
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 629,
+                        "endColumn": 53,
+                        "endOffset": 678
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 2494,
+                    "endColumn": 58,
+                    "endOffset": 2548
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 683,
+                        "endColumn": 58,
+                        "endOffset": 737
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 2553,
+                    "endColumn": 67,
+                    "endOffset": 2616
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 742,
+                        "endColumn": 67,
+                        "endOffset": 805
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 2621,
+                    "endColumn": 53,
+                    "endOffset": 2670
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 810,
+                        "endColumn": 53,
+                        "endOffset": 859
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 2675,
+                    "endColumn": 44,
+                    "endOffset": 2715
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 864,
+                        "endColumn": 44,
+                        "endOffset": 904
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 2720,
+                    "endColumn": 64,
+                    "endOffset": 2780
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 909,
+                        "endColumn": 64,
+                        "endOffset": 969
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 2785,
+                    "endColumn": 62,
+                    "endOffset": 2843
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 974,
+                        "endColumn": 62,
+                        "endOffset": 1032
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 2848,
+                    "endColumn": 74,
+                    "endOffset": 2918
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1037,
+                        "endColumn": 74,
+                        "endOffset": 1107
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 2923,
+                    "endColumn": 53,
+                    "endOffset": 2972
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1112,
+                        "endColumn": 53,
+                        "endOffset": 1161
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 2977,
+                    "endColumn": 58,
+                    "endOffset": 3031
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1166,
+                        "endColumn": 58,
+                        "endOffset": 1220
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 3036,
+                    "endColumn": 73,
+                    "endOffset": 3105
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1225,
+                        "endColumn": 73,
+                        "endOffset": 1294
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 3110,
+                    "endColumn": 68,
+                    "endOffset": 3174
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1299,
+                        "endColumn": 68,
+                        "endOffset": 1363
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 3179,
+                    "endColumn": 63,
+                    "endOffset": 3238
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1368,
+                        "endColumn": 63,
+                        "endOffset": 1427
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 3243,
+                    "endColumn": 56,
+                    "endOffset": 3295
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1432,
+                        "endColumn": 56,
+                        "endOffset": 1484
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 3300,
+                    "endColumn": 58,
+                    "endOffset": 3354
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 1489,
+                        "endColumn": 58,
+                        "endOffset": 1543
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 3359,
+                    "endColumn": 53,
+                    "endOffset": 3408
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1548,
+                        "endColumn": 53,
+                        "endOffset": 1597
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 3413,
+                    "endColumn": 63,
+                    "endOffset": 3472
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 1602,
+                        "endColumn": 63,
+                        "endOffset": 1661
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 3477,
+                    "endColumn": 62,
+                    "endOffset": 3535
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 1666,
+                        "endColumn": 62,
+                        "endOffset": 1724
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 3540,
+                    "endColumn": 65,
+                    "endOffset": 3601
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 4,
+                        "startOffset": 1729,
+                        "endColumn": 65,
+                        "endOffset": 1790
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 3606,
+                    "endColumn": 56,
+                    "endOffset": 3658
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 1795,
+                        "endColumn": 56,
+                        "endOffset": 1847
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 3663,
+                    "endColumn": 68,
+                    "endOffset": 3727
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 1852,
+                        "endColumn": 68,
+                        "endOffset": 1916
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 49,
+                    "startColumn": 4,
+                    "startOffset": 3732,
+                    "endColumn": 57,
+                    "endOffset": 3785
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 4,
+                        "startOffset": 1921,
+                        "endColumn": 57,
+                        "endOffset": 1974
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 3790,
+                    "endColumn": 55,
+                    "endOffset": 3841
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 33,
+                        "startColumn": 4,
+                        "startOffset": 1979,
+                        "endColumn": 55,
+                        "endOffset": 2030
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 3846,
+                    "endColumn": 47,
+                    "endOffset": 3889
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 2035,
+                        "endColumn": 47,
+                        "endOffset": 2078
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 3894,
+                    "endColumn": 67,
+                    "endOffset": 3957
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 35,
+                        "startColumn": 4,
+                        "startOffset": 2083,
+                        "endColumn": 67,
+                        "endOffset": 2146
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 3962,
+                    "endColumn": 63,
+                    "endOffset": 4021
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 4,
+                        "startOffset": 2151,
+                        "endColumn": 63,
+                        "endOffset": 2210
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 54,
+                    "startColumn": 4,
+                    "startOffset": 4026,
+                    "endColumn": 66,
+                    "endOffset": 4088
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 37,
+                        "startColumn": 4,
+                        "startOffset": 2215,
+                        "endColumn": 66,
+                        "endOffset": 2277
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 55,
+                    "startColumn": 4,
+                    "startOffset": 4093,
+                    "endColumn": 47,
+                    "endOffset": 4136
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 2282,
+                        "endColumn": 47,
+                        "endOffset": 2325
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 56,
+                    "startColumn": 4,
+                    "startOffset": 4141,
+                    "endColumn": 76,
+                    "endOffset": 4213
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 2330,
+                        "endColumn": 76,
+                        "endOffset": 2402
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 57,
+                    "startColumn": 4,
+                    "startOffset": 4218,
+                    "endColumn": 59,
+                    "endOffset": 4273
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 4,
+                        "startOffset": 2407,
+                        "endColumn": 59,
+                        "endOffset": 2462
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 58,
+                    "startColumn": 4,
+                    "startOffset": 4278,
+                    "endColumn": 49,
+                    "endOffset": 4323
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 41,
+                        "startColumn": 4,
+                        "startOffset": 2467,
+                        "endColumn": 49,
+                        "endOffset": 2512
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 59,
+                    "startColumn": 4,
+                    "startOffset": 4328,
+                    "endColumn": 68,
+                    "endOffset": 4392
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 42,
+                        "startColumn": 4,
+                        "startOffset": 2517,
+                        "endColumn": 68,
+                        "endOffset": 2581
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 60,
+                    "startColumn": 4,
+                    "startOffset": 4397,
+                    "endColumn": 66,
+                    "endOffset": 4459
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 43,
+                        "startColumn": 4,
+                        "startOffset": 2586,
+                        "endColumn": 66,
+                        "endOffset": 2648
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 61,
+                    "startColumn": 4,
+                    "startOffset": 4464,
+                    "endColumn": 46,
+                    "endOffset": 4506
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 44,
+                        "startColumn": 4,
+                        "startOffset": 2653,
+                        "endColumn": 46,
+                        "endOffset": 2695
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 62,
+                    "startColumn": 4,
+                    "startOffset": 4511,
+                    "endColumn": 48,
+                    "endOffset": 4555
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 45,
+                        "startColumn": 4,
+                        "startOffset": 2700,
+                        "endColumn": 48,
+                        "endOffset": 2744
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 63,
+                    "startColumn": 4,
+                    "startOffset": 4560,
+                    "endColumn": 54,
+                    "endOffset": 4610
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 46,
+                        "startColumn": 4,
+                        "startOffset": 2749,
+                        "endColumn": 54,
+                        "endOffset": 2799
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 64,
+                    "startColumn": 4,
+                    "startOffset": 4615,
+                    "endColumn": 49,
+                    "endOffset": 4660
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 47,
+                        "startColumn": 4,
+                        "startOffset": 2804,
+                        "endColumn": 49,
+                        "endOffset": 2849
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 65,
+                    "startColumn": 4,
+                    "startOffset": 4665,
+                    "endColumn": 93,
+                    "endOffset": 4754
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 48,
+                        "startColumn": 4,
+                        "startOffset": 2854,
+                        "endColumn": 93,
+                        "endOffset": 2943
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 66,
+                    "startColumn": 4,
+                    "startOffset": 4759,
+                    "endColumn": 136,
+                    "endOffset": 4891
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 49,
+                        "startColumn": 4,
+                        "startOffset": 2948,
+                        "endColumn": 136,
+                        "endOffset": 3080
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 67,
+                    "startColumn": 4,
+                    "startOffset": 4896,
+                    "endColumn": 53,
+                    "endOffset": 4945
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 50,
+                        "startColumn": 4,
+                        "startOffset": 3085,
+                        "endColumn": 53,
+                        "endOffset": 3134
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 68,
+                    "startColumn": 4,
+                    "startOffset": 4950,
+                    "endColumn": 53,
+                    "endOffset": 4999
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 51,
+                        "startColumn": 4,
+                        "startOffset": 3139,
+                        "endColumn": 53,
+                        "endOffset": 3188
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 69,
+                    "startColumn": 4,
+                    "startOffset": 5004,
+                    "endColumn": 58,
+                    "endOffset": 5058
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 52,
+                        "startColumn": 4,
+                        "startOffset": 3193,
+                        "endColumn": 58,
+                        "endOffset": 3247
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 70,
+                    "startColumn": 4,
+                    "startOffset": 5063,
+                    "endColumn": 115,
+                    "endOffset": 5174
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 53,
+                        "startColumn": 4,
+                        "startOffset": 3252,
+                        "endColumn": 115,
+                        "endOffset": 3363
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 71,
+                    "startColumn": 4,
+                    "startOffset": 5179,
+                    "endColumn": 48,
+                    "endOffset": 5223
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 4,
+                        "startOffset": 3368,
+                        "endColumn": 48,
+                        "endOffset": 3412
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 72,
+                    "startColumn": 4,
+                    "startOffset": 5228,
+                    "endColumn": 48,
+                    "endOffset": 5272
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 55,
+                        "startColumn": 4,
+                        "startOffset": 3417,
+                        "endColumn": 48,
+                        "endOffset": 3461
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 73,
+                    "startColumn": 4,
+                    "startOffset": 5277,
+                    "endColumn": 100,
+                    "endOffset": 5373
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 56,
+                        "startColumn": 4,
+                        "startOffset": 3466,
+                        "endColumn": 100,
+                        "endOffset": 3562
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 74,
+                    "startColumn": 4,
+                    "startOffset": 5378,
+                    "endColumn": 45,
+                    "endOffset": 5419
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 57,
+                        "startColumn": 4,
+                        "startOffset": 3567,
+                        "endColumn": 45,
+                        "endOffset": 3608
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 75,
+                    "startColumn": 4,
+                    "startOffset": 5424,
+                    "endColumn": 51,
+                    "endOffset": 5471
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 58,
+                        "startColumn": 4,
+                        "startOffset": 3613,
+                        "endColumn": 51,
+                        "endOffset": 3660
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 76,
+                    "startColumn": 4,
+                    "startOffset": 5476,
+                    "endColumn": 53,
+                    "endOffset": 5525
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 59,
+                        "startColumn": 4,
+                        "startOffset": 3665,
+                        "endColumn": 53,
+                        "endOffset": 3714
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 77,
+                    "startColumn": 4,
+                    "startOffset": 5530,
+                    "endColumn": 127,
+                    "endOffset": 5653
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 60,
+                        "startColumn": 4,
+                        "startOffset": 3719,
+                        "endColumn": 127,
+                        "endOffset": 3842
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 78,
+                    "startColumn": 4,
+                    "startOffset": 5658,
+                    "endColumn": 56,
+                    "endOffset": 5710
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 61,
+                        "startColumn": 4,
+                        "startOffset": 3847,
+                        "endColumn": 56,
+                        "endOffset": 3899
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 79,
+                    "startColumn": 4,
+                    "startOffset": 5715,
+                    "endColumn": 50,
+                    "endOffset": 5761
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 62,
+                        "startColumn": 4,
+                        "startOffset": 3904,
+                        "endColumn": 50,
+                        "endOffset": 3950
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 80,
+                    "startColumn": 4,
+                    "startOffset": 5766,
+                    "endColumn": 90,
+                    "endOffset": 5852
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 63,
+                        "startColumn": 4,
+                        "startOffset": 3955,
+                        "endColumn": 90,
+                        "endOffset": 4041
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 81,
+                    "startColumn": 4,
+                    "startOffset": 5857,
+                    "endColumn": 75,
+                    "endOffset": 5928
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 64,
+                        "startColumn": 4,
+                        "startOffset": 4046,
+                        "endColumn": 75,
+                        "endOffset": 4117
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 82,
+                    "startColumn": 4,
+                    "startOffset": 5933,
+                    "endColumn": 81,
+                    "endOffset": 6010
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 65,
+                        "startColumn": 4,
+                        "startOffset": 4122,
+                        "endColumn": 81,
+                        "endOffset": 4199
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 83,
+                    "startColumn": 4,
+                    "startOffset": 6015,
+                    "endColumn": 49,
+                    "endOffset": 6060
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 66,
+                        "startColumn": 4,
+                        "startOffset": 4204,
+                        "endColumn": 49,
+                        "endOffset": 4249
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 84,
+                    "startColumn": 4,
+                    "startOffset": 6065,
+                    "endColumn": 54,
+                    "endOffset": 6115
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 67,
+                        "startColumn": 4,
+                        "startOffset": 4254,
+                        "endColumn": 54,
+                        "endOffset": 4304
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 85,
+                    "startColumn": 4,
+                    "startOffset": 6120,
+                    "endColumn": 68,
+                    "endOffset": 6184
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 68,
+                        "startColumn": 4,
+                        "startOffset": 4309,
+                        "endColumn": 68,
+                        "endOffset": 4373
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 86,
+                    "startColumn": 4,
+                    "startOffset": 6189,
+                    "endColumn": 76,
+                    "endOffset": 6261
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 69,
+                        "startColumn": 4,
+                        "startOffset": 4378,
+                        "endColumn": 76,
+                        "endOffset": 4450
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 87,
+                    "startColumn": 4,
+                    "startOffset": 6266,
+                    "endColumn": 128,
+                    "endOffset": 6390
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 70,
+                        "startColumn": 4,
+                        "startOffset": 4455,
+                        "endColumn": 128,
+                        "endOffset": 4579
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 88,
+                    "startColumn": 4,
+                    "startOffset": 6395,
+                    "endColumn": 60,
+                    "endOffset": 6451
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 71,
+                        "startColumn": 4,
+                        "startOffset": 4584,
+                        "endColumn": 60,
+                        "endOffset": 4640
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 89,
+                    "startColumn": 4,
+                    "startOffset": 6456,
+                    "endColumn": 49,
+                    "endOffset": 6501
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 72,
+                        "startColumn": 4,
+                        "startOffset": 4645,
+                        "endColumn": 49,
+                        "endOffset": 4690
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 90,
+                    "startColumn": 4,
+                    "startOffset": 6506,
+                    "endColumn": 73,
+                    "endOffset": 6575
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 73,
+                        "startColumn": 4,
+                        "startOffset": 4695,
+                        "endColumn": 73,
+                        "endOffset": 4764
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 91,
+                    "startColumn": 4,
+                    "startOffset": 6580,
+                    "endColumn": 83,
+                    "endOffset": 6659
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 74,
+                        "startColumn": 4,
+                        "startOffset": 4769,
+                        "endColumn": 83,
+                        "endOffset": 4848
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 92,
+                    "startColumn": 4,
+                    "startOffset": 6664,
+                    "endColumn": 82,
+                    "endOffset": 6742
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 75,
+                        "startColumn": 4,
+                        "startOffset": 4853,
+                        "endColumn": 82,
+                        "endOffset": 4931
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 93,
+                    "startColumn": 4,
+                    "startOffset": 6747,
+                    "endColumn": 81,
+                    "endOffset": 6824
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 76,
+                        "startColumn": 4,
+                        "startOffset": 4936,
+                        "endColumn": 81,
+                        "endOffset": 5013
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 94,
+                    "startColumn": 4,
+                    "startOffset": 6829,
+                    "endColumn": 100,
+                    "endOffset": 6925
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 77,
+                        "startColumn": 4,
+                        "startOffset": 5018,
+                        "endColumn": 100,
+                        "endOffset": 5114
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 95,
+                    "startColumn": 4,
+                    "startOffset": 6930,
+                    "endColumn": 73,
+                    "endOffset": 6999
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 78,
+                        "startColumn": 4,
+                        "startOffset": 5119,
+                        "endColumn": 73,
+                        "endOffset": 5188
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 96,
+                    "startColumn": 4,
+                    "startOffset": 7004,
+                    "endColumn": 91,
+                    "endOffset": 7091
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 79,
+                        "startColumn": 4,
+                        "startOffset": 5193,
+                        "endColumn": 91,
+                        "endOffset": 5280
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 97,
+                    "startColumn": 4,
+                    "startOffset": 7096,
+                    "endColumn": 129,
+                    "endOffset": 7221
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 80,
+                        "startColumn": 4,
+                        "startOffset": 5285,
+                        "endColumn": 129,
+                        "endOffset": 5410
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 98,
+                    "startColumn": 4,
+                    "startOffset": 7226,
+                    "endColumn": 94,
+                    "endOffset": 7316
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 81,
+                        "startColumn": 4,
+                        "startOffset": 5415,
+                        "endColumn": 94,
+                        "endOffset": 5505
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 99,
+                    "startColumn": 4,
+                    "startOffset": 7321,
+                    "endColumn": 80,
+                    "endOffset": 7397
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 82,
+                        "startColumn": 4,
+                        "startOffset": 5510,
+                        "endColumn": 80,
+                        "endOffset": 5586
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 100,
+                    "startColumn": 4,
+                    "startOffset": 7402,
+                    "endColumn": 77,
+                    "endOffset": 7475
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 83,
+                        "startColumn": 4,
+                        "startOffset": 5591,
+                        "endColumn": 77,
+                        "endOffset": 5664
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 101,
+                    "startColumn": 4,
+                    "startOffset": 7480,
+                    "endColumn": 82,
+                    "endOffset": 7558
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 84,
+                        "startColumn": 4,
+                        "startOffset": 5669,
+                        "endColumn": 82,
+                        "endOffset": 5747
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 102,
+                    "startColumn": 4,
+                    "startOffset": 7563,
+                    "endColumn": 89,
+                    "endOffset": 7648
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 85,
+                        "startColumn": 4,
+                        "startOffset": 5752,
+                        "endColumn": 89,
+                        "endOffset": 5837
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 103,
+                    "startColumn": 4,
+                    "startOffset": 7653,
+                    "endColumn": 70,
+                    "endOffset": 7719
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 86,
+                        "startColumn": 4,
+                        "startOffset": 5842,
+                        "endColumn": 70,
+                        "endOffset": 5908
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 104,
+                    "startColumn": 4,
+                    "startOffset": 7724,
+                    "endColumn": 76,
+                    "endOffset": 7796
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 87,
+                        "startColumn": 4,
+                        "startOffset": 5913,
+                        "endColumn": 76,
+                        "endOffset": 5985
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 105,
+                    "startColumn": 4,
+                    "startOffset": 7801,
+                    "endColumn": 97,
+                    "endOffset": 7894
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 88,
+                        "startColumn": 4,
+                        "startOffset": 5990,
+                        "endColumn": 97,
+                        "endOffset": 6083
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 106,
+                    "startColumn": 4,
+                    "startOffset": 7899,
+                    "endColumn": 102,
+                    "endOffset": 7997
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 89,
+                        "startColumn": 4,
+                        "startOffset": 6088,
+                        "endColumn": 102,
+                        "endOffset": 6186
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 107,
+                    "startColumn": 4,
+                    "startOffset": 8002,
+                    "endColumn": 102,
+                    "endOffset": 8100
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 90,
+                        "startColumn": 4,
+                        "startOffset": 6191,
+                        "endColumn": 102,
+                        "endOffset": 6289
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 108,
+                    "startColumn": 4,
+                    "startOffset": 8105,
+                    "endColumn": 100,
+                    "endOffset": 8201
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 91,
+                        "startColumn": 4,
+                        "startOffset": 6294,
+                        "endColumn": 100,
+                        "endOffset": 6390
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 109,
+                    "startColumn": 4,
+                    "startOffset": 8206,
+                    "endColumn": 82,
+                    "endOffset": 8284
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 92,
+                        "startColumn": 4,
+                        "startOffset": 6395,
+                        "endColumn": 82,
+                        "endOffset": 6473
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 110,
+                    "startColumn": 4,
+                    "startOffset": 8289,
+                    "endColumn": 75,
+                    "endOffset": 8360
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 93,
+                        "startColumn": 4,
+                        "startOffset": 6478,
+                        "endColumn": 75,
+                        "endOffset": 6549
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 111,
+                    "startColumn": 4,
+                    "startOffset": 8365,
+                    "endColumn": 68,
+                    "endOffset": 8429
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 94,
+                        "startColumn": 4,
+                        "startOffset": 6554,
+                        "endColumn": 68,
+                        "endOffset": 6618
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 112,
+                    "startColumn": 4,
+                    "startOffset": 8434,
+                    "endColumn": 64,
+                    "endOffset": 8494
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 95,
+                        "startColumn": 4,
+                        "startOffset": 6623,
+                        "endColumn": 64,
+                        "endOffset": 6683
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 113,
+                    "startColumn": 4,
+                    "startOffset": 8499,
+                    "endColumn": 64,
+                    "endOffset": 8559
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 96,
+                        "startColumn": 4,
+                        "startOffset": 6688,
+                        "endColumn": 64,
+                        "endOffset": 6748
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 114,
+                    "startColumn": 4,
+                    "startOffset": 8564,
+                    "endColumn": 166,
+                    "endOffset": 8726
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 97,
+                        "startColumn": 4,
+                        "startOffset": 6753,
+                        "endColumn": 166,
+                        "endOffset": 6915
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 115,
+                    "startColumn": 4,
+                    "startOffset": 8731,
+                    "endColumn": 66,
+                    "endOffset": 8793
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 98,
+                        "startColumn": 4,
+                        "startOffset": 6920,
+                        "endColumn": 66,
+                        "endOffset": 6982
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 116,
+                    "startColumn": 4,
+                    "startOffset": 8798,
+                    "endColumn": 75,
+                    "endOffset": 8869
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 99,
+                        "startColumn": 4,
+                        "startOffset": 6987,
+                        "endColumn": 75,
+                        "endOffset": 7058
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 117,
+                    "startColumn": 4,
+                    "startOffset": 8874,
+                    "endColumn": 87,
+                    "endOffset": 8957
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 100,
+                        "startColumn": 4,
+                        "startOffset": 7063,
+                        "endColumn": 87,
+                        "endOffset": 7146
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 118,
+                    "startColumn": 4,
+                    "startOffset": 8962,
+                    "endColumn": 70,
+                    "endOffset": 9028
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 101,
+                        "startColumn": 4,
+                        "startOffset": 7151,
+                        "endColumn": 70,
+                        "endOffset": 7217
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 119,
+                    "startColumn": 4,
+                    "startOffset": 9033,
+                    "endColumn": 136,
+                    "endOffset": 9165
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 102,
+                        "startColumn": 4,
+                        "startOffset": 7222,
+                        "endColumn": 136,
+                        "endOffset": 7354
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 120,
+                    "startColumn": 4,
+                    "startOffset": 9170,
+                    "endColumn": 69,
+                    "endOffset": 9235
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 103,
+                        "startColumn": 4,
+                        "startOffset": 7359,
+                        "endColumn": 69,
+                        "endOffset": 7424
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 121,
+                    "startColumn": 4,
+                    "startOffset": 9240,
+                    "endColumn": 57,
+                    "endOffset": 9293
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 104,
+                        "startColumn": 4,
+                        "startOffset": 7429,
+                        "endColumn": 57,
+                        "endOffset": 7482
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 122,
+                    "startColumn": 4,
+                    "startOffset": 9298,
+                    "endColumn": 82,
+                    "endOffset": 9376
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 105,
+                        "startColumn": 4,
+                        "startOffset": 7487,
+                        "endColumn": 82,
+                        "endOffset": 7565
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 123,
+                    "startColumn": 4,
+                    "startOffset": 9381,
+                    "endColumn": 78,
+                    "endOffset": 9455
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 106,
+                        "startColumn": 4,
+                        "startOffset": 7570,
+                        "endColumn": 78,
+                        "endOffset": 7644
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 124,
+                    "startColumn": 4,
+                    "startOffset": 9460,
+                    "endColumn": 121,
+                    "endOffset": 9577
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 107,
+                        "startColumn": 4,
+                        "startOffset": 7649,
+                        "endColumn": 121,
+                        "endOffset": 7766
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 125,
+                    "startColumn": 4,
+                    "startOffset": 9582,
+                    "endColumn": 92,
+                    "endOffset": 9670
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 108,
+                        "startColumn": 4,
+                        "startOffset": 7771,
+                        "endColumn": 92,
+                        "endOffset": 7859
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 126,
+                    "startColumn": 4,
+                    "startOffset": 9675,
+                    "endColumn": 77,
+                    "endOffset": 9748
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 109,
+                        "startColumn": 4,
+                        "startOffset": 7864,
+                        "endColumn": 77,
+                        "endOffset": 7937
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 127,
+                    "startColumn": 4,
+                    "startOffset": 9753,
+                    "endColumn": 91,
+                    "endOffset": 9840
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 110,
+                        "startColumn": 4,
+                        "startOffset": 7942,
+                        "endColumn": 91,
+                        "endOffset": 8029
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 128,
+                    "startColumn": 4,
+                    "startOffset": 9845,
+                    "endColumn": 67,
+                    "endOffset": 9908
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 111,
+                        "startColumn": 4,
+                        "startOffset": 8034,
+                        "endColumn": 67,
+                        "endOffset": 8097
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 129,
+                    "startColumn": 4,
+                    "startOffset": 9913,
+                    "endColumn": 103,
+                    "endOffset": 10012
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 112,
+                        "startColumn": 4,
+                        "startOffset": 8102,
+                        "endColumn": 103,
+                        "endOffset": 8201
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 130,
+                    "startColumn": 4,
+                    "startOffset": 10017,
+                    "endColumn": 68,
+                    "endOffset": 10081
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 113,
+                        "startColumn": 4,
+                        "startOffset": 8206,
+                        "endColumn": 68,
+                        "endOffset": 8270
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 131,
+                    "startColumn": 4,
+                    "startOffset": 10086,
+                    "endColumn": 63,
+                    "endOffset": 10145
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 114,
+                        "startColumn": 4,
+                        "startOffset": 8275,
+                        "endColumn": 63,
+                        "endOffset": 8334
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 132,
+                    "startColumn": 4,
+                    "startOffset": 10150,
+                    "endColumn": 71,
+                    "endOffset": 10217
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 115,
+                        "startColumn": 4,
+                        "startOffset": 8339,
+                        "endColumn": 71,
+                        "endOffset": 8406
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 133,
+                    "startColumn": 4,
+                    "startOffset": 10222,
+                    "endColumn": 72,
+                    "endOffset": 10290
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 116,
+                        "startColumn": 4,
+                        "startOffset": 8411,
+                        "endColumn": 72,
+                        "endOffset": 8479
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 134,
+                    "startColumn": 4,
+                    "startOffset": 10295,
+                    "endColumn": 71,
+                    "endOffset": 10362
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 117,
+                        "startColumn": 4,
+                        "startOffset": 8484,
+                        "endColumn": 71,
+                        "endOffset": 8551
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 135,
+                    "startColumn": 4,
+                    "startOffset": 10367,
+                    "endColumn": 70,
+                    "endOffset": 10433
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 118,
+                        "startColumn": 4,
+                        "startOffset": 8556,
+                        "endColumn": 70,
+                        "endOffset": 8622
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 136,
+                    "startColumn": 4,
+                    "startOffset": 10438,
+                    "endColumn": 54,
+                    "endOffset": 10488
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 119,
+                        "startColumn": 4,
+                        "startOffset": 8627,
+                        "endColumn": 54,
+                        "endOffset": 8677
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 137,
+                    "startColumn": 4,
+                    "startOffset": 10493,
+                    "endColumn": 57,
+                    "endOffset": 10546
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 120,
+                        "startColumn": 4,
+                        "startOffset": 8682,
+                        "endColumn": 57,
+                        "endOffset": 8735
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 138,
+                    "startColumn": 4,
+                    "startOffset": 10551,
+                    "endColumn": 62,
+                    "endOffset": 10609
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 121,
+                        "startColumn": 4,
+                        "startOffset": 8740,
+                        "endColumn": 62,
+                        "endOffset": 8798
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 139,
+                    "startColumn": 4,
+                    "startOffset": 10614,
+                    "endColumn": 62,
+                    "endOffset": 10672
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 122,
+                        "startColumn": 4,
+                        "startOffset": 8803,
+                        "endColumn": 62,
+                        "endOffset": 8861
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 140,
+                    "startColumn": 4,
+                    "startOffset": 10677,
+                    "endColumn": 54,
+                    "endOffset": 10727
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 123,
+                        "startColumn": 4,
+                        "startOffset": 8866,
+                        "endColumn": 54,
+                        "endOffset": 8916
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 141,
+                    "startColumn": 4,
+                    "startOffset": 10732,
+                    "endColumn": 51,
+                    "endOffset": 10779
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 124,
+                        "startColumn": 4,
+                        "startOffset": 8921,
+                        "endColumn": 51,
+                        "endOffset": 8968
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 142,
+                    "startColumn": 4,
+                    "startOffset": 10784,
+                    "endColumn": 68,
+                    "endOffset": 10848
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 125,
+                        "startColumn": 4,
+                        "startOffset": 8973,
+                        "endColumn": 68,
+                        "endOffset": 9037
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 143,
+                    "startColumn": 4,
+                    "startOffset": 10853,
+                    "endColumn": 54,
+                    "endOffset": 10903
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 126,
+                        "startColumn": 4,
+                        "startOffset": 9042,
+                        "endColumn": 54,
+                        "endOffset": 9092
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 144,
+                    "startColumn": 4,
+                    "startOffset": 10908,
+                    "endColumn": 80,
+                    "endOffset": 10984
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 2014,
+                        "endColumn": 80,
+                        "endOffset": 2090
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 145,
+                    "startColumn": 4,
+                    "startOffset": 10989,
+                    "endColumn": 100,
+                    "endOffset": 11085
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.1\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 2095,
+                        "endColumn": 100,
+                        "endOffset": 2191
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 146,
+                    "startColumn": 4,
+                    "startOffset": 11090,
+                    "endColumn": 83,
+                    "endOffset": 11169
+                },
+                "from": {
+                    "file": "C:\\Users\\Angelo\\Desktop\\TNS\\Repository Online\\Oleggo\\platforms\\android\\build\\intermediates\\exploded-aar\\barcodescanner-release-2.1.6\\res\\values-uk\\values-uk.xml",
+                    "position": {
+                        "startLine": 127,
+                        "startColumn": 4,
+                        "startOffset": 9097,
+                        "endColumn": 83,
+                        "endOffset": 9176
+                    }
+                }
+            }
+        ]
+    }
+]

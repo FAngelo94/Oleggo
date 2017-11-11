@@ -1,4 +1,5 @@
 {
+    "nativescript-barcodescanner": true,
     "nativescript-pro-ui": true,
     "nativescript-theme-core": true,
     "tns-core-modules": true,

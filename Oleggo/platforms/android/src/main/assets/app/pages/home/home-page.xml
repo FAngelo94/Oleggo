@@ -4,8 +4,8 @@
     xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
     xmlns:myDrawer="shared/my-drawer"
     xmlns="http://www.nativescript.org/tns.xsd"
-	xmlns:home="/pages/home/my-notes"
-	xmlns:search="/pages/home/my-library">
+	xmlns:my-notes="/pages/home/my-notes"
+	xmlns:my-library="/pages/home/my-library">
 
     <ActionBar class="action-bar">
         <!-- 
@@ -79,7 +79,7 @@
 			  <TabView.items>
 				<!--
 				To add a new TabView item, simply add a new <TabViewItem> component to the <TabView.items> collection.
-				Assign the <TabViewItem> component a "title" that will be displayed as the text of the tab item button.
+				Assign the <TabViewItem> component a "title" that will be displayed as the text of the tab item button. 
 				-->
 				<TabViewItem title="My Notes">
 				  <TabViewItem.view>
@@ -88,13 +88,13 @@
 					In this case the view contents and back end logic are separated in custom components.
 					You can find these components in their respective folders /home, /browse etc.
 					-->
-					<home:my-notes/>
+					<my-notes:my-notes/>
 				  </TabViewItem.view>
 				</TabViewItem>
 
 				<TabViewItem title="My Library">
 				  <TabViewItem.view>
-					 <search:my-library/>
+					 <my-library:my-library/>
 				  </TabViewItem.view>
 				</TabViewItem>
 
