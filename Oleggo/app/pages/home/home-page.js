@@ -7,7 +7,7 @@ let page;
 let pageData = new observableModule.fromObject({
     BookList: new ObservableArray(
         [{
-                title: "eggs",
+                title: "Hot dog",
                 author: "julian",
                 image: "res://breakfast1"
             },
