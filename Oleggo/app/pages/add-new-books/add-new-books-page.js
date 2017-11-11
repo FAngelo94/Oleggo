@@ -1,6 +1,7 @@
 const frameModule = require("ui/frame");
-
+var viewModule=require("ui/core/view");
 const AddNewBooksViewModel = require("./add-new-books-view-model");
+var dialogs = require("ui/dialogs");
 
 /* ***********************************************************
 * Use the "onNavigatingTo" handler to initialize the page binding context.
@@ -52,6 +53,7 @@ function read_qr() {
 		  function(result) {
 			console.info("Scan format: " + result.format);
 			console.info("Scan text:   " + result.text);
+			tryAddBook(resut.text);
 		  },
 		  function(error) {
 			console.info("No scan: " + error);
@@ -59,10 +61,26 @@ function read_qr() {
 	  );
 }
 function openQR(eventData) {
-	console.info("openQR");
 	read_qr()
 }
 
+function readISBN(args){
+	var page=args.object.page;
+	var isbn=viewModule.getViewById(page,"isbn");
+	console.info(isbn.text);
+	tryAddBook(isbn.text);
+}
+
+function tryAddBook(isbn){
+	
+	
+	dialogs.alert("Book added").then(function() {
+		
+	});
+
+}
+
+exports.readISBN=readISBN;
 exports.openQR = openQR;
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
