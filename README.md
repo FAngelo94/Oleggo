@@ -7,8 +7,10 @@ QR Code = https://market.nativescript.org/plugins/nativescript-barcodescanner
 
 Camera = https://docs.nativescript.org/hardware/camera
 
-DB lite = https://www.npmjs.com/package/nativescript-sqlite
+DB lite = https://www.npmjs.com/package/nativescript-sqlite   -
           https://github.com/nathanaela/nativescript-sqlite
+          
+Audio   = https://github.com/EddyVerbruggen/nativescript-pluginshowcase   
 
 ### Native Script app example
 
