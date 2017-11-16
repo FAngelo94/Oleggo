@@ -12,6 +12,8 @@ DB lite = https://www.npmjs.com/package/nativescript-sqlite   -
           
 Audio   = https://github.com/EddyVerbruggen/nativescript-pluginshowcase   
 
+Awesome font for menu of other things = http://fontawesome.io/cheatsheet/
+
 ### Native Script app example
 
 https://github.com/NativeScript/nativescript-marketplace-demo
