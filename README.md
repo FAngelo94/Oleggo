@@ -19,4 +19,5 @@ Awesome font for menu of other things = http://fontawesome.io/cheatsheet/
 https://github.com/NativeScript/nativescript-marketplace-demo
 
 ### Template used
-https://github.com/NativeScript/template-drawer-navigation
+* https://github.com/NativeScript/template-drawer-navigation
+* https://github.com/EddyVerbruggen/nativescript-pluginshowcase
