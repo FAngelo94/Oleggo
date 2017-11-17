@@ -4,14 +4,20 @@ var Sqlite = require( "nativescript-sqlite" );
 
 function MyNotesViewModel() {
 	openDB();
+	//Read from DB and insert in an ObservableArray
+	var w="Saved at 10:30 PM";
+	var n="We try a note";
+	var b="It, Steven King";
+	var dataPage=new ObservableArray(); 
+	dataPage.push([	{
+						when: w,
+						note: n,
+						book: b
+					}		
+				]);
+	//Pass the ObservableArray to the page
     var viewModel = observableModule.fromObject({
-		NoteList: new ObservableArray(
-        [{
-                when: "Saved at 10:30 PM",
-                note: "We try a note",
-                book: "It, Steven King"
-            }
-        ])
+		NoteList: dataPage
     });
 	
     return viewModel;
@@ -19,7 +25,6 @@ function MyNotesViewModel() {
 
 function openDB()
 {
-	
 	var db_promise = new Sqlite("MyTable", function(err, db) {
 		if (err) {
 		  console.info("We failed to open database", err);
