@@ -1,6 +1,13 @@
 const frameModule = require("ui/frame");
-
 const AddNoteViewModel = require("./add-note-view-model");
+var label;
+
+// require the plugin
+var SpeechRecognition = require("nativescript-speech-recognition").SpeechRecognition;
+// instantiate the plugin
+var speechRecognition = new SpeechRecognition();
+// import the options
+var SpeechRecognitionTranscription = require("nativescript-speech-recognition").SpeechRecognitionTranscription;
 
 /* ***********************************************************
 * Use the "onNavigatingTo" handler to initialize the page binding context.
@@ -16,7 +23,16 @@ function onNavigatingTo(args) {
     }
 
     const page = args.object;
+	label=page.getViewById("speakText");
+	label.text="REGISTRA";
     page.bindingContext = new AddNoteViewModel();
+	
+	
+	speechRecognition.available().then(
+	  function(available) {
+		console.log(available ? "YES!" : "NO");
+	  }
+	);
 }
 
 /* ***********************************************************
@@ -29,5 +45,23 @@ function onDrawerButtonTap(args) {
     sideDrawer.showDrawer();
 }
 
+function listen(args){
+	console.info("listening...");
+	speechRecognition.startListening(
+	{
+		returnPartialResults: true,
+		// this callback will be invoked repeatedly during recognition
+        onResult: function (transcription) {
+            console.info("User said: " + transcription.text);
+            console.info("User finished?: " + transcription.finished);
+			if(transcription.finished==true)
+			{
+				label.text=transcription.text;
+			}
+        },
+	});
+}
+
+exports.listen = listen;
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;

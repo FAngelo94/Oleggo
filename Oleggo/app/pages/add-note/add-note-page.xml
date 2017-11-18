@@ -56,10 +56,10 @@
         Always wrap content in a layout component.
         -->
         <nsDrawer:RadSideDrawer.mainContent>
-            <GridLayout class="page-content">
-                <Label class="page-icon fa" text="&#xf002;"></Label>
-                <Label class="page-placeholder" text="<!-- Page content goes here -->"></Label>
-            </GridLayout>
+            <StackLayout class="input-field" id="campo" weight="500px">
+                <Label class="label" text="Label" id="speakText"></Label>
+				<Button text="Press and speak" class="btn btn-primary btn-active" tap="listen"/>
+            </StackLayout>
         </nsDrawer:RadSideDrawer.mainContent>
     </nsDrawer:RadSideDrawer>
 </Page>
