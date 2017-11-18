@@ -3,7 +3,7 @@ const ObservableArray = require("data/observable-array").ObservableArray;
 var Sqlite = require( "nativescript-sqlite" );
 
 function MyNotesViewModel() {
-	openDB();
+	readDB();
 	//Read from DB and insert in an ObservableArray
 	var w="Saved at 10:30 PM";
 	var n="We try a note";
@@ -22,8 +22,9 @@ function MyNotesViewModel() {
 	
     return viewModel;
 }
+module.exports = MyNotesViewModel;
 
-function openDB()
+function readDB()
 {
 	var db_promise = new Sqlite("MyTable", function(err, db) {
 		if (err) {
@@ -40,4 +41,3 @@ function saveChanges(){
 }
 
 module.exports = saveChanges;
-module.exports = MyNotesViewModel;

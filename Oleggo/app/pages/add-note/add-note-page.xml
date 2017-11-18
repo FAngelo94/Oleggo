@@ -57,8 +57,11 @@
         -->
         <nsDrawer:RadSideDrawer.mainContent>
             <StackLayout class="input-field" id="campo" weight="500px">
-                <Label class="label" text="Label" id="speakText"></Label>
+				<TextView id="speakText" hint="Enter a note"></TextView>
+				<TextView id="page" hint="Enter the page of note (optionally)"></TextView>
 				<Button text="Press and speak" class="btn btn-primary btn-active" tap="listen"/>
+				<Button text="Add Quote" class="btn btn-primary btn-active" tap="addQuote"/>
+				<Button text="Look for the Word" class="btn btn-primary btn-active" tap="lookForWord"/>
             </StackLayout>
         </nsDrawer:RadSideDrawer.mainContent>
     </nsDrawer:RadSideDrawer>

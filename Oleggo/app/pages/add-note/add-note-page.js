@@ -24,17 +24,14 @@ function onNavigatingTo(args) {
 
     const page = args.object;
 	label=page.getViewById("speakText");
-	label.text="REGISTRA";
     page.bindingContext = new AddNoteViewModel();
-	
-	
 	speechRecognition.available().then(
 	  function(available) {
 		console.log(available ? "YES!" : "NO");
 	  }
 	);
 }
-
+exports.onNavigatingTo = onNavigatingTo;
 /* ***********************************************************
  * According to guidelines, if you have a drawer on your page, you should always
  * have a button that opens it. Get a reference to the RadSideDrawer view and
@@ -44,6 +41,7 @@ function onDrawerButtonTap(args) {
     const sideDrawer = frameModule.topmost().getViewById("sideDrawer");
     sideDrawer.showDrawer();
 }
+exports.onDrawerButtonTap = onDrawerButtonTap;
 
 function listen(args){
 	console.info("listening...");
@@ -61,7 +59,14 @@ function listen(args){
         },
 	});
 }
-
 exports.listen = listen;
-exports.onNavigatingTo = onNavigatingTo;
-exports.onDrawerButtonTap = onDrawerButtonTap;
+
+function addQuote(args){
+	console.info(label.text);
+}
+exports.addQuote = addQuote;
+
+function lookForWord(args){
+	console.info(label.text);
+}
+exports.lookForWord = lookForWord;
