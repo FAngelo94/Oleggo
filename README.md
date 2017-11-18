@@ -21,3 +21,6 @@ https://github.com/NativeScript/nativescript-marketplace-demo
 ### Template used
 * https://github.com/NativeScript/template-drawer-navigation
 * https://github.com/EddyVerbruggen/nativescript-pluginshowcase
+
+### Translate Typescript in Javascript
+https://www.typescriptlang.org/play/
