@@ -20,27 +20,24 @@ function onNavigatingTo(args) {
     page.bindingContext = new HomeViewModel();
 	
 	//Open DB
-	if(!Sqlite.exists("MyDB"))
-	{
-		var db_promise = new Sqlite("MyDB", function(err, db) {
-			if (err) {
-			  console.info("We failed to open database", err);
-			} 
-			else 
-			{
-			  // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
-				console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-				db.version(function(err, ver) {
-					if (ver === 0) {
-					  db.execSQL("Create table Notes(when text, note text, book text)");
-					  db.version(1); // Sets the version to 1
-					}
-				});
-			}
-		});
-	}
-	else
-		console.info("Exist yet");
+	var db_promise = new Sqlite("MyDB", function(err, db) {
+		if (err) {
+		  console.info("We failed to open database", err);
+		} 
+		else 
+		{
+		  // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
+			console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+			db.version(function(err, ver) {
+				if (ver === 0) {
+				  db.execSQL("Create table Books(ISBN text, Title text, Author text, Pages text,ReadPages text, Bookmark text, State text,imageLink text)");
+				  db.execSQL("Create table Dictionary(Word text, Meaning text)");
+				  db.execSQL("Create table Quotes(ISBN text,Quote text, Page text)");
+				  db.version(1); // Sets the version to 1
+				}
+			});
+		}
+	});
 }
 
 /* ***********************************************************
