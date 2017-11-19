@@ -35,6 +35,12 @@ Feel free to customize layouts and components to change how your app drawer look
                 <Label row="0" col="0" text="&#xf005;" class="fa" />
                 <Label row="0" col="1" text="Add New Books" class="p-r-10" />
             </GridLayout>
+			
+			<GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'AddNote' ? ' selected': '') }}"
+                route="pages/add-note/add-note-page" tap="onNavigationItemTap">
+                <Label row="0" col="0" text="&#xf005;" class="fa" />
+                <Label row="0" col="1" text="Add New Note" class="p-r-10" />
+            </GridLayout>
 
             <StackLayout class="hr-light"></StackLayout>
 			
