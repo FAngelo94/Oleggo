@@ -7,7 +7,8 @@ Tables and camps in the tables:
     * Pages
     * ReadPages
     * Bookmark
-    *State
+    * State
+    * imageLink
     
 * ### Dictionary
     * __Word__
