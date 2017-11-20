@@ -12,6 +12,7 @@ Tables and camps in the tables:
     
 * ### Dictionary
     * __Word__
+    * __ISBN__
     * Meaning
     
 * ### Quotes
