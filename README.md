@@ -10,6 +10,8 @@ Mobile Application (Uni)
 * Audio   = https://github.com/EddyVerbruggen/nativescript-pluginshowcase   
 * Awesome font for menu of other things = http://fontawesome.io/cheatsheet/
 * Image Picker = https://github.com/NativeScript/nativescript-imagepicker - https://docs.nativescript.org/cookbook/image-source
+* ISBN search = https://openlibrary.org/developers/api      -
+                http://xisbn.worldcat.org/xisbnadmin/doc/api.htm
 
 ### Native Script app example
 
