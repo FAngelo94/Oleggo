@@ -26,7 +26,7 @@ module.exports = MyNotesViewModel;
 
 function readDB()
 {
-	var db_promise = new Sqlite("MyTable", function(err, db) {
+	var db_promise = new Sqlite("DB", function(err, db) {
 		if (err) {
 		  console.info("We failed to open database", err);
 		} else {

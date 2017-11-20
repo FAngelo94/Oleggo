@@ -6,12 +6,6 @@ Feel free to customize layouts and components to change how the tab view looks.
     <ScrollView row="0" col="0">
         <GridLayout rows="*" columns="*">
             <StackLayout class="form">
-                 
-				 
-				<StackLayout class="input-field" id="campo">
-					<TextView id="newNote" hint="Enter some notes" ></TextView>
-					<Button text="Add new Note" class="btn btn-primary btn-active" tap="addNote"/>
-				</StackLayout>
 				
 				<lv:RadListView items="{{ NoteList }}" >
 					<lv:RadListView.listViewLayout>

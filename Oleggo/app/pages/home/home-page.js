@@ -31,7 +31,7 @@ function onNavigatingTo(args) {
 			db.version(function(err, ver) {
 				if (ver === 0) {
 				  db.execSQL("Create table Books(ISBN text, Title text, Author text, Pages text,ReadPages text, Bookmark text, State text,imageLink text)");
-				  db.execSQL("Create table Dictionary(Word text, Meaning text)");
+				  db.execSQL("Create table Dictionary(ISBN text, Word text, Meaning text)");
 				  db.execSQL("Create table Quotes(ISBN text,Quote text, Page text)");
 				  db.version(1); // Sets the version to 1
 				}

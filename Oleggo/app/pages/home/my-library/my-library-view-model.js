@@ -70,4 +70,16 @@ function MyLibraryViewModel() {
     return viewModel;
 }
 
+function readDB()
+{
+	var db_promise = new Sqlite("DB", function(err, db) {
+		if (err) {
+		  console.info("We failed to open database", err);
+		} else {
+		  // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
+		  console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+		}
+	});
+}
+
 module.exports = MyLibraryViewModel;

@@ -27,26 +27,5 @@ function modifyNote(args) {
 	console.info(noteModified.text);
 }
 
-function addNote(args){
-	var db_promise = new Sqlite("MyDB", function(err, db) {
-		if (err) {
-		  console.info("We failed to open database", err);
-		} 
-		else 
-		{
-		  // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
-			console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-			
-		}
-	});
-	var newNote=page.getViewById("newNote");
-	console.info(newNote.text);
-	
-	const currentDate = new Date();
-	console.info(currentDate);
-	console.info(currentDate.toString().substring(0,21));
-}
-
-exports.addNote = addNote;
 exports.modifyNote = modifyNote;
 exports.onLoaded=onLoaded
