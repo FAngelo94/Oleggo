@@ -5,7 +5,6 @@ Tables and camps in the tables:
     * Title
     * Author
     * Pages
-    * ReadPages
     * Bookmark
     * State
     * imageLink
