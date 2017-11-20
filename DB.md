@@ -5,13 +5,13 @@ Tables and camps in the tables:
     * Title
     * Author
     * Pages
-    * ReadPages
     * Bookmark
-    * State
+    * State (0=read, 1=active, 2=main active)
     * imageLink
     
 * ### Dictionary
     * __Word__
+    * __ISBN__
     * Meaning
     
 * ### Quotes
