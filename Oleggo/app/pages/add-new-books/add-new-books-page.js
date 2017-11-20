@@ -4,6 +4,7 @@ const AddNewBooksViewModel = require("./add-new-books-view-model");
 var dialogs = require("ui/dialogs");
 var BarcodeScanner = require("nativescript-barcodescanner").BarcodeScanner;
 var http = require("http");
+var Sqlite = require( "nativescript-sqlite" );
 
 const defaultOptions = {
     timeout: 2500,
@@ -89,56 +90,68 @@ function readISBN(args) {
         }
         else {
             console.log('Book found: ' + JSON.stringify(book))
-            tryAddBook(book.title + "\nAuthor: " + book.authors)
+            tryAddBook(book.title + "\nAuthor: " + book.authors+"\nPage count:")
         }
     });
 }
 
 function tryAddBook(data) {
 
-    dialogs.alert({
+    dialogs.prompt({
         title: "Book response",
         message: data,
+        inputType: dialogs.inputType.number,
+        okButtonText: "continue"
+    }).then(function (r) {
+        console.log("Dialog result: " + r.result + ", text: " + r.text);
+        if(isNumeric(r.text)){
+            console.log("entre")
+            data.pageCount=r.text
+            addBookDB(data)
+        }
+        else{
+            errorAlert("Page number is not valid")
+        }      
+    });
+
+}
+function addBookDB(data) {
+        var db_promise = new Sqlite("MyDB", function(err, db) {
+            if (err) {
+              console.info("We failed to open database", err);
+              errorAlert("We failed to open database: "+ err)
+            } 
+            else 
+            {
+              // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
+                console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+                db.execSQL("INSERT INTO Books (ISBN,Title,Author,Pages,Bookmark,State,ImageLink) values (?,?,?,?,?,?,?,?)",
+                [data.ISBN,data.title,data.authors,data.pageCount,0,0,data.imageLinks.thumbnail],
+                function(err,row){
+                    console.log(err)
+                    console.log(row)      
+                })
+            }
+        });
+}
+
+function errorAlert(e){
+    dialogs.alert({
+        title: "Error",
+        message: e,
         okButtonText: "continue"
     }).then(() => {
         console.log("Alert closed");
     });
-
 }
-/* function jresolveGoogle(isbn) {
-	console.log("entre")
-	var requestOptions = Object.assign({}, defaultOptions, {
-	  url: GOOGLE_BOOKS_API_BASE + GOOGLE_BOOKS_API_BOOK + '?q=isbn:' + isbn
-	});
-	console.log(JSON.stringify(requestOptions))
-	http.request(requestOptions).then(function (response) {
-	  //// Argument (response) is HttpResponse!
-	  if (response.statusCode !== 200) {
-		console.log('wrong response code: ' + response.statusCode);
-	  }
-  
-	  var books = JSON.parse(body);
-  
-	  if (!books.totalItems) {
-		console.log('no books found with isbn: ' + isbn);
-	  }
-  
-	  // In very rare circumstances books.items[0] is undefined (see #2)
-	  if (!books.items || books.items.length === 0) {
-		console.log('no volume info found for book with isbn: ' + isbn);
-	  }
-  
-	  var book = books.items[0].volumeInfo;
-	  console.log( book);
-  }, function (e) {
-	  //// Argument (e) is Error!
-	  console.log(e);
-  });
-} */
+function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+}
 function _resolveOpenLibrary(isbn, callback) {
     console.log("entre")
     var standardize = function standardize(book) {
         var standardBook = {
+            "ISBN":isbn,
             'title': book.details.title,
             'publishedDate': book.details.publish_date,
             'authors': [],
@@ -227,6 +240,7 @@ function _resolveWorldcat(isbn, callback) {
 
     var standardize = function standardize(book) {
         var standardBook = {
+            "ISBN":isbn,
             'title': book.title,
             'publishedDate': book.year,
             'authors': [],
