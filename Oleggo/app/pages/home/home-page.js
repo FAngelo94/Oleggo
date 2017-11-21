@@ -1,43 +1,44 @@
 const frameModule = require("ui/frame");
-var Sqlite = require( "nativescript-sqlite" );
+var Sqlite = require("nativescript-sqlite");
 const HomeViewModel = require("./home-view-model");
 
-
 /* ***********************************************************
-* Use the "onNavigatingTo" handler to initialize the page binding context.
-*************************************************************/
+ * Use the "onNavigatingTo" handler to initialize the page binding context.
+ *************************************************************/
 function onNavigatingTo(args) {
     /* ***********************************************************
-    * The "onNavigatingTo" event handler lets you detect if the user navigated with a back button.
-    * Skipping the re-initialization on back navigation means the user will see the
-    * page in the same data state that he left it in before navigating.
-    *************************************************************/
+     * The "onNavigatingTo" event handler lets you detect if the user navigated with a back button.
+     * Skipping the re-initialization on back navigation means the user will see the
+     * page in the same data state that he left it in before navigating.
+     *************************************************************/
     if (args.isBackNavigation) {
         return;
     }
 
     const page = args.object;
-    page.bindingContext = new HomeViewModel();
-	
-	//Open DB
-	var db_promise = new Sqlite("MyDB", function(err, db) {
-		if (err) {
-		  console.info("We failed to open database", err);
-		} 
-		else 
-		{
-		  // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
-			console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-			db.version(function(err, ver) {
-				if (ver === 0) {
-				  db.execSQL("Create table Books(ISBN text, Title text, Author text, Pages text,ReadPages text, Bookmark text, State text,imageLink text)");
-				  db.execSQL("Create table Dictionary(ISBN text, Word text, Meaning text)");
-				  db.execSQL("Create table Quotes(ISBN text,Quote text, Page text)");
-				  db.version(1); // Sets the version to 1
-				}
-			});
-		}
-	});
+	page.bindingContext = new HomeViewModel();
+    (new Sqlite("OleggoDB.db")).then(db => {
+        db.execSQL("CREATE TABLE IF NOT EXISTS books(id INTEGER PRIMARY KEY AUTOINCREMENT, ISBN TEXT, title TEXT, author TEXT, pages TEXT, bookmark TEXT, state TEXT, imagelink TEXT)").then(id => {
+            console.log("table  Books created")
+            db.execSQL("CREATE TABLE IF NOT EXISTS dictionary(id INTEGER PRIMARY KEY AUTOINCREMENT, isbn TEXT, word TEXT, meaning TEXT)").then(id => {
+                console.log("table  Dictionary created")
+
+                db.execSQL("CREATE TABLE IF NOT EXISTS quotes(id INTEGER PRIMARY KEY AUTOINCREMENT, isbn TEXT, quote TEXT, page TEXT)").then(id => {
+                    console.log("table  Quotes created")
+
+                }, error => {
+                    console.log("CREATE TABLE ERROR", error);
+                });
+
+            }, error => {
+                console.log("CREATE TABLE ERROR", error);
+            });
+        }, error => {
+            console.log("CREATE TABLE ERROR", error);
+        });
+    }, error => {
+        console.log("OPEN DB ERROR", error);
+    });	
 }
 
 /* ***********************************************************
@@ -66,4 +67,3 @@ function onSelectedIndexChanged(args) {
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
 exports.onSelectedIndexChanged = onSelectedIndexChanged;
-

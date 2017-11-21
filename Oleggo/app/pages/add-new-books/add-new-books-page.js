@@ -4,7 +4,7 @@ const AddNewBooksViewModel = require("./add-new-books-view-model");
 var dialogs = require("ui/dialogs");
 var BarcodeScanner = require("nativescript-barcodescanner").BarcodeScanner;
 var http = require("http");
-var Sqlite = require( "nativescript-sqlite" );
+var Sqlite = require("nativescript-sqlite");
 
 const defaultOptions = {
     timeout: 2500,
@@ -83,19 +83,22 @@ function readISBN(args) {
     let page = args.object.page;
     let isbn = viewModule.getViewById(page, "isbn");
     console.info(isbn.text);
-    resolve("9780545010221", (err, book) => {
+    if(isbn.text!=""){resolve(isbn.text, (err, book) => {
         if (err) {
             console.log('Book not found' + err)
             tryAddBook(err)
         }
         else {
             console.log('Book found: ' + JSON.stringify(book))
-            tryAddBook(book.title + "\nAuthor: " + book.authors+"\nPage count:")
+            tryAddBook(book.title + "\nAuthor: " + book.authors + "\nPage count:",book)
         }
-    });
+    });}
+    else{
+        errorAlert("Enter a ISBN first")
+    }
 }
 
-function tryAddBook(data) {
+function tryAddBook(data, book) {
 
     dialogs.prompt({
         title: "Book response",
@@ -104,38 +107,41 @@ function tryAddBook(data) {
         okButtonText: "continue"
     }).then(function (r) {
         console.log("Dialog result: " + r.result + ", text: " + r.text);
-        if(isNumeric(r.text)){
-            console.log("entre")
-            data.pageCount=r.text
-            addBookDB(data)
+        if (isNumeric(r.text)) {
+            book.pageCount = r.text
+            addBookDB(book)
         }
-        else{
+        else {
             errorAlert("Page number is not valid")
-        }      
+        }
     });
 
 }
+
 function addBookDB(data) {
-        var db_promise = new Sqlite("MyDB", function(err, db) {
-            if (err) {
-              console.info("We failed to open database", err);
-              errorAlert("We failed to open database: "+ err)
-            } 
-            else 
-            {
-              // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
-                console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-                db.execSQL("INSERT INTO Books (ISBN,Title,Author,Pages,Bookmark,State,ImageLink) values (?,?,?,?,?,?,?,?)",
-                [data.ISBN,data.title,data.authors,data.pageCount,0,0,data.imageLinks.thumbnail],
-                function(err,row){
-                    console.log(err)
-                    console.log(row)      
-                })
-            }
+    (new Sqlite("OleggoDB.db")).then(db => {
+        // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
+        console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+        db.execSQL("INSERT INTO books (ISBN,title,author,pages,bookmark,state,imagelink) VALUES (?, ?, ?, ?, ?, ?, ?)", [data.ISBN, data.title, data.authors, data.pageCount, "0", "0", data.imageLinks.thumbnail]).then(id => {
+            console.log("INSERT RESULT", id);
+            db.all("SELECT * FROM books").then(rows => {
+                for(var row in rows) {
+                    console.log("RESULT", rows[row]);
+                }
+            }, error => {
+                console.log("SELECT ERROR", error);
+            });
+        }, error => {
+            console.log("INSERT ERROR", error);
         });
+
+    }, err => {
+        console.info("Failed to open database", err);
+        errorAlert("Failed to open database: " + err)
+    })
 }
 
-function errorAlert(e){
+function errorAlert(e) {
     dialogs.alert({
         title: "Error",
         message: e,
@@ -144,14 +150,16 @@ function errorAlert(e){
         console.log("Alert closed");
     });
 }
+
 function isNumeric(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
 }
+
 function _resolveOpenLibrary(isbn, callback) {
     console.log("entre")
     var standardize = function standardize(book) {
         var standardBook = {
-            "ISBN":isbn,
+            "ISBN": isbn,
             'title': book.details.title,
             'publishedDate': book.details.publish_date,
             'authors': [],
@@ -240,7 +248,7 @@ function _resolveWorldcat(isbn, callback) {
 
     var standardize = function standardize(book) {
         var standardBook = {
-            "ISBN":isbn,
+            "ISBN": isbn,
             'title': book.title,
             'publishedDate': book.year,
             'authors': [],

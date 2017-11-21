@@ -3,7 +3,7 @@ const ObservableArray = require("data/observable-array").ObservableArray;
 var Sqlite = require( "nativescript-sqlite" );
 
 function MyNotesViewModel() {
-	readDB();
+	//readDB();
 	//Read from DB and insert in an ObservableArray
 	var w="Saved at 10:30 PM";
 	var n="We try a note";
@@ -26,18 +26,18 @@ module.exports = MyNotesViewModel;
 
 function readDB()
 {
-	var db_promise = new Sqlite("DB", function(err, db) {
+/* 	var db_promise = new Sqlite("DB", function(err, db) {
 		if (err) {
 		  console.info("We failed to open database", err);
 		} else {
 		  // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
 		  console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
 		}
-	});
+	}); */
 }
 
 function saveChanges(){
-	console.info("save changes");
+	//console.info("save changes");
 }
 
 module.exports = saveChanges;

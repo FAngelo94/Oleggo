@@ -9,7 +9,7 @@ function onLoaded(args) {
 }
 
 function modifyNote(args) {
-	var db_promise = new Sqlite("MyDB", function(err, db) {
+	/* var db_promise = new Sqlite("MyDB", function(err, db) {
 		if (err) {
 		  console.info("We failed to open database", err);
 		} 
@@ -21,7 +21,7 @@ function modifyNote(args) {
 		}
 	});
 	
-	console.info("Changes are saved!");
+	console.info("Changes are saved!"); */
 	console.info(args.object.id);
 	var noteModified=page.getViewById(args.object.id+"T");
 	console.info(noteModified.text);
