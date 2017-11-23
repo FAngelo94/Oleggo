@@ -6,7 +6,7 @@ Tables and camps in the tables:
     * Author
     * Pages
     * Bookmark
-    * State (0=read, 1=active, 2=main active)
+    * State (0=passive 1=active, 2=main active, 3=read)
     * imageLink
     
 * ### Dictionary
