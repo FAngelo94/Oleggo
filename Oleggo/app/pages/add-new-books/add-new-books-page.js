@@ -83,49 +83,66 @@ function readISBN(args) {
     let page = args.object.page;
     let isbn = viewModule.getViewById(page, "isbn");
     console.info(isbn.text);
-    if(isbn.text!=""){resolve(isbn.text, (err, book) => {
-        if (err) {
-            console.log('Book not found' + err)
-            tryAddBook(err)
-        }
-        else {
-            console.log('Book found: ' + JSON.stringify(book))
-            tryAddBook(book.title + "\nAuthor: " + book.authors + "\nPage count:",book)
-        }
-    });}
-    else{
+    if (isbn.text != "") {
+        resolve(isbn.text, (err, book) => {
+            if (err) {
+                console.log('Book not found' + err)
+                tryAddBook(err)
+            }
+            else {
+                console.log('Book found: ' + JSON.stringify(book))
+                tryAddBook(book.title + "\nAuthor: " + book.authors + "\nPage count:", book);
+            }
+        });
+    }
+    else {
         errorAlert("Enter a ISBN first")
     }
 }
 
 function tryAddBook(data, book) {
 
-    dialogs.prompt({
+    let content = {
         title: "Book response",
         message: data,
+        defaultText: "Page count",
         inputType: dialogs.inputType.number,
-        okButtonText: "continue"
-    }).then(function (r) {
+        okButtonText: "continue",
+        cancelButtonText: "cancel"
+    };
+
+    console.log(book.pageCount);
+
+    if (book.pageCount > 0) {
+        console.log("book ok");
+        content.defaultText = book.pageCount.toString();
+    }
+    else {
+        console.log("book not pages");
+    }
+
+    dialogs.prompt(content).then((r) => {
         console.log("Dialog result: " + r.result + ", text: " + r.text);
-        if (isNumeric(r.text)) {
-            book.pageCount = r.text
-            addBookDB(book)
-        }
-        else {
-            errorAlert("Page number is not valid")
+        if (r.result === true) {
+            if (isNumeric(r.text)) {
+                book.pageCount = r.text;
+                addBookDB(book);
+            }
+            else {
+                errorAlert("Page number is not valid");
+            }
         }
     });
-
 }
 
 function addBookDB(data) {
-    (new Sqlite("OleggoDB.db")).then(db => {
+  (new Sqlite("OleggoDB.db")).then(db => {
         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
         console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
         db.execSQL("INSERT INTO books (ISBN,title,author,pages,bookmark,state,imagelink) VALUES (?, ?, ?, ?, ?, ?, ?)", [data.ISBN, data.title, data.authors, data.pageCount, "0", "0", data.imageLinks.thumbnail]).then(id => {
             console.log("INSERT RESULT", id);
             db.all("SELECT * FROM books").then(rows => {
-                for(var row in rows) {
+                for (var row in rows) {
                     console.log("RESULT", rows[row]);
                 }
             }, error => {
@@ -154,9 +171,11 @@ function errorAlert(e) {
 function isNumeric(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
 }
-
+/* 
+good books
+    9780307474278
+*/
 function _resolveOpenLibrary(isbn, callback) {
-    console.log("entre")
     var standardize = function standardize(book) {
         var standardBook = {
             "ISBN": isbn,
@@ -230,7 +249,7 @@ function _resolveOpenLibrary(isbn, callback) {
 
         var books = JSON.parse(response.content);
         var book = books['ISBN:' + isbn];
-        console.log(JSON.stringify(book))
+        console.log("open" + JSON.stringify(books))
 
         if (!book) {
             return callback(new Error('no books found with isbn: ' + isbn));
@@ -294,6 +313,7 @@ function _resolveWorldcat(isbn, callback) {
         }
 
         let books = JSON.parse(response.content);
+        console.log("cat" + JSON.stringify(books))
 
         if (books.stat !== "ok") {
             return callback(new Error("no books found with isbn: " + isbn));
@@ -310,7 +330,7 @@ function _resolveWorldcat(isbn, callback) {
 
 function resolve(isbn, callback) {
 
-    return _resolveOpenLibrary(isbn, function (err, book) {
+    return _resolveOpenLibrary(isbn, (err, book) => {
         if (err) {
             return _resolveWorldcat(isbn, callback);
         }
