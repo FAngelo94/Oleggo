@@ -50,6 +50,9 @@ function onDrawerButtonTap(args) {
     const sideDrawer = frameModule.topmost().getViewById("sideDrawer");
     sideDrawer.showDrawer();
 }
+function onDelete() {
+    //console.log("hola")
+}
 
 /* ***********************************************************
  * Get the current tab view title and set it as an ActionBar title.
@@ -63,7 +66,7 @@ function onSelectedIndexChanged(args) {
 
     bindingContext.set("title", selectedTabViewItem.title);
 }
-
+exports.onDelete = onDelete;
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
 exports.onSelectedIndexChanged = onSelectedIndexChanged;

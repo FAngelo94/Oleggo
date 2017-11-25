@@ -86,18 +86,47 @@ function readISBN(args) {
     if (isbn.text != "") {
         resolve(isbn.text, (err, book) => {
             if (err) {
-                console.log('Book not found' + err)
-                tryAddBook(err)
+                console.log('Book not found ' + err)
+                errorAlert(err)
             }
             else {
                 console.log('Book found: ' + JSON.stringify(book))
-                tryAddBook(book.title + "\nAuthor: " + book.authors + "\nPage count:", book);
+                if (book.authors == "Unknown") {
+                    tryAddAuthor(book.title + "\nAuthor: ", book);
+                }
+                else
+                    tryAddBook(book.title + "\nAuthor: " + book.authors + "\nPage count:", book);
             }
         });
     }
     else {
         errorAlert("Enter a ISBN first")
     }
+}
+
+function tryAddAuthor(data, book) {
+
+    let content = {
+        title: "Book response",
+        message: data,
+        defaultText: "Author",
+        inputType: dialogs.inputType.text,
+        okButtonText: "continue",
+        cancelButtonText: "cancel"
+    };
+
+    dialogs.prompt(content).then((r) => {
+        console.log("Dialog result: " + r.result + ", text: " + r.text);
+        if (r.result === true) {
+            if (r.text !='') {
+                book.authors = r.text;
+                tryAddBook(book.title + "\nAuthor: " + book.authors + "\nPage count:", book);
+            }
+            else {
+                errorAlert("Author is not valid");
+            }
+        }
+    });
 }
 
 function tryAddBook(data, book) {
@@ -126,6 +155,12 @@ function tryAddBook(data, book) {
         if (r.result === true) {
             if (isNumeric(r.text)) {
                 book.pageCount = r.text;
+                if (book.imageLink.includes("S.jpg")) {
+                    console.log("si")
+                    book.imageLink = book.imageLink.replace("S.jpg", 'M.jpg');
+
+                }
+
                 addBookDB(book);
             }
             else {
@@ -136,10 +171,10 @@ function tryAddBook(data, book) {
 }
 
 function addBookDB(data) {
-  (new Sqlite("OleggoDB.db")).then(db => {
+    (new Sqlite("OleggoDB.db")).then(db => {
         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
         console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-        db.execSQL("INSERT INTO books (ISBN,title,author,pages,bookmark,state,imagelink) VALUES (?, ?, ?, ?, ?, ?, ?)", [data.ISBN, data.title, data.authors, data.pageCount, "0", "0", data.imageLinks.thumbnail]).then(id => {
+        db.execSQL("INSERT INTO books (ISBN,title,author,pages,bookmark,state,imagelink) VALUES (?, ?, ?, ?, ?, ?, ?)", [data.ISBN, data.title, data.authors, data.pageCount, "0", "0", data.imageLink]).then(id => {
             console.log("INSERT RESULT", id);
             db.all("SELECT * FROM books").then(rows => {
                 for (var row in rows) {
@@ -174,6 +209,9 @@ function isNumeric(n) {
 /* 
 good books
     9780307474278
+    9780545139700
+    9780241968581
+    9780544003415
 */
 function _resolveOpenLibrary(isbn, callback) {
     var standardize = function standardize(book) {
@@ -187,10 +225,7 @@ function _resolveOpenLibrary(isbn, callback) {
             'pageCount': book.details.number_of_pages,
             'printType': 'BOOK',
             'categories': [],
-            'imageLinks': {
-                'smallThumbnail': book.thumbnail_url,
-                'thumbnail': book.thumbnail_url
-            },
+            'imageLink': book.thumbnail_url,
             'previewLink': book.preview_url,
             'infoLink': book.info_url
         };
@@ -208,8 +243,7 @@ function _resolveOpenLibrary(isbn, callback) {
             });
         }
         else {
-            if (book.details.publishers)
-                standardBook.authors = book.details.publishers[0]
+            standardBook.authors = 'Unknown';
         }
 
         if (book.details.languages) {
@@ -276,12 +310,15 @@ function _resolveWorldcat(isbn, callback) {
             'pageCount': null,
             'printType': 'BOOK',
             'categories': [],
-            'imageLinks': {},
+            'imageLink': "~/images/empty.png",
             'publisher': book.publisher
         };
 
         if (book.author) {
             standardBook.authors.push(book.author);
+        }
+        else {
+            standardBook.authors = 'Unknown';
         }
 
         switch (book.lang) {

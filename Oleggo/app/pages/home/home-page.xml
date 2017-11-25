@@ -25,13 +25,13 @@
         </ActionItem>
 		
 		<ActionItem 
-			icon="res://menu"
+			icon="res://logo"
 			tap="onDelete"
 			ios.systemIcon="16" 
 			ios.position="right" 
 			android.position="right"/>
 		
-        <Label class="action-bar-title" text="Home"></Label>
+        <Label class="action-bar-title" text="Oleggo"></Label>
     </ActionBar>
 
     <!--
@@ -76,32 +76,24 @@
 			Learn more about the TabView component in this documentation article:
 			http://docs.nativescript.org/cookbook/ui/tab-view
 			-->
-			<TabView selectedIndexChanged="onSelectedIndexChanged">
-			  <TabView.items>
-				<!--
-				To add a new TabView item, simply add a new <TabViewItem> component to the <TabView.items> collection.
-				Assign the <TabViewItem> component a "title" that will be displayed as the text of the tab item button. 
-				-->
-				<TabViewItem title="My Notes">
-				  <TabViewItem.view>
-					<!--
-					You can declare the layout and components of each view inside the <TabViewItem.view> directly.
-					In this case the view contents and back end logic are separated in custom components.
-					You can find these components in their respective folders /home, /browse etc.
-					-->
-					<my-notes:my-notes/>
-				  </TabViewItem.view>
-				</TabViewItem>
-				
-				<TabViewItem title="My Library">
-				  <TabViewItem.view>
-					 
-						<my-library:my-library/>
-					 
-				  </TabViewItem.view>
-				</TabViewItem>
-			  </TabView.items>
-			</TabView> 
+            <TabView selectedIndexChanged="onSelectedIndexChanged">
+                <TabView.items>
+                <!--
+                To add a new TabView item, simply add a new <TabViewItem> component to the <TabView.items> collection.
+                Assign the <TabViewItem> component a "title" that will be displayed as the text of the tab item button. 
+                -->
+                    <TabViewItem title="My Library">
+                        <TabViewItem.view>
+                            <my-library:my-library/>
+                        </TabViewItem.view>
+                    </TabViewItem>
+                    <TabViewItem title="My Notes">
+                        <TabViewItem.view>
+                            <my-notes:my-notes/>
+                        </TabViewItem.view>
+                    </TabViewItem>
+                </TabView.items>
+            </TabView> 
         </nsDrawer:RadSideDrawer.mainContent>
     </nsDrawer:RadSideDrawer>
 </Page>

@@ -1,0 +1,26 @@
+
+Button {
+    height: 40;
+    width: 40;
+    border-radius: 50%;
+    margin:0 15 0 15;
+    background-color: #FF4082;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+Image {
+    height: 120;
+    margin: 5 5 0 5;
+}
+.BookTitle {
+    padding:20 0 0 0;
+    font-size: 20;
+    color:white;
+}
+
+.BookAuthor {
+    padding:0 0 25 0;
+    color:#F98735;
+    font-size: 18;
+}
