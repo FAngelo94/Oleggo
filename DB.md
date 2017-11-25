@@ -18,3 +18,4 @@ Tables and camps in the tables:
     * __ISBN__
     * Quote
     * Page
+    * Favorite
