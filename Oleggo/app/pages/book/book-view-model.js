@@ -31,7 +31,13 @@ function readBooksDB(database, isbn) {
         else {
             for (var row in rows) {
                 console.log("RESULT", rows[row]);
+               
                 var res = (rows[row].toString()).split(",");
+                var background
+                if (res[7].includes("M.jpg")) {
+                    console.log("si")
+                    background = res[7].replace("M.jpg", 'L.jpg');
+                }
                 book = {
                     id: res[0],
                     ISBN: res[1],
@@ -41,6 +47,7 @@ function readBooksDB(database, isbn) {
                     bookmark: res[5],
                     state: res[6],
                     imagelink: res[7],
+                    background:background,
                     progress:Math.round((Number(res[5])/Number(res[4]))*100)
                 }
             }
