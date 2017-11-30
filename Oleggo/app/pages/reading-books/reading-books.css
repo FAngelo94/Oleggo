@@ -4,7 +4,6 @@
 }
 
 .scroll-pane {
-    background-color: rgb(204, 248, 242);
     width: 120;
     height: 240;
     margin: 10;
@@ -17,4 +16,25 @@ Button {
     background-color: #FF4082;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.BookContainer {
+    height: 40;
+    background-color: rgb(255, 255, 255);
+    padding: 2 8;
+}
+
+.BookTitle {
+    font-size: 12;
+    color: #434B5B;
+}
+
+.BookAuthor {
+    font-size: 10;
+    color: #F98735;;
+}
+
+Image {
+    margin: 1.25 2.5 0 2.5;
+    border-radius: 5;
 }

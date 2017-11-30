@@ -6,6 +6,7 @@
     navigatingTo="onNavigatingTo"  
     xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
     xmlns:myDrawer="shared/my-drawer"
+    xmlns:lv="nativescript-pro-ui/listview"
     xmlns="http://www.nativescript.org/tns.xsd">
 
     <ActionBar class="action-bar">
@@ -62,24 +63,25 @@
         -->
         <nsDrawer:RadSideDrawer.mainContent>
             <StackLayout orientation="vertical">
-            <ScrollView orientation="horizontal" height="220">
-                <StackLayout orientation="horizontal" class="scroll-menu" style="padding:40 0 30 0; background-color:rgb(34, 84, 124)">
+            <ScrollView orientation="horizontal">
+            <lv:RadListView items="{{ BookList }}">
+                <lv:RadListView.listViewLayout>
+                    <lv:ListViewLinearLayout itemHeight="144" scrollDirection="Horizontal" style="padding:40 0 30 0; background-color:rgb(34, 84, 124)"/>
+                </lv:RadListView.listViewLayout>
+                <lv:RadListView.itemTemplate>
                     <StackLayout class="scroll-pane">
-                        <Label text="Cool Slide"  style="horizontal-align: center;"/>                    
+                        <GridLayout rows="*,auto">
+                            <StackLayout class="btn-img" row="0" orientation="horizontal" tap="onImageBookTap" id="{{ISBN}}">
+                                <Image src="{{ imagelink }}" stretch="aspectFill"/>
+                            </StackLayout>
+                            <StackLayout row="1" class="BookContainer" orientation="vertical">
+                                <Label text="{{ title }}" class="BookTitle"/>
+                                <Label text="{{ author, 'by ' + author }}" class="BookAuthor"/>
+                            </StackLayout>
+                        </GridLayout>
                     </StackLayout>
-                    <StackLayout class="scroll-pane">
-                        <Button text="Button" />                  
-                    </StackLayout>
-                    <StackLayout class="scroll-pane">
-                        <Button text="Button" />                  
-                    </StackLayout>
-                    <StackLayout class="scroll-pane">
-                        <Button text="Button" />                  
-                    </StackLayout>
-                    <StackLayout class="scroll-pane">
-                        <Button text="Button" />                  
-                    </StackLayout>
-                </StackLayout>
+                </lv:RadListView.itemTemplate>
+            </lv:RadListView> 
             </ScrollView>
             <Label text="Tittle" style="padding:40 0 10 0;horizontal-align: center;"/>
             <Label text="Author" style="padding:0 0 30 0;horizontal-align: center;"/>

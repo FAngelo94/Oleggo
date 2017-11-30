@@ -1,11 +1,22 @@
 const frameModule = require("ui/frame");
-
 const ReadingBooksViewModel = require("./reading-books-view-model");
+var Sqlite = require("nativescript-sqlite");
 
-exports.other = function () {
-    //frameModule.topmost().navigate("views/library/library");
+let page;
+
+
+exports.loaded = function (args) {
+    page = args.object;
+    (new Sqlite("OleggoDB.db")).then((db) => {
+        console.log("gotDB")
+        var temp = new ReadingBooksViewModel(db)
+        page.bindingContext = temp
+        console.log(JSON.stringify(temp))
+    }, err => {
+        console.info("Failed to open database", err);
+        errorAlert("Failed to open database: " + err)
+    })
 };
-
 /* ***********************************************************
 * Use the "onNavigatingTo" handler to initialize the page binding context.
 *************************************************************/
@@ -18,9 +29,6 @@ function onNavigatingTo(args) {
     if (args.isBackNavigation) {
         return;
     }
-
-    const page = args.object;
-    page.bindingContext = new ReadingBooksViewModel();
 }
 
 /* ***********************************************************

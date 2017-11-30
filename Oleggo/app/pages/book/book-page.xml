@@ -90,18 +90,16 @@
                                                         
                                 <StackLayout orientation="horizontal" style="horizontal-align: center; padding:0 0 10 0;">
                                     <Button style="background-image:res://logo;" tap="onProgressButtonTap"/>   
-                                    <Button text="B" tap="other" /> 
+                                    <Button text="B" id="btnState" tap="onStateButtonTap" /> 
                                     <Button text="B" />
                                 </StackLayout>
 
-                                <StackLayout orientation="horizontal" style="horizontal-align: center;">
-                                    <Label text="{{Book.bookmark}}"/>
-                                    <Label text="/"/>
-                                    <Label text="{{Book.pages}}" style="padding:0 10 0 0"/>
-                                    <Progress value="{{Book.progress}}" width="50%"/>
-                                    <Label text="{{Book.bookmark}}" style="padding:0 0 0 10"/>
-                                    <Label text="%"/>
-                                    
+                                <Label text="{{Book.pages +' pages'}}" style="text-align:right;padding:0;margin:0;font-size: 12;" width="75%"/>
+
+                                <StackLayout orientation="horizontal" style="horizontal-align:center;margin:0" width="75%">
+                                    <Label text="{{Book.progress}}" style="text-align:right;font-weight:bold" width="12%"/>
+                                    <Label text="%" style="font-size: 16;padding:0 5 0 0;font-weight:bold" width="10%"/>
+                                    <Progress value="{{Book.progress}}" width="78%" /> 
                                 </StackLayout>
 
                             </StackLayout>

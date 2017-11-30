@@ -2,24 +2,72 @@ const observableModule = require("data/observable");
 const ObservableArray = require("data/observable-array").ObservableArray;
 var Sqlite = require("nativescript-sqlite");
 
+let viewModeldata = {
+    Book: {},
+    Quotes: new ObservableArray([]),
+    Dictionary: new ObservableArray([]),
+    QuotesLength:{},
+    DiccLength:{}
+}
+
 function BookViewModel(database, isbn) {
     console.log("Model");
-    const viewModel = observableModule.fromObject({
-        Book: {},
-        Quotes: new ObservableArray([]),
-        Dictionary: new ObservableArray([]),
-        QuotesLength:{},
-        DiccLength:{}
-    });
+    
     //viewModel.BookList = viewModel.BookList.concat(books2);
     var temp = readBooksDB(database, isbn)
-    viewModel.Quotes=viewModel.Quotes.concat(readQuotesDB(database, isbn))
-    viewModel.Dictionary=viewModel.Dictionary.concat(readDiccDB(database, isbn))
-    viewModel.DiccLength=viewModel.Dictionary.length
-    viewModel.QuotesLength=viewModel.Quotes.length
-    viewModel.Book = temp
+    viewModeldata.Quotes=viewModeldata.Quotes.concat(readQuotesDB(database, isbn))
+    viewModeldata.Dictionary=viewModeldata.Dictionary.concat(readDiccDB(database, isbn))
+    viewModeldata.DiccLength=viewModeldata.Dictionary.length
+    viewModeldata.QuotesLength=viewModeldata.Quotes.length
+    viewModeldata.Book = temp
+    console.log(JSON.stringify(viewModeldata))
+    var viewModel= observableModule.fromObjectRecursive(viewModeldata)
+    console.dir(viewModel)
+    viewModel.updateBookmark= function (data) {
+           (new Sqlite("OleggoDB.db")).then(db => {
+            // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
+            console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+            db.execSQL("UPDATE books SET bookmark=? WHERE id=?", [data.bookmark,data.id]).then(id => {
+                console.log("UPDATE RESULT", id);
+                db.all("SELECT * FROM books").then(rows => {
+                    for (var row in rows) {
+                        console.log("RESULT", rows[row]);
+                    }
+                }, error => {
+                    console.log("SELECT ERROR", error);
+                });
+            }, error => {
+                console.log("INSERT ERROR", error);
+            });
+    
+        }, err => {
+            console.info("Failed to open database", err);
+        }) 
+    }
+    viewModel.updateState= function (data) {
+        (new Sqlite("OleggoDB.db")).then(db => {
+         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
+         console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+         db.execSQL("UPDATE books SET state=? WHERE id=?", [data.state,data.id]).then(id => {
+             console.log("UPDATE RESULT", id);
+             db.all("SELECT * FROM books WHERE id=?",[data.id]).then(rows => {
+                 for (var row in rows) {
+                     console.log("RESULT", rows[row]);
+                 }
+             }, error => {
+                 console.log("SELECT ERROR", error);
+             });
+         }, error => {
+             console.log("INSERT ERROR", error);
+         });
+ 
+     }, err => {
+         console.info("Failed to open database", err);
+     }) 
+ }
     return viewModel;
 }
+
 
 function readBooksDB(database, isbn) {
     var book = {}
@@ -118,4 +166,4 @@ function readDiccDB(database, isbn) {
     })
     return dicc;
 }
-module.exports = BookViewModel;
+module.exports.BookViewModel = BookViewModel;

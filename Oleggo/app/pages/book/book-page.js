@@ -2,19 +2,26 @@ const frameModule = require("ui/frame");
 var Sqlite = require("nativescript-sqlite");
 const BookViewModel = require("./book-view-model");
 
-exports.other = function () {
-    //frameModule.topmost().navigate("views/library/library");
-};
 let page;
+let dataBook;
 
 exports.loaded = function (args) {
     page = args.object;
     (new Sqlite("OleggoDB.db")).then((db) => {
-        var temp = new BookViewModel(db, page.navigationContext.bookISBN)
+        var temp = BookViewModel.BookViewModel(db, page.navigationContext.bookISBN)
         console.log(JSON.stringify(temp.Book))
         console.log(JSON.stringify(temp.Dictionary))
         console.log(JSON.stringify(temp.Quotes))
+        dataBook=temp
         page.bindingContext = temp
+        console.log(JSON.stringify(temp))
+        if(dataBook.Book.state==0){
+            page.getViewById("btnState").style = "background-color:#FF4082"
+        }
+        else{
+            page.getViewById("btnState").style = "background-color:white"
+        }
+
     }, err => {
         console.info("Failed to open database", err);
         errorAlert("Failed to open database: " + err)
@@ -64,32 +71,40 @@ function onDrawerButtonTap(args) {
     const sideDrawer = frameModule.topmost().getViewById("sideDrawer");
     sideDrawer.showDrawer();
 }
+function onStateButtonTap(args){
+
+    
+    if(dataBook.Book.state==1){
+        dataBook.Book.state = 0
+        page.getViewById("btnState").style = "background-color:#FF4082"
+    }
+    else{
+        dataBook.Book.state = 1
+        page.getViewById("btnState").style = "background-color:white"
+    }
+    console.log(dataBook.Book.state)  
+    dataBook.updateState(dataBook.Book)
+}
 
 function onProgressButtonTap(args) {
-    console.log("hello bitch")
-    let isbn = "1234"
-    /*  var topmost = frameModule.topmost();
-     var naviagationOptions={
-         moduleName:"pages/book/book-progress/book-progress-page",
-         context:{
-             bookISBN:isbn
-         },
-         transition: {
-             name: "fade"
-         }
-     }
-     topmost.navigate(naviagationOptions);  */
 
     var fullscreen = true
     var context=page.bindingContext._map.Book
 
-    page.showModal("pages/book-progress/book-progress-page", context, function (page, set) {
-        console.log(page + "/" + set);
-       // label.text = username + "/" + password;
+    page.showModal("pages/book-progress/book-progress-page", context, function (newBookmark, set) {
+        console.log(newBookmark + "/" + set);
+        if(set===true){
+            dataBook.Book.bookmark=newBookmark
+            dataBook.Book.progress=Math.round((newBookmark/dataBook.Book.pages)*100)
+            console.log(JSON.stringify(page.bindingContext._map))
+            dataBook.updateBookmark(dataBook.Book)
+        }
+            
     }, fullscreen);
 }
 exports.onProgressButtonTap = onProgressButtonTap;
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
 
+exports.onStateButtonTap = onStateButtonTap;
 exports.onSelectedIndexChanged = onSelectedIndexChanged;
