@@ -6,7 +6,7 @@ Tables and camps in the tables:
     * Author
     * Pages
     * Bookmark
-    * State (0=passive 1=active, 2=main active, 3=read)
+    * State (0=passive, 1=active, 2=main active, 3=read)
     * imageLink
     
 * ### Dictionary
@@ -18,4 +18,5 @@ Tables and camps in the tables:
     * __ISBN__
     * Quote
     * Page
-    * Favorite
+    * Favorite (0=Not Favorite[defalut],   1=Favorite)
+    * When
