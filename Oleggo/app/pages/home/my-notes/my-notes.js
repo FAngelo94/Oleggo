@@ -1,11 +1,18 @@
-var MyNotesViewModel = require("./my-notes-view-model");
+const MyNotesViewModel = require("./my-notes-view-model");
 var Sqlite = require( "nativescript-sqlite" );
 
 var page;
 function onLoaded(args) {
 	page = args.object;
-    page.bindingContext = MyNotesViewModel();
-	console.info(page);
+	(new Sqlite("OleggoDB.db")).then((db) => {
+         console.log("gotDB")
+         var temp = new MyNotesViewModel(db)
+		 console.info("temp="+temp)
+         page.bindingContext = temp
+     }, err => {
+         console.info("Failed to open database", err)
+         errorAlert("Failed to open database: " + err)
+     })
 }
 
 function modifyNote(args) {
@@ -22,10 +29,10 @@ function modifyNote(args) {
 	});
 	
 	console.info("Changes are saved!"); */
-	console.info(args.object.id);
-	var noteModified=page.getViewById(args.object.id+"T");
+	console.info(args.object.id)
+	var noteModified=page.getViewById(args.object.id+"T")
 	console.info(noteModified.text);
 }
 
-exports.modifyNote = modifyNote;
+exports.modifyNote = modifyNote
 exports.onLoaded=onLoaded

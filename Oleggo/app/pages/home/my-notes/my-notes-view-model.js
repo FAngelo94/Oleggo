@@ -1,39 +1,44 @@
-var observableModule = require("data/observable");
+const observableModule = require("data/observable");
 const ObservableArray = require("data/observable-array").ObservableArray;
 var Sqlite = require( "nativescript-sqlite" );
 
-function MyNotesViewModel() {
-	//readDB();
-	//Read from DB and insert in an ObservableArray
-	var w="Saved at 10:30 PM";
-	var n="We try a note";
-	var b="It, Steven King";
-	var dataPage=new ObservableArray(); 
-	dataPage.push([	{
-						when: w,
-						note: n,
-						book: b
-					}		
-				]);
+function MyNotesViewModel(db) {
 	//Pass the ObservableArray to the page
-    var viewModel = observableModule.fromObject({
-		NoteList: dataPage
-    });
-	
-    return viewModel;
+    const viewModel = observableModule.fromObject({
+		NoteList: new ObservableArray([])
+    })
+	var temp=readQuotesDB(db)
+	viewModel.NoteList=viewModel.NoteList.concat(temp)
+	console.info(JSON.stringify(viewModel.NoteList))
+    return viewModel
 }
-module.exports = MyNotesViewModel;
 
-function readDB()
+
+function readQuotesDB(db)
 {
-/* 	var db_promise = new Sqlite("DB", function(err, db) {
-		if (err) {
-		  console.info("We failed to open database", err);
-		} else {
-		  // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
-		  console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-		}
-	}); */
+	var quotes = []
+    db.all("SELECT * FROM quotes join books where quotes.ISBN=books.ISBN", function (error, rows) {
+        if (error) {
+            console.log("SELECT ERROR", error)
+            return ("SELECT ERROR" + error)
+        }
+        else {
+            for (var row in rows) {
+                console.log("RESULT", rows[row])
+                var res = (rows[row].toString()).split(",")
+                var quote = {
+                    book: res[8]+", page "+res[3],
+					note:res[2],
+					when:res[5]
+                }
+                quotes.push(quote);
+				console.info(rows[row].toString())
+                    
+            }
+            return quotes
+        }
+    })
+    return quotes
 }
 
 function saveChanges(){
@@ -41,3 +46,4 @@ function saveChanges(){
 }
 
 module.exports = saveChanges;
+module.exports = MyNotesViewModel;

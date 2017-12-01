@@ -23,9 +23,9 @@ function onNavigatingTo(args) {
             db.execSQL("CREATE TABLE IF NOT EXISTS dictionary(id INTEGER PRIMARY KEY AUTOINCREMENT, isbn TEXT, word TEXT, meaning TEXT)").then(id => {
                 console.log("table  Dictionary created")
 
-                db.execSQL("CREATE TABLE IF NOT EXISTS quotes(id INTEGER PRIMARY KEY AUTOINCREMENT, isbn TEXT, quote TEXT, page TEXT)").then(id => {
+                db.execSQL("CREATE TABLE IF NOT EXISTS quotes(id INTEGER PRIMARY KEY AUTOINCREMENT, isbn TEXT, quote TEXT, page TEXT, favorite TEXT, date TEXT)").then(id => {
                     console.log("table  Quotes created")
-
+ 
                 }, error => {
                     console.log("CREATE TABLE ERROR", error);
                 });

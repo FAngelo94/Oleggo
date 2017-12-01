@@ -1,6 +1,8 @@
 const frameModule = require("ui/frame");
 const AddNoteViewModel = require("./add-note-view-model");
-var label;
+var Sqlite = require("nativescript-sqlite");
+var labelQuote;
+var labelPage;
 
 // require the plugin
 var SpeechRecognition = require("nativescript-speech-recognition").SpeechRecognition;
@@ -23,7 +25,8 @@ function onNavigatingTo(args) {
     }
 
     const page = args.object;
-    label = page.getViewById("speakText");
+    labelQuote = page.getViewById("speakText");
+	labelPage = page.getViewById("page");
     page.bindingContext = new AddNoteViewModel();
     speechRecognition.available().then(
         function (available) {
@@ -52,7 +55,7 @@ function listen(args) {
             console.info("User said: " + transcription.text);
             console.info("User finished?: " + transcription.finished);
             if (transcription.finished == true) {
-                label.text = transcription.text;
+                labelQuote.text = transcription.text;
             }
         },
     });
@@ -60,14 +63,58 @@ function listen(args) {
 exports.listen = listen;
 
 function addQuote(args) {
-    console.info(label.text);
+    (new Sqlite("OleggoDB.db")).then((db) => {db.all("SELECT * FROM books WHERE State=1", function (error, rows) {
+        if (error) {
+            console.log("SELECT ERROR", error);
+            return ("SELECT ERROR" + error)
+        }
+        else {
+				var res = (rows[0].toString()).split(",");
+				var ISBN = res[1];
+				console.info(ISBN);
+				addQuoteDB(ISBN);
+		}
+    })},
+	err => {
+         console.info("Failed to open database", err);
+         errorAlert("Failed to open database: " + err)
+     })
 }
 exports.addQuote = addQuote;
+function addQuoteDB(ISBN)
+{
+	(new Sqlite("OleggoDB.db")).then(db => {
+        // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
+        console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+		var d=new Date()
+		d=d.toString()
+		d=d.substring(0,21)
+        db.execSQL("INSERT INTO quotes (ISBN, Quote, Page, Favorite, Date) VALUES (?, ?, ?, ?, ?)", [ISBN, labelQuote.text, labelPage.text, "0", d]).then(id => {
+            console.info("INSERT RESULT" + id);
+        }, error => {
+            console.info("INSERT ERROR" + error);
+        });
+
+    }, err => {
+        console.info("Failed to open database", err);
+        errorAlert("Failed to open database: " + err)
+    })
+}
 
 function lookForWord(args) {
-    console.info(label.text);
+    console.info(labelQuote.text);
     wd.getDef("Car", "en", null, (definition) => {
         console.log(definition.definition);
     });
 }
 exports.lookForWord = lookForWord;
+
+function errorAlert(e) {
+    dialogs.alert({
+        title: "Error",
+        message: e,
+        okButtonText: "continue"
+    }).then(() => {
+        console.log("Alert closed");
+    });
+}
