@@ -1,6 +1,5 @@
 const observableModule = require("data/observable");
 const ObservableArray = require("data/observable-array").ObservableArray;
-var Sqlite = require( "nativescript-sqlite" );
 
 function MyNotesViewModel(db) {
 	//Pass the ObservableArray to the page
@@ -29,7 +28,8 @@ function readQuotesDB(db)
                 var quote = {
                     book: res[8]+", page "+res[3],
 					note:res[2],
-					when:res[5]
+					when:res[5],
+					key:res[0]
                 }
                 quotes.push(quote);
 				console.info(rows[row].toString())
@@ -41,9 +41,4 @@ function readQuotesDB(db)
     return quotes
 }
 
-function saveChanges(){
-	//console.info("save changes");
-}
-
-module.exports = saveChanges;
 module.exports = MyNotesViewModel;

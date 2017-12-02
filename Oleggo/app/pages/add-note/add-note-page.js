@@ -1,8 +1,12 @@
 const frameModule = require("ui/frame");
 const AddNoteViewModel = require("./add-note-view-model");
 var Sqlite = require("nativescript-sqlite");
-var labelQuote;
+var dialogs = require("ui/dialogs");
+var Toast = require("nativescript-toast");
+var labelNote;
 var labelPage;
+var wordAdded = Toast.makeText("Word Added Successfully!");
+var quoteAdded = Toast.makeText("Quote Added Successfully");
 
 // require the plugin
 var SpeechRecognition = require("nativescript-speech-recognition").SpeechRecognition;
@@ -25,7 +29,7 @@ function onNavigatingTo(args) {
     }
 
     const page = args.object;
-    labelQuote = page.getViewById("speakText");
+    labelNote = page.getViewById("speakText");
 	labelPage = page.getViewById("page");
     page.bindingContext = new AddNoteViewModel();
     speechRecognition.available().then(
@@ -55,7 +59,7 @@ function listen(args) {
             console.info("User said: " + transcription.text);
             console.info("User finished?: " + transcription.finished);
             if (transcription.finished == true) {
-                labelQuote.text = transcription.text;
+                labelNote.text = transcription.text;
             }
         },
     });
@@ -80,17 +84,18 @@ function addQuote(args) {
          errorAlert("Failed to open database: " + err)
      })
 }
-exports.addQuote = addQuote;
+
 function addQuoteDB(ISBN)
 {
 	(new Sqlite("OleggoDB.db")).then(db => {
         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
         console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-		var d=new Date()
-		d=d.toString()
-		d=d.substring(0,21)
-        db.execSQL("INSERT INTO quotes (ISBN, Quote, Page, Favorite, Date) VALUES (?, ?, ?, ?, ?)", [ISBN, labelQuote.text, labelPage.text, "0", d]).then(id => {
-            console.info("INSERT RESULT" + id);
+			var d=new Date()
+			d=d.toString()
+			d=d.substring(0,21)
+			db.execSQL("INSERT INTO quotes (ISBN, Quote, Page, Favorite, Date) VALUES (?, ?, ?, ?, ?)", [ISBN, labelNote.text, labelPage.text, "0", d]).then(id => {
+			quoteAdded.show()
+			console.info("INSERT RESULT" + id);
         }, error => {
             console.info("INSERT ERROR" + error);
         });
@@ -102,11 +107,56 @@ function addQuoteDB(ISBN)
 }
 
 function lookForWord(args) {
-    console.info(labelQuote.text);
-    wd.getDef("Car", "en", null, (definition) => {
-        console.log(definition.definition);
-    });
+    (new Sqlite("OleggoDB.db")).then((db) => {db.all("SELECT * FROM books WHERE State=1", function (error, rows) {
+        if (error) {
+            console.log("SELECT ERROR", error);
+            return ("SELECT ERROR" + error)
+        }
+        else {
+				var res = (rows[0].toString()).split(",");
+				var ISBN = res[1];
+				wordDefinition(ISBN);
+		}
+    })},
+	err => {
+         console.info("Failed to open database", err);
+         errorAlert("Failed to open database: " + err)
+     })
 }
+
+function wordDefinition(ISBN)
+{
+	console.info("Inizio")
+	var meaning = "Tetto"
+	wd.getDef(labelNote.text, "en", null, (definition) => {
+		console.info("definition="+definition.definition)
+		lookForWordDB(ISBN, definition.definition)
+		
+	});
+	
+}
+
+function lookForWordDB(ISBN, meaning)
+{
+	(new Sqlite("OleggoDB.db")).then(db => {
+			// This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
+			console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+			console.info("meaning="+meaning)
+			db.execSQL("INSERT INTO dictionary (ISBN, word, meaning) VALUES (?, ?, ?)", [ISBN, labelNote.text, meaning]).then(id => {
+				labelNote.text=""
+				wordAdded.show()
+				console.info("INSERT RESULT" + id)
+				
+			}, error => {
+				console.info("INSERT ERROR" + error)
+			});
+
+		}, err => {
+			console.info("Failed to open database", err);
+			errorAlert("Failed to open database: " + err)
+		})
+}
+exports.addQuote = addQuote;
 exports.lookForWord = lookForWord;
 
 function errorAlert(e) {

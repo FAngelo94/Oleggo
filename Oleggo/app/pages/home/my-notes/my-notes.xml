@@ -14,9 +14,11 @@ Feel free to customize layouts and components to change how the tab view looks.
 					<lv:RadListView.itemTemplate>
 						<StackLayout class="input-field" id="campo" weight="500px">
 							<Label class="label" text="{{ when }}" ></Label>
-							<TextView id="{{ when + 'T'}}" hint="Enter some notes" text="{{ note }}" ></TextView>
+							<TextView id="{{ key + 'text' }}" hint="Enter some notes" text="{{ note }}" ></TextView>
 							<Label class="label" text="{{ book }}"></Label>
-							<Button id="{{ when }}" text="Save Changes" class="btn btn-primary btn-active" tap="modifyNote"/>
+							<Button id="{{ key }}" text="Save Changes" class="btn btn-primary btn-active" tap="modifyNote"/>
+							<Button id="{{ key }}" text="Remove" class="btn btn-primary btn-active" tap="removeNote"/>
+							<Button id="{{ key }}" text="Remove Favorite" class="btn btn-primary btn-active" tap="notFavoriteNote"/>
 							
 						</StackLayout>
 					</lv:RadListView.itemTemplate>
