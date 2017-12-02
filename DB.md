@@ -10,8 +10,9 @@ Tables and camps in the tables:
     * imageLink
     
 * ### Dictionary
-    * __Word__
+    * __id__
     * __ISBN__
+    * __Word__
     * Meaning
     
 * ### Quotes
