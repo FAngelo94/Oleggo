@@ -95,6 +95,7 @@ function addQuoteDB(ISBN)
 			d=d.substring(0,21)
 			db.execSQL("INSERT INTO quotes (ISBN, Quote, Page, Favorite, Date) VALUES (?, ?, ?, ?, ?)", [ISBN, labelNote.text, labelPage.text, "0", d]).then(id => {
 			quoteAdded.show()
+			labelNote.text=""
 			console.info("INSERT RESULT" + id);
         }, error => {
             console.info("INSERT ERROR" + error);
