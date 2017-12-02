@@ -12,7 +12,8 @@ Mobile Application (Uni)
 * Image Picker = https://github.com/NativeScript/nativescript-imagepicker - https://docs.nativescript.org/cookbook/image-source
 * ISBN search = https://openlibrary.org/developers/api      -
                 http://xisbn.worldcat.org/xisbnadmin/doc/api.htm
-
+* Toast = https://github.com/TobiasHennig/nativescript-toast
+* Usefull Plugins = https://github.com/TobiasHennig
 ### Native Script app example
 
 https://github.com/NativeScript/nativescript-marketplace-demo
