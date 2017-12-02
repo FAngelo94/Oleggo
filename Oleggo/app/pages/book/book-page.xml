@@ -1,6 +1,7 @@
 <Page
     class="page"
     loaded="loaded" 
+    actionBarHidden="true"
     navigatingTo="onNavigatingTo"
     xmlns:lv="nativescript-pro-ui/listview"
     cssFile="~/pages/book/book-page.css"
@@ -8,8 +9,8 @@
     xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
     xmlns:myDrawer="shared/my-drawer"
     xmlns="http://www.nativescript.org/tns.xsd">
-
-    <ActionBar class="action-bar" >
+    
+    <ActionBar class="action-bar">
         <!-- 
         Use the NavigationButton as a side-drawer button in Android because ActionItems are shown on the right side of the ActionBar
         -->
@@ -22,7 +23,7 @@
             tap="onDrawerButtonTap"
             ios.position="left">
         </ActionItem>
-        <ActionItem id="exampleMenuButton" icon="res://logo" automationText="ExampleMenu" />
+        <ActionItem id="exampleMenuButton" icon="res://book" automationText="ExampleMenu"/>
         <Label class="action-bar-title" text=""></Label>
     </ActionBar>
 
@@ -33,7 +34,7 @@
     The RadSideDrawer component is designed to be used as a root element to the <Page> and
     it shouldn't have any other siblings other than the <ActionBar> component.
     -->
-    <nsDrawer:RadSideDrawer id="sideDrawer" showOverNavigation="true">
+    <nsDrawer:RadSideDrawer id="sideDrawer" showOverNavigation="true" >
         <!--
         Use the RadSideDrawer.drawerTransition component to change the open/close animation of the drawer.
         -->
@@ -61,11 +62,12 @@
         Use the RadSideDrawer.mainContent component to display the content of the page when you have an app drawer.
         Always wrap content in a layout component.
         -->
-        <nsDrawer:RadSideDrawer.mainContent>
-            <ScrollView>
+        <nsDrawer:RadSideDrawer.mainContent >
+            <ScrollView style="margin:24 0 0 0;padding:0;">
                 <AbsoluteLayout style="background-color:#434B5B;margin:0;padding:0;width:100%;">
+                <Button class="btnMenu" tap="onDrawerButtonTap" left="0" top="0"></Button>
                     <Image src="{{Book.background}}" class="imgBack" stretch="aspectFill" left="0" top="0" />
-                    <StackLayout orientation="vertical" left="0" top="0" style="margin:0;padding:0;width:100%">
+                    <StackLayout orientation="vertical" left="0" top="50" style="margin:0;padding:0;width:100%">
                         <StackLayout orientation="vertical" style="color: white;">
                             <DockLayout stretchLastChild="true" style="width:100%;padding:10 0 10 0;">
                                 <StackLayout dock="left" style="vertical-align: bottom;margin:0 0 0 10; width:80;color:#839E9D;">
@@ -88,10 +90,10 @@
                                 <Label text="{{Book.title}}" class="BookTitle" style="horizontal-align: center;"/>
                                 <Label text="{{Book.author}}" class="BookAuthor" style="horizontal-align: center;"/>
                                                         
-                                <StackLayout orientation="horizontal" style="horizontal-align: center; padding:0 0 10 0;">
+                                <StackLayout orientation="horizontal" style="horizontal-align: center; padding:0 0 10 0;" width="75%">
                                     <Button style="background-image:res://logo;" tap="onProgressButtonTap"/>   
                                     <Button text="B" id="btnState" tap="onStateButtonTap" /> 
-                                    <Button text="B" />
+                                    <Button text="B" id="btnMain" tap="onMainButtonTap"/>
                                 </StackLayout>
 
                                 <Label text="{{Book.pages +' pages'}}" style="text-align:right;padding:0;margin:0;font-size: 12;" width="75%"/>

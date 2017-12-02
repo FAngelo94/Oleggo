@@ -11,14 +11,12 @@
 
 .BookAuthor {
     font-size: 10;
-    color: #F98735;;
+    color: #F98735;
 }
 
 Image {
     margin: 1.25 2.5 0 2.5;
-    border-radius: 10;
-    border-width: 0 3 2 0;
+    border-radius: 0 5% 5% 0;
     color: white;
-    border-color: #1e1e1f;
     background-color: white;
 }

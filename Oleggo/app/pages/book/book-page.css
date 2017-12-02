@@ -1,35 +1,42 @@
 
 Button {
-    height: 50;
-    width: 50;
+    height: 40;
+    width: 40;
     border-radius: 50%;
     margin:0 15 0 15;
     background-color: #FF4082;
     background-repeat: no-repeat;
     background-position: center;
 }
+.btnMenu{
+    margin:0 0 0 0;
+    background-color:rgba(0,0,0,0);
+    background-image:res://menu;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .imgBack{
     margin:0;
     padding:0;
     width:100%;
-    height:170;
-    filter:blur(50px);
+    height:175;
 }
 label{
     font-size:16;
 }
 Image {
-    height: 200;
+    height: 165;
     margin: 5 5 0 5;
 }
 .BookTitle {
     padding:0 0 0 0;
-    font-size: 20;
+    font-size: 18;
     color:white;
 }
 
 .BookAuthor {
-    padding:0 0 15 0;
+    padding:0 0 10 0;
     color:#F98735;
-    font-size: 18;
+    font-size: 16;
 }
