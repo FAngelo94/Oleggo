@@ -19,8 +19,7 @@
     "nativescript-sqlite": "^1.1.11",
     "nativescript-theme-core": "1.0.4",
     "nativescript-toast": "^1.4.6",
-    "tns-core-modules": "3.3.0",
-    "word-definition": "^2.1.6"
+    "tns-core-modules": "3.3.0"
   },
   "devDependencies": {
     "babel-traverse": "6.4.5",

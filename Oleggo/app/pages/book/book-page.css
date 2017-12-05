@@ -9,7 +9,7 @@ Button {
     background-position: center;
 }
 .btnMenu{
-    margin:0 0 0 0;
+    margin:8 0 0 8;
     background-color:rgba(0,0,0,0);
     background-image:res://menu;
     background-repeat: no-repeat;

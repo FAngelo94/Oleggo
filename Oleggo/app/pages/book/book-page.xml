@@ -1,6 +1,5 @@
 <Page
     class="page"
-    loaded="loaded" 
     actionBarHidden="true"
     navigatingTo="onNavigatingTo"
     xmlns:lv="nativescript-pro-ui/listview"

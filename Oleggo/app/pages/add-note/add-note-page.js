@@ -14,7 +14,7 @@ var SpeechRecognition = require("nativescript-speech-recognition").SpeechRecogni
 var speechRecognition = new SpeechRecognition();
 // import the options
 var SpeechRecognitionTranscription = require("nativescript-speech-recognition").SpeechRecognitionTranscription;
-var wd = require("word-definition")
+var wd = require("~/shared/word-definition")
 /* ***********************************************************
  * Use the "onNavigatingTo" handler to initialize the page binding context.
  *************************************************************/
@@ -38,7 +38,7 @@ function onNavigatingTo(args) {
         }
     );
 }
-exports.onNavigatingTo = onNavigatingTo;
+
 /* ***********************************************************
  * According to guidelines, if you have a drawer on your page, you should always
  * have a button that opens it. Get a reference to the RadSideDrawer view and
@@ -48,7 +48,7 @@ function onDrawerButtonTap(args) {
     const sideDrawer = frameModule.topmost().getViewById("sideDrawer");
     sideDrawer.showDrawer();
 }
-exports.onDrawerButtonTap = onDrawerButtonTap;
+
 
 function listen(args) {
     console.info("listening...");
@@ -64,7 +64,7 @@ function listen(args) {
         },
     });
 }
-exports.listen = listen;
+
 
 function addQuote(args) {
     (new Sqlite("OleggoDB.db")).then((db) => {db.all("SELECT * FROM books WHERE State=1", function (error, rows) {
@@ -157,8 +157,6 @@ function lookForWordDB(ISBN, meaning)
 			errorAlert("Failed to open database: " + err)
 		})
 }
-exports.addQuote = addQuote;
-exports.lookForWord = lookForWord;
 
 function errorAlert(e) {
     dialogs.alert({
@@ -169,3 +167,8 @@ function errorAlert(e) {
         console.log("Alert closed");
     });
 }
+exports.listen = listen;
+exports.addQuote = addQuote;
+exports.lookForWord = lookForWord;
+exports.onDrawerButtonTap = onDrawerButtonTap;
+exports.onNavigatingTo = onNavigatingTo;

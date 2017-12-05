@@ -23,6 +23,7 @@ function readDictionaryDB(db)
         else {
             for (var row in rows) {
                 console.log("RESULT", rows[row])
+                console.log(rows[row])
                 var res = (rows[row].toString()).split(",")
                 var quote = {
 					word:res[2],

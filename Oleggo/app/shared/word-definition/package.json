@@ -1,27 +1,31 @@
 {
-  "_from": "word-definition",
+  "_args": [
+    [
+      "word-definition@2.1.6",
+      "/home/julian/WorkspaceNS/Oleggo/Oleggo"
+    ]
+  ],
+  "_from": "word-definition@2.1.6",
   "_id": "word-definition@2.1.6",
   "_inBundle": false,
   "_integrity": "sha1-E4Ji5pPdri0uA5vPV8lxSDhVkAk=",
   "_location": "/word-definition",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
+    "type": "version",
     "registry": true,
-    "raw": "word-definition",
+    "raw": "word-definition@2.1.6",
     "name": "word-definition",
     "escapedName": "word-definition",
-    "rawSpec": "",
+    "rawSpec": "2.1.6",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "2.1.6"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/word-definition/-/word-definition-2.1.6.tgz",
-  "_shasum": "138262e693ddae2d2e039bcf57c9714838559009",
-  "_spec": "word-definition",
+  "_spec": "2.1.6",
   "_where": "/home/julian/WorkspaceNS/Oleggo/Oleggo",
   "author": {
     "name": "Patatruc",
@@ -31,8 +35,6 @@
   "bugs": {
     "url": "https://github.com/Patatruc/word-definition/issues"
   },
-  "bundleDependencies": false,
-  "deprecated": false,
   "description": "Grabs the definition of a word from the wiktionary - supported languages: english, french and german",
   "homepage": "https://github.com/Patatruc/word-definition#readme",
   "keywords": [

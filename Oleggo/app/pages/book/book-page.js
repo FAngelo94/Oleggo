@@ -5,16 +5,15 @@ const BookViewModel = require("./book-view-model");
 let page;
 let dataBook;
 
-exports.loaded = function (args) {
+function loaded (args) {
     page = args.object;
     (new Sqlite("OleggoDB.db")).then((db) => {
-        var temp = BookViewModel.BookViewModel(db, page.navigationContext.bookISBN)
-        console.log(JSON.stringify(temp.Book))
+        var temp = new BookViewModel(db, page.navigationContext.bookISBN)
+        //console.log(JSON.stringify(temp.Book))
         console.log(JSON.stringify(temp.Dictionary))
         console.log(JSON.stringify(temp.Quotes))
         dataBook=temp
         page.bindingContext = temp
-        console.log(JSON.stringify(temp))
         if(dataBook.Book.state==0){
             page.getViewById("btnState").style = "background-color:#FF4082"
         }
@@ -40,6 +39,7 @@ function onNavigatingTo(args) {
     if (args.isBackNavigation) {
         return;
     }
+    loaded(args)
     //TODO corregir para cuando llegue
 
     // page.bindingContext = new BookViewModel();

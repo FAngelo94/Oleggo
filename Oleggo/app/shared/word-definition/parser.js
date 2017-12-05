@@ -108,8 +108,8 @@ parser.prototype.parse = function (page) {
     }
 
     var def = this.searchDef(page);
-
     if (def == true) return;
+
 
     if (def) {
         for (var i = 0, len = this.variants.length; i < len; i++) {
@@ -117,7 +117,6 @@ parser.prototype.parse = function (page) {
             if (found) {
                 this.lastTitle = this.titles[0];
                 this.titles[0] = found[found.length - 1];
-                // console.log (this.word + " : variant #" + i + " ==> " + this.titles[0]);
                 this.getPage();
                 return;
             }
@@ -141,16 +140,15 @@ parser.prototype.parse = function (page) {
 }
 
 parser.prototype.cleanup = function (word, cat, def) {
-
-    def = def.replace(new RegExp("{{(([^}|]+)\\|)+" + this.lng + "}}", "g"), "($2)");
+    console.log(def)
+    def = def.replace(new RegExp("{{([^}|]+)\\|+" + this.lng + "\\|+([^}|]+)}}", "g"), "$2");
     def = def.replace(/{{[^}]*}}/g, "");
-
     def = def.replace(/<(\w+)>[^<]*<\/\1>/, "").trim();
-
+    console.log(def)
     if (/^\s*\.*$/.test(def)) return this.sendErr(errors.notFound, word);
-
-    def = def.replace(/'''([^']+)'''/g, this.options.formatted ? "<span style='bold'>$1</span>" : "$1");
-    def = def.replace(/''([^']+)''/g, this.options.formatted ? "<span style='italic'>$1</span>" : "$1");
+    
+    def = def.replace(/'''([^']+)'''/g, this.options.formatted ? "<Span fontAttributes=='bold'>$1</Span>" : "$1");
+    def = def.replace(/''([^']+)''/g, this.options.formatted ? "<Span fontAttributes=='italic'>$1</Span>" : "$1");
 
     switch (this.options.hyperlinks) {
     case "brackets":

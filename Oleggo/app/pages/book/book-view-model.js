@@ -2,27 +2,28 @@ const observableModule = require("data/observable");
 const ObservableArray = require("data/observable-array").ObservableArray;
 var Sqlite = require("nativescript-sqlite");
 
-let viewModeldata = {
-    Book: {},
-    Quotes: new ObservableArray([]),
-    Dictionary: new ObservableArray([]),
-    QuotesLength:{},
-    DiccLength:{}
-}
+
 
 function BookViewModel(database, isbn) {
     console.log("Model");
+    let viewModeldata = {
+        Book: {},
+        Quotes: new ObservableArray([]),
+        Dictionary: new ObservableArray([]),
+        QuotesLength:{},
+        DiccLength:{}
+    }
     
     //viewModel.BookList = viewModel.BookList.concat(books2);
     var temp = readBooksDB(database, isbn)
+
     viewModeldata.Quotes=viewModeldata.Quotes.concat(readQuotesDB(database, isbn))
     viewModeldata.Dictionary=viewModeldata.Dictionary.concat(readDiccDB(database, isbn))
     viewModeldata.DiccLength=viewModeldata.Dictionary.length
     viewModeldata.QuotesLength=viewModeldata.Quotes.length
     viewModeldata.Book = temp
-    console.log(JSON.stringify(viewModeldata))
+   // console.log(JSON.stringify(viewModeldata))
     var viewModel= observableModule.fromObjectRecursive(viewModeldata)
-    console.dir(viewModel)
     viewModel.updateBookmark= function (data) {
            (new Sqlite("OleggoDB.db")).then(db => {
             // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
@@ -67,7 +68,6 @@ function BookViewModel(database, isbn) {
  }
     return viewModel;
 }
-
 
 function readBooksDB(database, isbn) {
     var book = {}
@@ -118,14 +118,10 @@ function readQuotesDB(database, isbn) {
                 console.log("RESULT", rows[row]);
                 var res = (rows[row].toString()).split(",");
                 quote = {
-                    id: res[0],
-                    ISBN: res[1],
-                    title: res[2],
-                    author: res[3],
-                    pages: res[4],
-                    bookmark: res[5],
-                    state: res[6],
-                    imagelink: res[7],
+                    quote: res[2],
+                    page: res[3],
+                    favorite: res[4],
+                    date: res[5]
                 }
                 quotes.push(quote);
             }
@@ -148,14 +144,8 @@ function readDiccDB(database, isbn) {
                 console.log("RESULT", rows[row]);
                 var res = (rows[row].toString()).split(",");
                 word = {
-                    id: res[0],
-                    ISBN: res[1],
-                    title: res[2],
-                    author: res[3],
-                    pages: res[4],
-                    bookmark: res[5],
-                    state: res[6],
-                    imagelink: res[7]
+                    word: res[2],
+                    meaning: res[3],
                 }
 
                 dicc.push(word);
@@ -166,4 +156,4 @@ function readDiccDB(database, isbn) {
     })
     return dicc;
 }
-module.exports.BookViewModel = BookViewModel;
+module.exports = BookViewModel;
