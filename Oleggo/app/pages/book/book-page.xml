@@ -7,7 +7,10 @@
     navigatingTo="onNavigatingTo"  
     xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
     xmlns:myDrawer="shared/my-drawer"
-    xmlns="http://www.nativescript.org/tns.xsd">
+    xmlns="http://www.nativescript.org/tns.xsd"
+	
+	xmlns:my-notes="/pages/book/my-notes"
+	xmlns:my-dictionary="/pages/book/my-dictionary">
     
     <ActionBar class="action-bar">
         <!-- 
@@ -61,7 +64,7 @@
         Use the RadSideDrawer.mainContent component to display the content of the page when you have an app drawer.
         Always wrap content in a layout component.
         -->
-        <nsDrawer:RadSideDrawer.mainContent >
+        <nsDrawer:RadSideDrawer.mainContent>
             <ScrollView style="margin:24 0 0 0;padding:0;">
                 <AbsoluteLayout style="background-color:#434B5B;margin:0;padding:0;width:100%;">
                 <Button class="btnMenu" tap="onDrawerButtonTap" left="0" top="0"></Button>
@@ -105,23 +108,29 @@
 
                             </StackLayout>
 
-                            <StackLayout orientation="vertical" style="height:510">
-                                <TabView selectedIndexChanged="onSelectedIndexChanged" tabBackgroundColor="white">
+                            <StackLayout orientation="vertical" style="height:500">		
+								<TabView selectedIndexChanged="onSelectedIndexChanged" tabBackgroundColor="white">
                                     <TabView.items>
+									
                                         <TabViewItem title="Notes">
                                             <TabViewItem.view>
-                                                <Label text="Label in Tab1" />
+                                        
+												<my-notes:my-notes/>
+												
                                             </TabViewItem.view>
-                                            
                                         </TabViewItem>
 
                                         <TabViewItem title="Dictionary">
                                             <TabViewItem.view>
-                                                <Label text="Label in Tab1" />
+                                                
+												<my-dictionary:my-dictionary/>
+												
                                             </TabViewItem.view>
                                         </TabViewItem>
+										
                                     </TabView.items>
                                 </TabView> 
+								
                             </StackLayout>
                         </StackLayout>
                     </StackLayout>

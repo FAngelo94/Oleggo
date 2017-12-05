@@ -1,0 +1,31 @@
+<!--
+This is the component view that represents the 'Home' tab.
+Feel free to customize layouts and components to change how the tab view looks.
+-->
+<GridLayout rows="*" columns="*" xmlns:lv="nativescript-pro-ui/listview" loaded="onLoaded">
+    <ScrollView row="0" col="0">
+        <GridLayout rows="*" columns="*">
+            <StackLayout class="form">
+				
+				<lv:RadListView items="{{ NoteList }}" >
+					<lv:RadListView.listViewLayout>
+						<lv:ListViewStaggeredLayout spanCount="1"/>
+					</lv:RadListView.listViewLayout>
+					<lv:RadListView.itemTemplate>
+						<StackLayout class="input-field" id="campo" >
+							<Label class="label" text="{{ when }}" ></Label>
+							<TextView id="{{ key + 'text' }}" hint="Enter some notes" text="{{ note }}" ></TextView>
+							<Label class="label" text="{{ book }}"></Label>
+							<StackLayout orientation="horizontal" style="horizontal-align:center">
+							<Button id="{{ key }}" text="Save"  tap="modifyNote"/>
+							<Button id="{{ key }}" text="Delete"  tap="removeNote"/>
+							<Button id="{{ key }}" text="Remove"  tap="notFavoriteNote"/>
+							</StackLayout>
+						</StackLayout>
+					</lv:RadListView.itemTemplate>
+				</lv:RadListView>  
+				  
+            </StackLayout>
+        </GridLayout>
+    </ScrollView>
+</GridLayout>

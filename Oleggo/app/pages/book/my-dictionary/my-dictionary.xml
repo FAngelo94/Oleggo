@@ -1,0 +1,27 @@
+<!--
+This is the component view that represents the 'Search' tab.
+Feel free to customize layouts and components to change how the tab view looks.
+-->
+<GridLayout rows="*" columns="*" xmlns:lv="nativescript-pro-ui/listview" loaded="loadList">
+	<ScrollView row="0" col="0">
+		<GridLayout rows="*" columns="*">
+			<StackLayout class="form">
+				
+				<lv:RadListView items="{{ DictionaryList }}" >
+					<lv:RadListView.listViewLayout>
+						<lv:ListViewStaggeredLayout spanCount="1"/>
+					</lv:RadListView.listViewLayout>
+					<lv:RadListView.itemTemplate>
+						<StackLayout class="input-field" id="campo" weight="500px">
+							<Label class="label" text="{{ word }}" ></Label>
+							<Label class="label" text="{{ meaning }}" textWrap="true"></Label>
+							<Button id="{{ word }}" text="Remove" class="btn btn-primary btn-active" tap="removeWord"/>
+						
+						</StackLayout>
+					</lv:RadListView.itemTemplate>
+				</lv:RadListView>  
+				  
+			</StackLayout>
+		</GridLayout>
+	</ScrollView>
+</GridLayout>
