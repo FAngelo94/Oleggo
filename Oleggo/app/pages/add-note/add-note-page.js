@@ -73,8 +73,7 @@ function addQuote(args) {
             return ("SELECT ERROR" + error)
         }
         else {
-				var res = (rows[0].toString()).split(",");
-				var ISBN = res[1];
+				var ISBN = rows[row][1];
 				console.info(ISBN);
 				addQuoteDB(ISBN);
 		}
@@ -114,8 +113,8 @@ function lookForWord(args) {
             return ("SELECT ERROR" + error)
         }
         else {
-				var res = (rows[0].toString()).split(",");
-				var ISBN = res[1];
+				
+				var ISBN = rows[row][1];
 				wordDefinition(ISBN);
 		}
     })},
@@ -127,8 +126,6 @@ function lookForWord(args) {
 
 function wordDefinition(ISBN)
 {
-	console.info("Inizio")
-	var meaning = "Tetto"
 	wd.getDef(labelNote.text, "en", null, (definition) => {
 		console.info("definition="+definition.definition)
 		lookForWordDB(ISBN, definition.definition)

@@ -26,16 +26,15 @@ function readBooksDB(database) {
         else {
             for (var row in rows) {
                 console.log("RESULT", rows[row]);
-                var res = (rows[row].toString()).split(",");
                 var book = {
-                    id:res[0],
-                    ISBN:res[1],
-                    title: res[2],
-                    author: res[3],
-                    pages:res[4],
-                    bookmark:res[5],
-                    state:res[6],
-                    imagelink: res[7]
+                    id:rows[row][0],
+                    ISBN:rows[row][1],
+                    title: rows[row][2],
+                    author: rows[row][3],
+                    pages:rows[row][4],
+                    bookmark:rows[row][5],
+                    state:rows[row][6],
+                    imagelink: rows[row][7]
                 }
                 books.push(book);
                     

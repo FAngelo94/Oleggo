@@ -80,23 +80,22 @@ function readBooksDB(database, isbn) {
             for (var row in rows) {
                 console.log("RESULT", rows[row]);
                
-                var res = (rows[row].toString()).split(",");
                 var background
-                if (res[7].includes("M.jpg")) {
+                if (rows[row][7].includes("M.jpg")) {
                     console.log("si")
-                    background = res[7].replace("M.jpg", 'L.jpg');
+                    background = rows[row][7].replace("M.jpg", 'L.jpg');
                 }
                 book = {
-                    id: res[0],
-                    ISBN: res[1],
-                    title: res[2],
-                    author: res[3],
-                    pages: res[4],
-                    bookmark: res[5],
-                    state: res[6],
-                    imagelink: res[7],
+                    id: rows[row][0],
+                    ISBN: rows[row][1],
+                    title: rows[row][2],
+                    author: rows[row][3],
+                    pages: rows[row][4],
+                    bookmark: rows[row][5],
+                    state: rows[row][6],
+                    imagelink: rows[row][7],
                     background:background,
-                    progress:Math.round((Number(res[5])/Number(res[4]))*100)
+                    progress:Math.round((Number(rows[row][5])/Number(rows[row][4]))*100)
                 }
             }
             return book
@@ -118,10 +117,10 @@ function readQuotesDB(database, isbn) {
                 console.log("RESULT", rows[row]);
                 var res = (rows[row].toString()).split(",");
                 quote = {
-                    quote: res[2],
-                    page: res[3],
-                    favorite: res[4],
-                    date: res[5]
+                    quote: rows[row][2],
+                    page: rows[row][3],
+                    favorite: rows[row][4],
+                    date: rows[row][5]
                 }
                 quotes.push(quote);
             }
@@ -144,8 +143,8 @@ function readDiccDB(database, isbn) {
                 console.log("RESULT", rows[row]);
                 var res = (rows[row].toString()).split(",");
                 word = {
-                    word: res[2],
-                    meaning: res[3],
+                    word: rows[row][2],
+                    meaning: rows[row][3],
                 }
 
                 dicc.push(word);

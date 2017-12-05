@@ -17,8 +17,7 @@ var viewModel = new  observableModule.fromObject({
     background:"context.background",
     progress:"context.progress"
 });
-var usernameTextField;
-var passwordTextField;
+
 function onShownModally(args) {
     page = args.object;
     console.log("login-page.onShownModally, context: " + JSON.stringify(args.context));
@@ -38,15 +37,6 @@ function onShownModally(args) {
     closeCallback = args.closeCallback;
 }
 exports.onShownModally = onShownModally;
-/* function onLoaded(args) {
-    console.log("login-page.onLoaded");
-    page = args.object;
-}
-exports.onLoaded = onLoaded;
-function onUnloaded() {
-    console.log("login-page.onUnloaded");
-}
-exports.onUnloaded = onUnloaded; */
 
 function onFinishButtonTap() {
     console.log("onFinishButtonTap");

@@ -24,10 +24,9 @@ function readDictionaryDB(db)
             for (var row in rows) {
                 console.log("RESULT", rows[row])
                 console.log(rows[row])
-                var res = (rows[row].toString()).split(",")
                 var quote = {
-					word:res[2],
-					meaning:res[3]
+					word:rows[row][2],
+					meaning:rows[row][3]
                 }
                 quotes.push(quote);
 				console.info(rows[row].toString())
