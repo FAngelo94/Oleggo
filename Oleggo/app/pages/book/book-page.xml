@@ -86,8 +86,8 @@
                             
                             <StackLayout orientation="vertical" style="padding:0 0 10 0;color: white;">
 
-                                <Label text="{{Book.title}}" class="BookTitle" style="horizontal-align: center;"/>
-                                <Label text="{{Book.author}}" class="BookAuthor" style="horizontal-align: center;"/>
+                                <Label text="{{Book.title}}" class="BookTitle" style="horizontal-align: center;" textWrap="true"/>
+                                <Label text="{{Book.author}}" class="BookAuthor" style="horizontal-align: center;" textWrap="true"/>
                                                         
                                 <StackLayout orientation="horizontal" style="horizontal-align: center; padding:0 0 10 0;" width="75%">
                                     <Button style="background-image:res://logo;" tap="onProgressButtonTap"/>   

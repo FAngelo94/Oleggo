@@ -70,7 +70,7 @@
 								<lv:RadListView.itemTemplate>
 									<StackLayout class="input-field" id="campo" weight="500px">
 										<Label class="label" text="{{ word }}" ></Label>
-										<Label class="label" text="{{ meaning }}"></Label>
+										<Label class="label" text="{{ meaning }}" textWrap="true"></Label>
 										<Button id="{{ word }}" text="Remove" class="btn btn-primary btn-active" tap="removeWord"/>
 									
 									</StackLayout>

@@ -6,8 +6,8 @@
         <Label text="Update progress" class="progress" style="horizontal-align: center;"/>
         </StackLayout>
 
-        <Label text="{{title}}" class="BookTitle" style="horizontal-align: center;"/>
-        <Label text="{{author}}" class="BookAuthor" style="horizontal-align: center;"/>
+        <Label text="{{title}}" class="BookTitle" style="horizontal-align: center;" textWrap="true"/>
+        <Label text="{{author}}" class="BookAuthor" style="horizontal-align: center;" textWrap="true"/>
         
         <StackLayout orientation="horizontal" style="horizontal-align: center;padding:0 0 10 0;margin:0;font-size: 15;">
             <Label text="I am on page: "  style="vertical-align:center"/>

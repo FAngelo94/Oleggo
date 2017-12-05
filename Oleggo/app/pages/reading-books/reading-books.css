@@ -1,11 +1,5 @@
-.scroll-menu {
-    height: 220;
-    padding: 10;
-}
-
 .scroll-pane {
     width: 120;
-    height: 240;
     margin: 10;
 }
 
@@ -19,7 +13,6 @@ Button {
 }
 
 .BookContainer {
-    height: 40;
     background-color: rgb(255, 255, 255);
     padding: 2 8;
 }

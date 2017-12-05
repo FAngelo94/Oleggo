@@ -19,6 +19,9 @@ function loaded (args) {
         }
         else{
             page.getViewById("btnState").style = "background-color:white"
+            if(dataBook.Book.state==2){
+                page.getViewById("btnMain").style = "background-color:white"
+            }
         }
 
     }, err => {
@@ -115,7 +118,9 @@ function onMainButtonTap(args) {
         page.getViewById("btnState").style = "background-color:white"
         page.getViewById("btnMain").style = "background-color:#FF4082"
     }
+
     console.log(dataBook.Book.state)  
+    dataBook.updateMainState(dataBook.Book)
     dataBook.updateState(dataBook.Book)
 }
 exports.onProgressButtonTap = onProgressButtonTap;

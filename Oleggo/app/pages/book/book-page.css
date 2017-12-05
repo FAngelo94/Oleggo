@@ -33,10 +33,12 @@ Image {
     padding:0 0 0 0;
     font-size: 18;
     color:white;
+    text-align:center;
 }
 
 .BookAuthor {
     padding:0 0 10 0;
     color:#F98735;
     font-size: 16;
+    text-align:center;
 }

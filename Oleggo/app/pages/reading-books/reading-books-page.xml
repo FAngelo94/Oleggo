@@ -63,31 +63,31 @@
         -->
         <nsDrawer:RadSideDrawer.mainContent>
             <StackLayout orientation="vertical">
-            <ScrollView orientation="horizontal">
-            <lv:RadListView items="{{ BookList }}">
-                <lv:RadListView.listViewLayout>
-                    <lv:ListViewLinearLayout itemHeight="144" scrollDirection="Horizontal" style="padding:40 0 30 0; background-color:rgb(34, 84, 124)"/>
-                </lv:RadListView.listViewLayout>
-                <lv:RadListView.itemTemplate>
-                    <StackLayout class="scroll-pane">
-                        <GridLayout rows="*,auto">
-                            <StackLayout class="btn-img" row="0" orientation="horizontal" tap="onImageBookTap" id="{{ISBN}}">
-                                <Image src="{{ imagelink }}" stretch="aspectFill"/>
+                <ScrollView orientation="horizontal" >
+                    <lv:RadListView items="{{ BookList }}">
+                        <lv:RadListView.listViewLayout>
+                            <lv:ListViewLinearLayout scrollDirection="Horizontal"/>
+                        </lv:RadListView.listViewLayout>
+                        <lv:RadListView.itemTemplate>
+                            <StackLayout class="scroll-pane">
+                                <GridLayout rows="auto,auto">
+                                    <StackLayout class="btn-img" row="0" orientation="horizontal" tap="onImageBookTap" id="{{ISBN}}">
+                                        <Image src="{{ imagelink }}" stretch="aspectFit"/>
+                                    </StackLayout>
+                                    <StackLayout row="1" class="BookContainer" orientation="vertical">
+                                        <Label text="{{ title }}" class="BookTitle" textWrap="true"/>
+                                        <Label text="{{ author, 'by ' + author }}" class="BookAuthor" textWrap="true"/>
+                                    </StackLayout>
+                                </GridLayout>
                             </StackLayout>
-                            <StackLayout row="1" class="BookContainer" orientation="vertical">
-                                <Label text="{{ title }}" class="BookTitle"/>
-                                <Label text="{{ author, 'by ' + author }}" class="BookAuthor"/>
-                            </StackLayout>
-                        </GridLayout>
-                    </StackLayout>
-                </lv:RadListView.itemTemplate>
-            </lv:RadListView> 
-            </ScrollView>
-            <Label text="Tittle" style="padding:40 0 10 0;horizontal-align: center;"/>
-            <Label text="Author" style="padding:0 0 30 0;horizontal-align: center;"/>
-            <StackLayout orientation="horizontal" style="horizontal-align: center;">
-            <Label text="50%" style="padding:0 10"/>
-            <Progress value="50%" width="50%"/>
+                        </lv:RadListView.itemTemplate>
+                    </lv:RadListView> 
+                </ScrollView>
+                <Label text="Tittle"  style="padding:10 0 10 0;horizontal-align: center;"/>
+                <Label text="Author"  style="padding:0 0 30 0;horizontal-align: center;"/>
+                <StackLayout orientation="horizontal" style="horizontal-align: center;">
+                <Label text="50%" style="padding:0 10"/>
+                <Progress value="50%" width="50%"/>
             </StackLayout>
                                     
             <StackLayout orientation="horizontal" style="horizontal-align: center;">

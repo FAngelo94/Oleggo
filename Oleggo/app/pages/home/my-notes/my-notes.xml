@@ -12,14 +12,15 @@ Feel free to customize layouts and components to change how the tab view looks.
 						<lv:ListViewStaggeredLayout spanCount="1"/>
 					</lv:RadListView.listViewLayout>
 					<lv:RadListView.itemTemplate>
-						<StackLayout class="input-field" id="campo" weight="500px">
+						<StackLayout class="input-field" id="campo" >
 							<Label class="label" text="{{ when }}" ></Label>
 							<TextView id="{{ key + 'text' }}" hint="Enter some notes" text="{{ note }}" ></TextView>
 							<Label class="label" text="{{ book }}"></Label>
-							<Button id="{{ key }}" text="Save Changes" class="btn btn-primary btn-active" tap="modifyNote"/>
-							<Button id="{{ key }}" text="Remove" class="btn btn-primary btn-active" tap="removeNote"/>
-							<Button id="{{ key }}" text="Remove Favorite" class="btn btn-primary btn-active" tap="notFavoriteNote"/>
-							
+							<StackLayout orientation="horizontal" style="horizontal-align:center">
+							<Button id="{{ key }}" text="Save"  tap="modifyNote"/>
+							<Button id="{{ key }}" text="Delete"  tap="removeNote"/>
+							<Button id="{{ key }}" text="Remove"  tap="notFavoriteNote"/>
+							</StackLayout>
 						</StackLayout>
 					</lv:RadListView.itemTemplate>
 				</lv:RadListView>  

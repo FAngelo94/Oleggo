@@ -2,33 +2,31 @@ const observableModule = require("data/observable");
 const ObservableArray = require("data/observable-array").ObservableArray;
 var Sqlite = require("nativescript-sqlite");
 
-
-
 function BookViewModel(database, isbn) {
     console.log("Model");
     let viewModeldata = {
         Book: {},
         Quotes: new ObservableArray([]),
         Dictionary: new ObservableArray([]),
-        QuotesLength:{},
-        DiccLength:{}
+        QuotesLength: {},
+        DiccLength: {}
     }
-    
+
     //viewModel.BookList = viewModel.BookList.concat(books2);
     var temp = readBooksDB(database, isbn)
 
-    viewModeldata.Quotes=viewModeldata.Quotes.concat(readQuotesDB(database, isbn))
-    viewModeldata.Dictionary=viewModeldata.Dictionary.concat(readDiccDB(database, isbn))
-    viewModeldata.DiccLength=viewModeldata.Dictionary.length
-    viewModeldata.QuotesLength=viewModeldata.Quotes.length
+    viewModeldata.Quotes = viewModeldata.Quotes.concat(readQuotesDB(database, isbn))
+    viewModeldata.Dictionary = viewModeldata.Dictionary.concat(readDiccDB(database, isbn))
+    viewModeldata.DiccLength = viewModeldata.Dictionary.length
+    viewModeldata.QuotesLength = viewModeldata.Quotes.length
     viewModeldata.Book = temp
-   // console.log(JSON.stringify(viewModeldata))
-    var viewModel= observableModule.fromObjectRecursive(viewModeldata)
-    viewModel.updateBookmark= function (data) {
-           (new Sqlite("OleggoDB.db")).then(db => {
+
+    var viewModel = observableModule.fromObjectRecursive(viewModeldata)
+    viewModel.updateBookmark = function (data) {
+        (new Sqlite("OleggoDB.db")).then(db => {
             // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
             console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-            db.execSQL("UPDATE books SET bookmark=? WHERE id=?", [data.bookmark,data.id]).then(id => {
+            db.execSQL("UPDATE books SET bookmark=? WHERE id=?", [data.bookmark, data.id]).then(id => {
                 console.log("UPDATE RESULT", id);
                 db.all("SELECT * FROM books").then(rows => {
                     for (var row in rows) {
@@ -40,32 +38,58 @@ function BookViewModel(database, isbn) {
             }, error => {
                 console.log("INSERT ERROR", error);
             });
-    
+
         }, err => {
             console.info("Failed to open database", err);
-        }) 
+        })
     }
-    viewModel.updateState= function (data) {
+    viewModel.updateState = function (data) {
         (new Sqlite("OleggoDB.db")).then(db => {
-         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
-         console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-         db.execSQL("UPDATE books SET state=? WHERE id=?", [data.state,data.id]).then(id => {
-             console.log("UPDATE RESULT", id);
-             db.all("SELECT * FROM books WHERE id=?",[data.id]).then(rows => {
-                 for (var row in rows) {
-                     console.log("RESULT", rows[row]);
-                 }
-             }, error => {
-                 console.log("SELECT ERROR", error);
-             });
-         }, error => {
-             console.log("INSERT ERROR", error);
-         });
- 
-     }, err => {
-         console.info("Failed to open database", err);
-     }) 
- }
+            // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
+            console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+            db.execSQL("UPDATE books SET state=? WHERE id=?", [data.state, data.id]).then(id => {
+                console.log("UPDATE RESULT", id);
+                db.all("SELECT * FROM books WHERE id=?", [data.id]).then(rows => {
+                    for (var row in rows) {
+                        console.log("RESULT", rows[row]);
+                    }
+                }, error => {
+                    console.log("SELECT ERROR", error);
+                });
+            }, error => {
+                console.log("INSERT ERROR", error);
+            });
+
+        }, err => {
+            console.info("Failed to open database", err);
+        })
+    }
+    viewModel.updateMainState = function (data) {
+        (new Sqlite("OleggoDB.db")).then(db => {
+            // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
+            console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+            db.all("SELECT * FROM books WHERE state=2").then(rows => {
+                for (var row in rows) {
+                    console.log("RESULT Main", rows[row]);
+                    if(rows[row]){
+                        viewModel.updateState({
+                            id:rows[row][0],
+                            state:1
+                        })
+                    }
+                }
+                viewModel.updateState({
+                    id:data.id,
+                    state:data.state
+                })
+            }, error => {
+                console.log("SELECT ERROR", error);
+            });
+
+        }, err => {
+            console.info("Failed to open database", err);
+        })
+    }
     return viewModel;
 }
 
@@ -79,7 +103,7 @@ function readBooksDB(database, isbn) {
         else {
             for (var row in rows) {
                 console.log("RESULT", rows[row]);
-               
+
                 var background
                 if (rows[row][7].includes("M.jpg")) {
                     console.log("si")
@@ -94,8 +118,8 @@ function readBooksDB(database, isbn) {
                     bookmark: rows[row][5],
                     state: rows[row][6],
                     imagelink: rows[row][7],
-                    background:background,
-                    progress:Math.round((Number(rows[row][5])/Number(rows[row][4]))*100)
+                    background: background,
+                    progress: Math.round((Number(rows[row][5]) / Number(rows[row][4])) * 100)
                 }
             }
             return book

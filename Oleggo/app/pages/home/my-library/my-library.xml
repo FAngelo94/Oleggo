@@ -5,7 +5,7 @@ Feel free to customize layouts and components to change how the tab view looks.
 <GridLayout rows="*" columns="*" xmlns:lv="nativescript-pro-ui/listview" loaded="loaded" style="padding:5">
 	<lv:RadListView items="{{ BookList }}">
 		<lv:RadListView.listViewLayout>
-			<lv:ListViewStaggeredLayout itemHeight="144" spanCount="3"/>
+			<lv:ListViewStaggeredLayout spanCount="3"/>
 		</lv:RadListView.listViewLayout>
 		<lv:RadListView.itemTemplate>
 			<GridLayout rows="*,auto">
@@ -13,8 +13,8 @@ Feel free to customize layouts and components to change how the tab view looks.
 					<Image src="{{ imagelink }}" stretch="aspectFill"/>
 				</StackLayout>
 				<StackLayout row="1" class="BookContainer" orientation="vertical">
-					<Label text="{{ title }}" class="BookTitle"/>
-					<Label text="{{ author, 'by ' + author }}" class="BookAuthor"/>
+					<Label text="{{ title }}" class="BookTitle" textWrap="true"/>
+					<Label text="{{ author, 'by ' + author }}" class="BookAuthor" textWrap="true"/>
 				</StackLayout>
 			</GridLayout>
 		</lv:RadListView.itemTemplate>
