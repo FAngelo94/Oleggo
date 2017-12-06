@@ -87,7 +87,7 @@ function readISBN(args) {
         resolve(isbn.text, (err, book) => {
             if (err) {
                 console.log('Book not found ' + err)
-                errorAlert(err)
+                errorAlert('Book not found. ' + err)
             }
             else {
                 console.log('Book found: ' + JSON.stringify(book))
@@ -193,10 +193,10 @@ function addBookDB(data) {
     })
 }
 
-function errorAlert(e) {
+function errorAlert(err) {
     dialogs.alert({
         title: "Error",
-        message: e,
+        message: err,
         okButtonText: "continue"
     }).then(() => {
         console.log("Alert closed");
