@@ -97,7 +97,7 @@ function onProgressButtonTap(args) {
 
     page.showModal("pages/book-progress/book-progress-page", context, function (newBookmark, set) {
         console.log(newBookmark + "/" + set);
-        if(set===true){
+        if(set===true && newBookmark!=""){
             dataBook.Book.bookmark=newBookmark
             dataBook.Book.progress=Math.round((newBookmark/dataBook.Book.pages)*100)
             console.log(JSON.stringify(page.bindingContext._map))

@@ -1,6 +1,9 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" shownModally="onShownModally" backgroundColor="rgba(248,138,76,0.75)" style="margin:0;padding:0;width:100%;height:100%;">
-   
-    <StackLayout orientation="vertical" style="padding:90 0 10 0;color: white;width:100%;height:100%;">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+    shownModally="onShownModally"
+    backgroundColor="rgba(248,138,76,0.6)"
+    xmlns:Gradient="nativescript-gradient"
+    style="margin:0;padding:0;width:100%;height:100%;">
+   <Gradient:Gradient direction="to top right" colors="rgba(248,143,42,0.70),rgba(239,90,50,0.70), rgba(229,73,74,0.70)" orientation="vertical" style="padding:90 0 10 0;color: white;width:100%;height:100%;">
 
         <StackLayout class="line">
         <Label text="Update progress" class="progress" style="horizontal-align: center;"/>
@@ -21,6 +24,13 @@
         </StackLayout>
 
         <Button text="I have finished the book" class="btnFinish" tap="onFinishButtonTap"/> 
-        <Button text="Update Progress" tap="onSetButtonTap"/>
-    </StackLayout>
+        <Gradient:Gradient  direction="to top left" 
+        colors="rgba(248,153,42,0.60),rgba(239,90,50,0.60), rgba(240,73,94,0.60)"
+        orientation="vertical" 
+        verticalAlignment="center"
+        borderRadius="20"
+        style="width:60%;margin:10 10 10 10; height: 35;">
+        <Label text="UPDATE PROGRESS" tap="onSetButtonTap" style="text-align:center; font-size: 12;"/>
+        </Gradient:Gradient>
+    </Gradient:Gradient>
 </Page>
