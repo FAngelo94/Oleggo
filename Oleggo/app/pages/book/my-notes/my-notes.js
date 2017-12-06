@@ -6,7 +6,7 @@ var saveChanges = Toast.makeText("Modification Saved Successfully!");
 
 var page;
 function onLoaded(args) {
-	page = args.object
+    page = args.object
 	setUpModel()
 }
 
