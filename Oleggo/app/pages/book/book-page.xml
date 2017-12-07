@@ -93,7 +93,8 @@
                                 <Label text="{{Book.author}}" class="BookAuthor" style="horizontal-align: center;" textWrap="true"/>
                                                         
                                 <StackLayout orientation="horizontal" style="horizontal-align: center; padding:0 0 10 0;" width="75%">
-                                    <Button style="background-image:res://logo;" tap="onProgressButtonTap"/>   
+                                    <Button text="I" tap="changeImageBook"/>
+									<Button style="background-image:res://logo;" tap="onProgressButtonTap"/>   
                                     <Button text="B" id="btnState" tap="onStateButtonTap" /> 
                                     <Button text="B" id="btnMain" tap="onMainButtonTap"/>
                                 </StackLayout>

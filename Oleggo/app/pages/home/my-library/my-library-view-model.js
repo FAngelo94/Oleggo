@@ -40,7 +40,7 @@ function readBooksDB(database) {
                     
             }
             return books
-            //console.log(JSON.stringify(books))
+            console.log(JSON.stringify(books))
         }
     })
     return books;

@@ -90,6 +90,27 @@ function BookViewModel(database, isbn) {
             console.info("Failed to open database", err);
         })
     }
+	viewModel.updateImageLink = function (imagelink, isbn) {
+        (new Sqlite("OleggoDB.db")).then(db => {
+            // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
+            console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+            db.execSQL("UPDATE books SET imagelink = ? WHERE ISBN = ?", [imagelink, isbn]).then(id => {
+                console.info("UPDATE RESULT");
+                db.all("SELECT * FROM books WHERE ISBN=?", [isbn]).then(rows => {
+                    for (var row in rows) {
+                        console.info("RESULT", rows[row]);
+                    }
+                }, error => {
+                    console.info("SELECT ERROR", error);
+                });
+            }, error => {
+                console.info("INSERT ERROR", error);
+            });
+
+        }, err => {
+            console.info("Failed to open database", err);
+        })
+    }
     return viewModel;
 }
 

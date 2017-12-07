@@ -17,6 +17,7 @@ const OPENLIBRARY_API_BOOK = '/api/books';
 const WORLDCAT_API_BASE = 'http://xisbn.worldcat.org';
 const WORLDCAT_API_BOOK = '/webservices/xid/isbn';
 
+var page;
 /* ***********************************************************
  * Use the "onNavigatingTo" handler to initialize the page binding context.
  *************************************************************/
@@ -30,7 +31,7 @@ function onNavigatingTo(args) {
         return;
     }
 
-    const page = args.object;
+    page = args.object;
     page.bindingContext = new AddNewBooksViewModel();
 }
 
@@ -50,7 +51,7 @@ function read_qr() {
     const barcodescanner = new BarcodeScanner();
 
     barcodescanner.scan({
-        formats: "QR_CODE,PDF_417", // Pass in of you want to restrict scanning to certain types
+        formats: "AZTEC,CODE_39,CODE_93,CODE_128,DATA_MATRIX,EAN_8,EAN_13,ITF,PDF_417,QR_CODE,UPC_E,CODABAR,MAXICODE,RSS_14,UPC_A", // Pass in of you want to restrict scanning to certain types
         cancelLabel: "EXIT. Also, try the volume buttons!", // iOS only, default 'Close'
         cancelLabelBackgroundColor: "#333333", // iOS only, default '#000000' (black)
         message: "Use the volume buttons for extra light", // Android only, default is 'Place a barcode inside the viewfinder rectangle to scan it.'
@@ -65,9 +66,10 @@ function read_qr() {
         openSettingsIfPermissionWasPreviouslyDenied: true // On iOS you can send the user to the settings app if access was previously denied
     }).then(
         (result) => {
-            console.info("Scan format: " + result.format);
-            console.info("Scan text:   " + result.text);
-            tryAddBook(resut.text);
+            console.info("Scan format: " + result.format)
+            console.info("Scan text:   " + result.text)
+			var isbn = viewModule.getViewById(page, "isbn")
+            isbn.text=result.text
         },
         (error) => {
             console.info("No scan: " + error);
@@ -80,7 +82,6 @@ function openQR(eventData) {
 }
 
 function readISBN(args) {
-    let page = args.object.page;
     let isbn = viewModule.getViewById(page, "isbn");
     console.info(isbn.text);
     if (isbn.text != "") {
