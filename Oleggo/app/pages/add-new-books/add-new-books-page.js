@@ -87,11 +87,11 @@ function readISBN(args) {
     if (isbn.text != "") {
         resolve(isbn.text, (err, book) => {
             if (err) {
-                console.log('Book not found ' + err)
+                console.info('Book not found ' + err)
                 errorAlert('Book not found. ' + err)
             }
             else {
-                console.log('Book found: ' + JSON.stringify(book))
+                console.info('Book found: ' + JSON.stringify(book))
                 if (book.authors == "Unknown") {
                     tryAddAuthor(book.title + "\nAuthor: ", book);
                 }
@@ -144,11 +144,11 @@ function tryAddBook(data, book) {
     console.log(book.pageCount);
 
     if (book.pageCount > 0) {
-        console.log("book ok");
+        console.info("book ok");
         content.defaultText = book.pageCount.toString();
     }
     else {
-        console.log("book not pages");
+        console.info("book not pages");
     }
 
     dialogs.prompt(content).then((r) => {
@@ -176,16 +176,16 @@ function addBookDB(data) {
         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
         console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
         db.execSQL("INSERT INTO books (ISBN,title,author,pages,bookmark,state,imagelink) VALUES (?, ?, ?, ?, ?, ?, ?)", [data.ISBN, data.title, data.authors, data.pageCount, "0", "0", data.imageLink]).then(id => {
-            console.log("INSERT RESULT", id);
+            console.info("INSERT RESULT", id);
             db.all("SELECT * FROM books").then(rows => {
                 for (var row in rows) {
-                    console.log("RESULT", rows[row]);
+                    console.info("RESULT", rows[row]);
                 }
             }, error => {
-                console.log("SELECT ERROR", error);
+                console.info("SELECT ERROR", error);
             });
         }, error => {
-            console.log("INSERT ERROR", error);
+            console.info("INSERT ERROR", error);
         });
 
     }, err => {
