@@ -24,3 +24,13 @@ https://github.com/NativeScript/nativescript-marketplace-demo
 
 ### Translate Typescript in Javascript
 https://www.typescriptlang.org/play/
+
+# For Final Exam
+* Project discussion 
+  * On official dates only
+* You must come with
+  * Your design document (printed or by email)
+  * A shor t presentation (brief  introduction and design decisions)
+  * Elevator pitch (shor t video, 30-60 seconds)
+  * A demo (real device or simulator)
+* Synergies are encouraged
