@@ -22,7 +22,7 @@
             tap="onDrawerButtonTap"
             ios.position="left">
         </ActionItem>
-        <ActionItem id="exampleMenuButton" icon="res://logo" automationText="ExampleMenu" />
+        <!--ActionItem id="exampleMenuButton" icon="res://logo" automationText="ExampleMenu" /-->
         <Label class="action-bar-title" text="Reading Books"></Label>
     </ActionBar>
 
@@ -63,7 +63,7 @@
         -->
         <nsDrawer:RadSideDrawer.mainContent>
             <StackLayout orientation="vertical">
-                <ScrollView orientation="horizontal" >
+                <ScrollView orientation="horizontal" style="margin: 50 0 0 0; height: 80%">
                     <lv:RadListView items="{{ BookList }}">
                         <lv:RadListView.listViewLayout>
                             <lv:ListViewLinearLayout scrollDirection="Horizontal"/>
@@ -83,18 +83,6 @@
                         </lv:RadListView.itemTemplate>
                     </lv:RadListView> 
                 </ScrollView>
-                <Label text="Tittle"  style="padding:10 0 10 0;horizontal-align: center;"/>
-                <Label text="Author"  style="padding:0 0 30 0;horizontal-align: center;"/>
-                <StackLayout orientation="horizontal" style="horizontal-align: center;">
-                <Label text="50%" style="padding:0 10"/>
-                <Progress value="50%" width="50%"/>
-            </StackLayout>
-                                    
-            <StackLayout orientation="horizontal" style="horizontal-align: center;">
-                <Button style="background-image:res://logo;"/>   
-                <Button text="B" style="height: 50;width: 50;" tap="other" /> 
-                <Button text="B" />
-            </StackLayout>
         </StackLayout>
         </nsDrawer:RadSideDrawer.mainContent>
     </nsDrawer:RadSideDrawer>

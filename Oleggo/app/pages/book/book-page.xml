@@ -1,6 +1,5 @@
 <Page
     class="page"
-    actionBarHidden="true"
     navigatingTo="onNavigatingTo"
     xmlns:lv="nativescript-pro-ui/listview"
     cssFile="~/pages/book/book-page.css"
@@ -25,8 +24,7 @@
             tap="onDrawerButtonTap"
             ios.position="left">
         </ActionItem>
-        <ActionItem id="exampleMenuButton" icon="res://book" automationText="ExampleMenu"/>
-        <Label class="action-bar-title" text=""></Label>
+        <Label class="action-bar-title" text="" textWrap="true"></Label>
     </ActionBar>
 
     <!--
@@ -65,78 +63,74 @@
         Always wrap content in a layout component.
         -->
         <nsDrawer:RadSideDrawer.mainContent>
-            <ScrollView style="margin:24 0 0 0;padding:0;">
-                <AbsoluteLayout style="background-color:#434B5B;margin:0;padding:0;width:100%;">
-                <Button class="btnMenu" tap="onDrawerButtonTap" left="0" top="0"></Button>
-                    <Image src="{{Book.background}}" class="imgBack" stretch="aspectFill" left="0" top="0" />
-                    <StackLayout orientation="vertical" left="0" top="50" style="margin:0;padding:0;width:100%">
-                        <StackLayout orientation="vertical" style="color: white;">
-                            <DockLayout stretchLastChild="true" style="width:100%;padding:10 0 10 0;">
-                                <StackLayout dock="left" style="vertical-align: bottom;margin:0 0 0 10; width:80;color:#839E9D;">
-                                    <Label text="{{QuotesLength}}"  style="horizontal-align: center;"/>
-                                    <Label text="Notes"  style="horizontal-align: center;"/> 
-                                </StackLayout>
-                                
-                                <StackLayout dock="right" style="vertical-align: bottom;margin:0 10 0 0; width:80;color:#839E9D">
-                                    <Label text="{{DiccLength}}"  style="horizontal-align: center;"/>
-                                    <Label text="Dictionary"  style="horizontal-align: center;"/> 
-                                </StackLayout>
-                                
-                                <StackLayout  style="horizontal-align: center;">
-                                    <Image src="{{Book.imagelink}}" stretch="aspectFit"/>
-                                </StackLayout>
-                            </DockLayout>
-                            
-                            <StackLayout orientation="vertical" style="padding:0 0 10 0;color: white;">
 
-                                <Label text="{{Book.title}}" class="BookTitle" style="horizontal-align: center;" textWrap="true"/>
-                                <Label text="{{Book.author}}" class="BookAuthor" style="horizontal-align: center;" textWrap="true"/>
-                                                        
-                                <StackLayout orientation="horizontal" style="horizontal-align: center; padding:0 0 10 0;" width="75%">
-                                    <Button text="I" tap="changeImageBook"/>
-									<Button style="background-image:res://logo;" tap="onProgressButtonTap"/>   
-                                    <Button text="B" id="btnState" tap="onStateButtonTap" /> 
-                                    <Button text="B" id="btnMain" tap="onMainButtonTap"/>
-                                </StackLayout>
-
-                                <Label text="{{Book.pages +' pages'}}" style="text-align:right;padding:0;margin:0;font-size: 12;" width="75%"/>
-
-                                <StackLayout orientation="horizontal" style="horizontal-align:center;margin:0" width="75%">
-                                    <Label text="{{Book.progress}}" style="text-align:right;font-weight:bold" width="12%"/>
-                                    <Label text="%" style="font-size: 16;padding:0 5 0 0;font-weight:bold" width="10%"/>
-                                    <Progress value="{{Book.progress}}" width="78%" /> 
-                                </StackLayout>
-
-                            </StackLayout>
-
-                            <StackLayout orientation="vertical" style="height:500">		
-								<TabView selectedIndexChanged="onSelectedIndexChanged" tabBackgroundColor="white">
-                                    <TabView.items>
-									
-                                        <TabViewItem title="Notes">
-                                            <TabViewItem.view>
-                                        
-												<my-notes:my-notes/>
-												
-                                            </TabViewItem.view>
-                                        </TabViewItem>
-
-                                        <TabViewItem title="Dictionary">
-                                            <TabViewItem.view>
+            <TabView selectedIndexChanged="onSelectedIndexChanged" selectedIndex="1">
+                <TabView.items>
+                <!--
+                To add a new TabView item, simply add a new <TabViewItem> component to the <TabView.items> collection.
+                Assign the <TabViewItem> component a "title" that will be displayed as the text of the tab item button. 
+                -->
+                    <TabViewItem title="Notes">
+                        <TabViewItem.view>
+                            <my-notes:my-notes/>
+                        </TabViewItem.view>
+                    </TabViewItem>
+                    <TabViewItem title="Info">
+                        <TabViewItem.view>
+                                <AbsoluteLayout style="background-color:#434B5B;margin:0;padding:0;width:100%;">
+                                    <Image src="{{Book.background}}" class="imgBack" stretch="aspectFill" left="0" top="0" />
+                                    <StackLayout orientation="vertical" left="0" top="50" style="margin:0;padding:0;width:100%">
+                                        <StackLayout orientation="vertical" style="color: white;">
+                                            <DockLayout stretchLastChild="true" style="width:100%;padding:10 0 20 0;">
+                                                <StackLayout dock="left" style="vertical-align: bottom;margin:0 0 0 10; width:80;color:#839E9D;">
+                                                    <Label text="{{QuotesLength}}"  style="horizontal-align: center;"/>
+                                                    <Label text="Notes"  style="horizontal-align: center;"/> 
+                                                </StackLayout>
                                                 
-												<my-dictionary:my-dictionary/>
-												
-                                            </TabViewItem.view>
-                                        </TabViewItem>
-										
-                                    </TabView.items>
-                                </TabView> 
-								
-                            </StackLayout>
-                        </StackLayout>
-                    </StackLayout>
-                </AbsoluteLayout>
-            </ScrollView>
+                                                <StackLayout dock="right" style="vertical-align: bottom;margin:0 10 0 0; width:80;color:#839E9D">
+                                                    <Label text="{{DiccLength}}"  style="horizontal-align: center;"/>
+                                                    <Label text="Dictionary"  style="horizontal-align: center;"/> 
+                                                </StackLayout>
+                                                
+                                                <StackLayout  style="horizontal-align: center;">
+                                                    <Image src="{{Book.imagelink}}" stretch="aspectFit"/>
+                                                </StackLayout>
+                                            </DockLayout>
+                                            
+                                            <StackLayout orientation="vertical" style="padding:0 0 10 0;color: white;">
+
+                                                <Label text="{{Book.title}}" class="BookTitle" style="horizontal-align: center;" textWrap="true"/>
+                                                <Label text="{{Book.author}}" class="BookAuthor" style="horizontal-align: center;" textWrap="true"/>
+                                                                        
+                                                <StackLayout orientation="horizontal" style="horizontal-align: center; padding:10 0 15 0;" width="75%">
+                                                    <Button text="I" tap="changeImageBook"/>
+                                                    <Button style="background-image:res://logo;" tap="onProgressButtonTap"/>   
+                                                    <Button text="B" id="btnState" tap="onStateButtonTap" /> 
+                                                    <Button text="B" id="btnMain" tap="onMainButtonTap"/>
+                                                </StackLayout>
+
+                                                <Label text="{{Book.pages +' pages'}}" style="text-align:right;padding:0;margin:0;font-size: 12;" width="75%"/>
+
+                                                <StackLayout orientation="horizontal" style="horizontal-align:center;margin:0" width="75%">
+                                                    <Label text="{{Book.progress}}" style="text-align:right;font-weight:bold" width="12%"/>
+                                                    <Label text="%" style="font-size: 16;padding:0 5 0 0;font-weight:bold" width="10%"/>
+                                                    <Progress value="{{Book.progress}}" width="78%" /> 
+                                                </StackLayout>
+
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </AbsoluteLayout>
+                        </TabViewItem.view>
+                    </TabViewItem>
+                    <TabViewItem title="Dictionary">
+                        <TabViewItem.view>
+                            <my-dictionary:my-dictionary/>
+                        </TabViewItem.view>
+                    </TabViewItem>
+                </TabView.items>
+            </TabView> 
+            
         </nsDrawer:RadSideDrawer.mainContent>
     </nsDrawer:RadSideDrawer>
 </Page>

@@ -1,15 +1,6 @@
 .scroll-pane {
-    width: 120;
+    width: 200;
     margin: 10;
-}
-
-Button {
-    height: 40;
-    width: 40;
-    border-radius: 50%;
-    background-color: #FF4082;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .BookContainer {
@@ -18,12 +9,12 @@ Button {
 }
 
 .BookTitle {
-    font-size: 12;
+    font-size: 16;
     color: #434B5B;
 }
 
 .BookAuthor {
-    font-size: 10;
+    font-size: 14;
     color: #F98735;;
 }
 

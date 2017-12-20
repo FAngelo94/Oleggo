@@ -20,18 +20,18 @@ Button {
     margin:0;
     padding:0;
     width:100%;
-    height:175;
+    height:200;
 }
 label{
     font-size:16;
 }
 Image {
-    height: 165;
+    height: 185;
     margin: 5 5 0 5;
 }
 .BookTitle {
     padding:0 0 0 0;
-    font-size: 18;
+    font-size: 22;
     color:white;
     text-align:center;
 }
@@ -39,6 +39,6 @@ Image {
 .BookAuthor {
     padding:0 0 10 0;
     color:#F98735;
-    font-size: 16;
+    font-size: 20;
     text-align:center;
 }

@@ -16,7 +16,7 @@ Feel free to customize layouts and components to change how the tab view looks.
 							<Label class="label" text="{{ when }}" ></Label>
 							<TextView id="{{ key + 'text' }}" hint="Enter some notes" text="{{ note }}" ></TextView>
 							<Label class="label" text="{{ book }}"></Label>
-							<StackLayout orientation="horizontal" style="horizontal-align:center">
+							<StackLayout orientation="horizontal" style="horizontal-align:center; margin:5 0 0 0">
 							<Button id="{{ key }}" text="Save"  tap="modifyNote"/>
 							<Button id="{{ key }}" text="Delete"  tap="removeNote"/>
 							<Button id="{{ key }}" text="Remove"  tap="notFavoriteNote"/>

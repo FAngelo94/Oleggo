@@ -101,7 +101,10 @@ function onProgressButtonTap(args) {
 
     page.showModal("pages/book-progress/book-progress-page", context, function (newBookmark, set) {
         console.log(newBookmark + "/" + set);
-        if(set===true && newBookmark!=""){
+        if(set===true && newBookmark!="" && newBookmark>0){
+            if(parseInt(newBookmark) > parseInt(dataBook.Book.pages)){
+                newBookmark=dataBook.Book.pages
+            }
             dataBook.Book.bookmark=newBookmark
             dataBook.Book.progress=Math.round((newBookmark/dataBook.Book.pages)*100)
             console.log(JSON.stringify(page.bindingContext._map))
@@ -129,7 +132,6 @@ function onMainButtonTap(args) {
 }
 
 function changeImageBook(args){
-	console.info("INIZIO")
 	var context = imagepicker.create({ mode: "single" });
 	console.info(context)
     startSelection(context, true);
@@ -164,7 +166,11 @@ function startSelection(context, isSingle) {
 							console.info("image updated")
 						}, function (error) {
 							// Failed to remove the file.
-						});
+                        });
+                    console.log(imageLink)
+                    dataBook.Book.imagelink=imageLink
+                    dataBook.Book.background=imageLink
+                    console.log(JSON.stringify(dataBook.Book))
                     dataBook.updateImageLink(imageLink,page.navigationContext.bookISBN)
 					
 					console.info("saved complete");

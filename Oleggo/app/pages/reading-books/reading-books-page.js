@@ -41,5 +41,18 @@ function onDrawerButtonTap(args) {
     sideDrawer.showDrawer();
 }
 
+exports.onImageBookTap = function (args) {
+    console.log("send " + args.object.id)
+    let isbn=args.object.id
+    var topmost = frameModule.topmost();
+    var naviagationOptions={
+        moduleName:"pages/book/book-page",
+        context:{
+            bookISBN:isbn
+        }
+    }
+    topmost.navigate(naviagationOptions); 
+}
+
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;

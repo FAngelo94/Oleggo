@@ -127,8 +127,10 @@ function readBooksDB(database, isbn) {
 
                 var background
                 if (rows[row][7].includes("M.jpg")) {
-                    console.log("si")
                     background = rows[row][7].replace("M.jpg", 'L.jpg');
+                }
+                else{
+                    background = rows[row][7]
                 }
                 book = {
                     id: rows[row][0],

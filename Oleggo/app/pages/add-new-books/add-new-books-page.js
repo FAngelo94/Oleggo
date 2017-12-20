@@ -226,10 +226,13 @@ function _resolveOpenLibrary(isbn, callback) {
             'pageCount': book.details.number_of_pages,
             'printType': 'BOOK',
             'categories': [],
-            'imageLink': book.thumbnail_url,
+            'imageLink': "~/images/empty.png",
             'previewLink': book.preview_url,
             'infoLink': book.info_url
         };
+        if(book.thumbnail_url){
+            standardBook.imageLink=book.thumbnail_url;
+        }
 
         if (book.details.publishers) {
             standardBook.publisher = book.details.publishers[0];
