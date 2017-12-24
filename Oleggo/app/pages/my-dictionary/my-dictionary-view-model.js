@@ -1,21 +1,22 @@
 const observableModule = require("data/observable");
 const ObservableArray = require("data/observable-array").ObservableArray;
 
-function MyDictionaryViewModel(db) {
+function MyDictionaryViewModel(db,word) {
     //Pass the ObservableArray to the page
     const viewModel = observableModule.fromObject({
 		DictionaryList: new ObservableArray([])
     })
-	var temp=readDictionaryDB(db)
+	var temp=readDictionaryDB(db,word)
 	viewModel.DictionaryList=viewModel.DictionaryList.concat(temp)
 	console.info(JSON.stringify(viewModel.DictionaryList))
     return viewModel
 }
 
-function readDictionaryDB(db)
+function readDictionaryDB(db,word)
 {
+	word="%"+word+"%"
 	var quotes = []
-    db.all("SELECT * FROM dictionary group by word order by word", function (error, rows) {
+    db.all("SELECT * FROM dictionary WHERE word LIKE ? group by word order by word",[word], function (error, rows) {
         if (error) {
             console.log("SELECT ERROR", error)
             return ("SELECT ERROR" + error)

@@ -57,11 +57,14 @@
         -->
         <nsDrawer:RadSideDrawer.mainContent>
 		
-		
+			
 			<GridLayout rows="*" columns="*" xmlns:lv="nativescript-pro-ui/listview" loaded="loadList">
 				<ScrollView row="0" col="0">
 					<GridLayout rows="*" columns="*">
 						<StackLayout class="form">
+							
+							<TextView id="word" hint="Write the words or its beginning"></TextView>		
+							<Button text="Search" class="btn btn-primary btn-active" tap="searchWord"/>
 							
 							<lv:RadListView items="{{ DictionaryList }}" >
 								<lv:RadListView.listViewLayout>

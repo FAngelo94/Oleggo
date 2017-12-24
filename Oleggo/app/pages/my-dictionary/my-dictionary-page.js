@@ -3,6 +3,7 @@ var Sqlite = require( "nativescript-sqlite" );
 const MyDictionaryViewModel = require("./my-dictionary-view-model");
 
 var page;
+var searchLabel;
 /* ***********************************************************
 * Use the "onNavigatingTo" handler to initialize the page binding context.
 *************************************************************/
@@ -29,13 +30,14 @@ function onDrawerButtonTap(args) {
 
 function loadList(args){
 	page = args.object
+	searchLabel = page.getViewById("word");
 	setUpModel()
 }
 
 function setUpModel(){
 	(new Sqlite("OleggoDB.db")).then((db) => {
          console.log("gotDB")
-         var temp = new MyDictionaryViewModel(db)
+         var temp = new MyDictionaryViewModel(db,"")
 		 console.info("temp="+temp)
          page.bindingContext = temp
      }, err => {
@@ -62,6 +64,18 @@ function removeWord(args){
 	setUpModel()
 }
 
+function searchWord(args){
+	(new Sqlite("OleggoDB.db")).then((db) => {
+         var temp = new MyDictionaryViewModel(db,searchLabel.text)
+		 console.info("temp="+temp)
+         page.bindingContext = temp
+     }, err => {
+         console.info("Failed to open database", err)
+         errorAlert("Failed to open database: " + err)
+     })
+}
+
+exports.searchWord = searchWord
 exports.loadList = loadList
 exports.removeWord = removeWord
 exports.onNavigatingTo = onNavigatingTo
