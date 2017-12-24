@@ -1,1 +1,1 @@
-//module.exports = require("nativescript-dev-sass/lib/watch.js");
+module.exports = require("nativescript-dev-sass/lib/watch.js");
