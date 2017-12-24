@@ -14,6 +14,8 @@ Mobile Application (Uni)
                 http://xisbn.worldcat.org/xisbnadmin/doc/api.htm
 * Toast = https://github.com/TobiasHennig/nativescript-toast
 * Usefull Plugins = https://github.com/TobiasHennig
+* RGB to Hex color converter = https://www.rapidtables.com/convert/color/rgb-to-hex.html
+
 ### Native Script app example
 
 https://github.com/NativeScript/nativescript-marketplace-demo
