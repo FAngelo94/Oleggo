@@ -15,6 +15,9 @@ var speechRecognition = new SpeechRecognition();
 // import the options
 var SpeechRecognitionTranscription = require("nativescript-speech-recognition").SpeechRecognitionTranscription;
 var wd = require("~/shared/word-definition")
+
+var DB = require("~/shared/db/db")
+
 /* ***********************************************************
  * Use the "onNavigatingTo" handler to initialize the page binding context.
  *************************************************************/
@@ -88,7 +91,7 @@ function addQuoteDB(ISBN) {
         var d = new Date()
         d = d.toString()
         d = d.substring(0, 21)
-        db.execSQL("INSERT INTO quotes (ISBN, Quote, Page, Favorite, Date) VALUES (?, ?, ?, ?, ?)", [ISBN, labelNote.text, labelPage.text, "0", d]).then(id => {
+        db.execSQL(DB.insertQuote(), [ISBN, labelNote.text, labelPage.text, "0", d]).then(id => {
             quoteAdded.show()
             labelNote.text = ""
             console.info("INSERT RESULT" + id);
