@@ -64,7 +64,7 @@
         -->
         <nsDrawer:RadSideDrawer.mainContent>
 
-            <TabView selectedIndexChanged="onSelectedIndexChanged" selectedIndex="1">
+            <TabView selectedIndexChanged="onSelectedIndexChanged" selectedIndex="1" androidSelectedTabHighlightColor="#FF7E00" tabBackgroundColor="#FFC100">
                 <TabView.items>
                 <!--
                 To add a new TabView item, simply add a new <TabViewItem> component to the <TabView.items> collection.
