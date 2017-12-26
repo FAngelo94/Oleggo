@@ -1,6 +1,8 @@
 const observableModule = require("data/observable");
 const ObservableArray = require("data/observable-array").ObservableArray;
 
+var DB = require("~/shared/db/db")
+
 function MyDictionaryViewModel(db,word) {
     //Pass the ObservableArray to the page
     const viewModel = observableModule.fromObject({
@@ -16,7 +18,7 @@ function readDictionaryDB(db,word)
 {
 	word="%"+word+"%"
 	var quotes = []
-    db.all("SELECT * FROM dictionary WHERE word LIKE ? group by word order by word",[word], function (error, rows) {
+    db.all(DB.readWords(),[word], function (error, rows) {
         if (error) {
             console.log("SELECT ERROR", error)
             return ("SELECT ERROR" + error)

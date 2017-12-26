@@ -69,7 +69,7 @@ function listen(args) {
 
 function addQuote(args) {
     (new Sqlite("OleggoDB.db")).then((db) => {
-            db.all("SELECT * FROM books WHERE state=2").then(rows => {
+            db.all(DB.readISBNMainActiveBook()).then(rows => {
                 var ISBN = rows[0][1];
                 console.info(ISBN);
                 addQuoteDB(ISBN);
@@ -107,7 +107,7 @@ function addQuoteDB(ISBN) {
 
 function lookForWord(args) {
     (new Sqlite("OleggoDB.db")).then((db) => {
-        db.all("SELECT * FROM books WHERE state=2").then(rows => {
+        db.all(DB.readISBNMainActiveBook()).then(rows => {
             var ISBN = rows[0][1];
             console.info(ISBN);
             wordDefinition(ISBN);
@@ -136,7 +136,7 @@ function lookForWordDB(ISBN, meaning) {
         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
         console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
         console.info("meaning=" + meaning)
-        db.execSQL("INSERT INTO dictionary (ISBN, word, meaning) VALUES (?, ?, ?)", [ISBN, labelNote.text, meaning]).then(id => {
+        db.execSQL(DB.insertNewWord(), [ISBN, labelNote.text, meaning]).then(id => {
             labelNote.text = ""
             wordAdded.show()
             console.info("INSERT RESULT" + id)

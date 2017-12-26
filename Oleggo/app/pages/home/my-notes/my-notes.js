@@ -3,6 +3,7 @@ var Sqlite = require( "nativescript-sqlite" );
 var Toast = require("nativescript-toast");
 
 var saveChanges = Toast.makeText("Modification Saved Successfully!");
+var DB = require("~/shared/db/db")
 
 var page;
 function onLoaded(args) {
@@ -29,7 +30,7 @@ function modifyNote(args) {
         console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
         var id=args.object.id
 		var quote=page.getViewById(id+"text")
-		db.execSQL("UPDATE quotes SET Quote = ? WHERE id = ?", [quote.text, id]).then(id => {
+		db.execSQL(DB.updateQuote(), [quote.text, id]).then(id => {
             saveChanges.show()
 			console.info("INSERT RESULT" + id);
         }, error => {
@@ -48,7 +49,7 @@ function removeNote(args) {
         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
         console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
         var id=args.object.id
-		db.execSQL("DELETE FROM quotes WHERE id = ?", [id]).then(id => {
+		db.execSQL(DB.removeQuote(), [id]).then(id => {
             console.info("INSERT RESULT" + id);
         }, error => {
             console.info("INSERT ERROR" + error);
@@ -67,7 +68,7 @@ function notFavoriteNote(args) {
         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
         console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
         var id=args.object.id
-		db.execSQL("UPDATE quotes SET Favorite = ? WHERE id = ?", ["0", id]).then(id => {
+		db.execSQL(DB.removeFromFavoriteQuote(), ["0", id]).then(id => {
             console.info("INSERT RESULT" + id);
         }, error => {
             console.info("INSERT ERROR" + error);

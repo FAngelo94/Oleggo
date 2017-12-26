@@ -2,6 +2,8 @@ const observableModule = require("data/observable");
 const ObservableArray = require("data/observable-array").ObservableArray;
 var Sqlite = require("nativescript-sqlite");
 
+var DB = require("~/shared/db/db")
+
 function ReadingBooksViewModel(database) {
     console.log("Model");
   
@@ -18,7 +20,7 @@ function ReadingBooksViewModel(database) {
 function readBooksDB(database) {
 
     var books = []
-    database.all("SELECT * FROM books WHERE state==1 OR state==2", function (error, rows) {
+    database.all(DB.readAllActiveBooks(), function (error, rows) {
         if (error) {
             console.log("SELECT ERROR", error);
             return ("SELECT ERROR" + error)
