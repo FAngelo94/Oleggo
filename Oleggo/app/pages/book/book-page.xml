@@ -64,18 +64,18 @@
         -->
         <nsDrawer:RadSideDrawer.mainContent>
 
-            <TabView selectedIndexChanged="onSelectedIndexChanged" selectedIndex="1" androidSelectedTabHighlightColor="#FF7E00" tabBackgroundColor="#FFC100">
+            <TabView style="font-family: FontAwesome; font-weight: bold;" selectedIndexChanged="onSelectedIndexChanged" selectedIndex="1" androidSelectedTabHighlightColor="#FF7E00">
                 <TabView.items>
                 <!--
                 To add a new TabView item, simply add a new <TabViewItem> component to the <TabView.items> collection.
                 Assign the <TabViewItem> component a "title" that will be displayed as the text of the tab item button. 
                 -->
-                    <TabViewItem title="Notes">
+                    <TabViewItem title="&#xf040; Notes">
                         <TabViewItem.view>
                             <my-notes:my-notes/>
                         </TabViewItem.view>
                     </TabViewItem>
-                    <TabViewItem title="Info">
+                    <TabViewItem title="&#xf05a; INFO">
                         <TabViewItem.view>
                                 <AbsoluteLayout style="background-color:#434B5B;margin:0;padding:0;width:100%;">
                                     <Image src="{{Book.background}}" class="imgBack" stretch="aspectFill" left="0" top="0" />
@@ -103,10 +103,9 @@
                                                 <Label text="{{Book.author}}" class="BookAuthor" style="horizontal-align: center;" textWrap="true"/>
                                                                         
                                                 <StackLayout orientation="horizontal" style="horizontal-align: center; padding:10 0 15 0;" width="75%">
-                                                    <Button text="I" tap="changeImageBook"/>
-                                                    <Button style="background-image:res://logo;" tap="onProgressButtonTap"/>   
-                                                    <Button text="B" id="btnState" tap="onStateButtonTap" /> 
-                                                    <Button text="B" id="btnMain" tap="onMainButtonTap"/>
+                                                    <Button text="&#xf0ae;" tap="onProgressButtonTap" style="font-family: FontAwesome;"/>   
+                                                    <Button text="B" id="btnState" tap="onStateButtonTap" style="height: 60;width: 60;"/> 
+                                                    <Button text="&#xf03e;" tap="changeImageBook" style="font-family: FontAwesome;" />
                                                 </StackLayout>
 
                                                 <Label text="{{Book.pages +' pages'}}" style="text-align:right;padding:0;margin:0;font-size: 12;" width="75%"/>
@@ -123,7 +122,7 @@
                                 </AbsoluteLayout>
                         </TabViewItem.view>
                     </TabViewItem>
-                    <TabViewItem title="Dictionary">
+                    <TabViewItem title="&#xf022; Dictionary">
                         <TabViewItem.view>
                             <my-dictionary:my-dictionary/>
                         </TabViewItem.view>

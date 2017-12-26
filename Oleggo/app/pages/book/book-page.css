@@ -1,44 +1,47 @@
-
 Button {
     height: 40;
     width: 40;
     border-radius: 50%;
-    margin:0 15 0 15;
-    background-color: #FF4082;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.btnMenu{
-    margin:8 0 0 8;
-    background-color:rgba(0,0,0,0);
-    background-image:res://menu;
+    margin: 0 15 0 15;
+    background-color: rgb(243, 113, 20);
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.imgBack{
-    margin:0;
-    padding:0;
-    width:100%;
-    height:200;
+.btnMenu {
+    margin: 8 0 0 8;
+    background-color: transparent;
+    background-image: res://menu;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-label{
-    font-size:16;
+
+.imgBack {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 200
 }
+
+label {
+    font-size: 16
+}
+
 Image {
     height: 185;
-    margin: 5 5 0 5;
+    margin: 5 5 0 5
 }
+
 .BookTitle {
-    padding:0 0 0 0;
+    padding: 0 0 0 0;
     font-size: 22;
-    color:white;
-    text-align:center;
+    color: white;
+    text-align: center
 }
 
 .BookAuthor {
-    padding:0 0 10 0;
-    color:#F98735;
+    padding: 0 0 10 0;
+    color: #F98735;
     font-size: 20;
-    text-align:center;
+    text-align: center
 }

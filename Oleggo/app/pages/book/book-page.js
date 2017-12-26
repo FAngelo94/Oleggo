@@ -24,7 +24,7 @@ function loaded (args) {
         else{
             page.getViewById("btnState").style = "background-color:white"
             if(dataBook.Book.state==2){
-                page.getViewById("btnMain").style = "background-color:white"
+                page.getViewById("btnState").style = "background-color:red"
             }
         }
 
@@ -80,18 +80,23 @@ function onDrawerButtonTap(args) {
 }
 function onStateButtonTap(args){
 
-    
-    if(dataBook.Book.state==1 || dataBook.Book.state==2){
-        dataBook.Book.state = 0
-        page.getViewById("btnState").style = "background-color:#FF4082"
-        page.getViewById("btnMain").style = "background-color:#FF4082"
-    }
-    else{
-        dataBook.Book.state = 1
-        page.getViewById("btnState").style = "background-color:white"
+    switch (dataBook.Book.state) {
+        case "0":
+            dataBook.Book.state = "1"
+            page.getViewById("btnState").style = "background-color:white"
+            break;
+        case "1":
+            dataBook.updateMainState(dataBook.Book)
+            dataBook.Book.state = "2"
+            page.getViewById("btnState").style = "background-color:red"
+            break;
+        case "2":
+            dataBook.Book.state = "0"
+            page.getViewById("btnState").style = "background-color:#FF4082"
+            break;    
     }
     console.log(dataBook.Book.state)  
-    dataBook.updateState(dataBook.Book)
+    dataBook.updateState(dataBook.Book)  
 }
 
 function onProgressButtonTap(args) {
@@ -112,23 +117,6 @@ function onProgressButtonTap(args) {
         }
             
     }, fullscreen);
-}
-function onMainButtonTap(args) {
-    
-    if(dataBook.Book.state!=2){
-        dataBook.Book.state = 2
-        page.getViewById("btnState").style = "background-color:white"
-        page.getViewById("btnMain").style = "background-color:white"
-    }
-    else{
-        dataBook.Book.state = 1
-        page.getViewById("btnState").style = "background-color:white"
-        page.getViewById("btnMain").style = "background-color:#FF4082"
-    }
-
-    console.log(dataBook.Book.state)  
-    dataBook.updateMainState(dataBook.Book)
-    dataBook.updateState(dataBook.Book)
 }
 
 function changeImageBook(args){
@@ -190,6 +178,5 @@ exports.changeImageBook = changeImageBook
 exports.onProgressButtonTap = onProgressButtonTap;
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
-exports.onMainButtonTap= onMainButtonTap;
 exports.onStateButtonTap = onStateButtonTap;
 exports.onSelectedIndexChanged = onSelectedIndexChanged;
