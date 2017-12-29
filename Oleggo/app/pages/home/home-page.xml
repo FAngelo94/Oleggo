@@ -87,7 +87,7 @@
                             <my-library:my-library/>
                         </TabViewItem.view>
                     </TabViewItem>
-                    <TabViewItem title="My Notes">
+                    <TabViewItem title="My Favorite Notes">
                         <TabViewItem.view>
                             <my-notes:my-notes/>
                         </TabViewItem.view>

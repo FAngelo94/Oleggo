@@ -71,7 +71,7 @@ function addQuote(args) {
     (new Sqlite("OleggoDB.db")).then((db) => {
             db.all(DB.readISBNMainActiveBook()).then(rows => {
                 var ISBN = rows[0][1];
-                console.info(ISBN);
+                console.info("ISBN="+ISBN);
                 addQuoteDB(ISBN);
             }, error => {
                 console.info("SELECT ERROR" + error);
@@ -109,7 +109,7 @@ function lookForWord(args) {
     (new Sqlite("OleggoDB.db")).then((db) => {
         db.all(DB.readISBNMainActiveBook()).then(rows => {
             var ISBN = rows[0][1];
-            console.info(ISBN);
+            console.info("ISBN="+ISBN);
             wordDefinition(ISBN);
         }, error => {
             console.info("SELECT ERROR" + error);
