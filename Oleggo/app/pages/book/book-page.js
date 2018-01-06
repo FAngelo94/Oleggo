@@ -13,6 +13,7 @@ function loaded (args) {
     page = args.object;
     (new Sqlite("OleggoDB.db")).then((db) => {
         var temp = new BookViewModel(db, page.navigationContext.bookISBN)
+		
         //console.log(JSON.stringify(temp.Book))
         console.log(JSON.stringify(temp.Dictionary))
         console.log(JSON.stringify(temp.Quotes))
@@ -32,7 +33,12 @@ function loaded (args) {
         console.info("Failed to open database", err);
         errorAlert("Failed to open database: " + err)
     })
-};
+}
+
+function readISBN(){
+	return page.navigationContext.bookISBN
+}
+exports.readISBN = readISBN
 
 /* ***********************************************************
  * Use the "onNavigatingTo" handler to initialize the page binding context.

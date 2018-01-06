@@ -4,9 +4,18 @@ var Toast = require("nativescript-toast");
 
 var saveChanges = Toast.makeText("Modification Saved Successfully!");
 
+const book = require("./../book-page");
+
 var page;
 function onLoaded(args) {
     page = args.object
+	
+	console.info("-----------------------------ATTENTION----------------------")
+	console.info(MyNotesViewModel)
+	console.info("-----------------------------ATTENTION----------------------")
+	console.info(book.readISBN())
+	console.info("-----------------------------ATTENTION----------------------")
+	
 	setUpModel()
 }
 
