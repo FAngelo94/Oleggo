@@ -16,7 +16,7 @@ function MyNotesViewModel(db) {
 function readQuotesDB(db)
 {
 	var quotes = []
-    db.all("SELECT * FROM quotes join books where quotes.ISBN=books.ISBN", function (error, rows) {
+    db.all("SELECT * FROM quotes join books where quotes.ISBN=books.ISBN and favorite=1", function (error, rows) {
         if (error) {
             console.log("SELECT ERROR", error)
             return ("SELECT ERROR" + error)
