@@ -1,29 +1,27 @@
-<!--
-This is the component view that represents the 'Search' tab.
-Feel free to customize layouts and components to change how the tab view looks.
--->
-<Page loaded="loadList">
-<GridLayout rows="*" columns="*" xmlns:lv="nativescript-pro-ui/listview">
-	<ScrollView row="0" col="0">
-		<GridLayout rows="*" columns="*">
-			<StackLayout class="form">
-				
-				<lv:RadListView items="{{ DictionaryList }}" >
-					<lv:RadListView.listViewLayout>
-						<lv:ListViewStaggeredLayout spanCount="1"/>
-					</lv:RadListView.listViewLayout>
-					<lv:RadListView.itemTemplate>
-						<StackLayout class="input-field" id="campo" weight="500px">
-							<Label class="label" text="{{ word }}" ></Label>
-							<Label class="label" text="{{ meaning }}" textWrap="true"></Label>
-							<Button id="{{ word }}" text="Remove" class="btn btn-primary btn-active" tap="removeWord"/>
-						
-						</StackLayout>
-					</lv:RadListView.itemTemplate>
-				</lv:RadListView>  
-				  
-			</StackLayout>
-		</GridLayout>
-	</ScrollView>
-</GridLayout>
+<Page loaded="loadList"
+	cssFile="~/pages/book/my-dictionary/my-dictionary.css">
+	<GridLayout rows="*" columns="*" xmlns:lv="nativescript-pro-ui/listview">
+		<ScrollView row="0" col="0">
+			<GridLayout rows="*" columns="*">
+				<StackLayout class="form">
+					
+					<lv:RadListView items="{{ DictionaryList }}" style="font-family: FontAwesome;">
+						<lv:RadListView.listViewLayout>
+							<lv:ListViewStaggeredLayout spanCount="1"/>
+						</lv:RadListView.listViewLayout>
+						<lv:RadListView.itemTemplate>
+							<StackLayout orientation="horizontal" style="font-family: FontAwesome;">
+								<StackLayout class="input-field" id="campo" style="font-family: FontAwesome;" width="80%">
+									<Label  text="{{ word }}" style="font-size:20px;"></Label>
+									<Label  text="{{ meaning }}" textWrap="true" style="margin:8;padding:1;font-size:16px;font-weight:normal;font-style: italic;"></Label>
+								</StackLayout>
+								<Button id="{{ word }}" text="&#xf014;"  tap="removeWord"/>
+							</StackLayout>
+						</lv:RadListView.itemTemplate>
+					</lv:RadListView>  
+					
+				</StackLayout>
+			</GridLayout>
+		</ScrollView>
+	</GridLayout>
 </Page>

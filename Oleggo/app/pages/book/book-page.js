@@ -5,44 +5,55 @@ var Sqlite = require("nativescript-sqlite");
 const BookViewModel = require("./book-view-model");
 var imagepicker = require("nativescript-imagepicker");
 var fs = require("tns-core-modules/file-system")
+var Toast = require("nativescript-toast");
 
 let page;
 let dataBook;
 
-function loaded (args) {
+var setMainState = Toast.makeText("Set as main active");
+
+function loaded(args) {
     page = args.object;
-    (new Sqlite("OleggoDB.db")).then((db) => {
+     (new Sqlite("OleggoDB.db")).then((db) => {
         var temp = new BookViewModel(db, page.navigationContext.bookISBN)
-		
+
         //console.log(JSON.stringify(temp.Book))
         console.log(JSON.stringify(temp.Dictionary))
         console.log(JSON.stringify(temp.Quotes))
-        dataBook=temp
+        dataBook = temp
         page.bindingContext = temp
-        if(dataBook.Book.state==0){
+
+        page.getViewById("tab-0").exports.getDataFromParent(page.navigationContext.bookISBN)
+        page.getViewById("tab-2").exports.getDataFromParent(page.navigationContext.bookISBN)
+   
+        if (dataBook.Book.state == 0) {
             page.getViewById("btnState").style = "background-color:#FF4082"
         }
-        else{
+        else {
             page.getViewById("btnState").style = "background-color:white"
-            if(dataBook.Book.state==2){
+            if (dataBook.Book.state == 2) {
                 page.getViewById("btnState").style = "background-color:red"
             }
         }
-
+        var lock = page.getViewById("lock");
+        if (dataBook.Book.state == 2) { 
+            console.log("lock")
+            lock.text = "\uf023";
+        }
+        else {
+            console.log("unlock")
+            lock.text = "\uf09c"; 
+        }
     }, err => {
         console.info("Failed to open database", err);
         errorAlert("Failed to open database: " + err)
     })
 }
 
-function readISBN(){
-	return page.navigationContext.bookISBN
+function readISBN() {
+    return page.navigationContext.bookISBN
 }
-exports.readISBN = readISBN
 
-/* ***********************************************************
- * Use the "onNavigatingTo" handler to initialize the page binding context.
- *************************************************************/
 function onNavigatingTo(args) {
     /* ***********************************************************
      * The "onNavigatingTo" event handler lets you detect if the user navigated with a back button.
@@ -70,133 +81,151 @@ function errorAlert(e) {
 
 function onSelectedIndexChanged(args) {
     const tabView = args.object;
-    console.log("new index"+args.newIndex)
-    if(args.newIndex==0)
-    page.getViewById("tab-"+args.newIndex).exports.getDataFromParent("hola")
-    /*   const bindingContext = tabView.bindingContext;
-      const selectedTabViewItem = tabView.items[args.newIndex];
-
-      bindingContext.set("title", selectedTabViewItem.title); */
+    if (args.newIndex == 0) {
+        page.getViewById("tab-" + args.newIndex).exports.onPageChange()
+    }
 }
-/* ***********************************************************
- * According to guidelines, if you have a drawer on your page, you should always
- * have a button that opens it. Get a reference to the RadSideDrawer view and
- * use the showDrawer() function to open the app drawer section.
- *************************************************************/
+
 function onDrawerButtonTap(args) {
     const sideDrawer = frameModule.topmost().getViewById("sideDrawer");
     sideDrawer.showDrawer();
 }
-function onStateButtonTap(args){
+
+function onStateButtonTap(args) {
 
     switch (dataBook.Book.state) {
-        case "0":
-            dataBook.Book.state = "1"
-            page.getViewById("btnState").style = "background-color:white"
-            break;
-        case "1":
-            dataBook.updateMainState(dataBook.Book)
-            dataBook.Book.state = "2"
-            page.getViewById("btnState").style = "background-color:red"
-            break;
-        case "2":
-            dataBook.Book.state = "0"
-            page.getViewById("btnState").style = "background-color:#FF4082"
-            break;    
+    case "0":
+        dataBook.Book.state = "1"
+        page.getViewById("btnState").style = "background-color:white"
+        break;
+    case "1":
+        dataBook.Book.state = "0"
+        page.getViewById("btnState").style = "background-color:#FF4082"
+        break;
+    case "2":
+        MainActiveTap()
+        dataBook.Book.state = "0"
+        page.getViewById("btnState").style = "background-color:#FF4082"
+        break;
     }
-    console.log(dataBook.Book.state)  
-    dataBook.updateState(dataBook.Book)  
+    console.log(dataBook.Book.state)
+    dataBook.updateState(dataBook.Book)
 }
 
 function onProgressButtonTap(args) {
 
     var fullscreen = true
-    var context=page.bindingContext._map.Book
+    var context = page.bindingContext._map.Book
 
     page.showModal("pages/book-progress/book-progress-page", context, function (newBookmark, set) {
         console.log(newBookmark + "/" + set);
-        if(set===true && newBookmark!="" && newBookmark>0){
-            if(parseInt(newBookmark) > parseInt(dataBook.Book.pages)){
-                newBookmark=dataBook.Book.pages
+        if (set === true && newBookmark != "" && newBookmark > 0) {
+            if (parseInt(newBookmark) > parseInt(dataBook.Book.pages)) {
+                newBookmark = dataBook.Book.pages
             }
-            dataBook.Book.bookmark=newBookmark
-            dataBook.Book.progress=Math.round((newBookmark/dataBook.Book.pages)*100)
+            dataBook.Book.bookmark = newBookmark
+            dataBook.Book.progress = Math.round((newBookmark / dataBook.Book.pages) * 100)
             console.log(JSON.stringify(page.bindingContext._map))
             dataBook.updateBookmark(dataBook.Book)
         }
-            
+
     }, fullscreen);
 }
 
-function changeImageBook(args){
-	var context = imagepicker.create({ mode: "single" });
-	console.info(context)
+function onImageTap(args) {
+    var context = imagepicker.create({ mode: "single" });
+    console.info(context)
     startSelection(context, true);
 }
 
 function startSelection(context, isSingle) {
     console.info("start select")
-	context
+    context
         .authorize()
         .then(function () {
-        //list.items = [];
-        return context.present();
-    })
+            //list.items = [];
+            return context.present();
+        })
         .then(function (selection) {
-        console.info("Selection done:");
-        selection.forEach(function (selected) {
-            console.info("----------------");
-            console.info("uri: " + selected.uri);
-            if (isSingle) {
-                selected.getImage({ maxWidth: 200, maxHeight: 200, aspectRatio: 'fill' })
-                    .then(function (imageSource) {
-                    //imageSrc.src = imageSource;
-					var imageLink = fs.knownFolders.documents().path+"/"+String(page.navigationContext.bookISBN)+".png"
-					console.info(imageSource.name)
-					console.info(imageSource)
-					
-					var documents = fs.knownFolders.documents();
-					var file = documents.getFile(imageLink);
-					file.remove()
-						.then(function (result) {
-							console.info(imageSource.saveToFile(imageLink, "png"))
-							console.info("image updated")
-						}, function (error) {
-							// Failed to remove the file.
+            console.info("Selection done:");
+            selection.forEach(function (selected) {
+                console.info("----------------");
+                console.info("uri: " + selected.uri);
+                if (isSingle) {
+                    selected.getImage({ maxWidth: 200, maxHeight: 200, aspectRatio: 'fill' })
+                        .then(function (imageSource) {
+                            //imageSrc.src = imageSource;
+                            var imageLink = fs.knownFolders.documents().path + "/" + String(page.navigationContext.bookISBN) + ".png"
+                            console.info(imageSource.name)
+                            console.info(imageSource)
+
+                            var documents = fs.knownFolders.documents();
+                            var file = documents.getFile(imageLink);
+                            file.remove()
+                                .then(function (result) {
+                                    console.info(imageSource.saveToFile(imageLink, "png"))
+                                    console.info("image updated")
+                                }, function (error) {
+                                    // Failed to remove the file.
+                                });
+                            console.log(imageLink)
+                            dataBook.Book.imagelink = imageLink
+                            dataBook.Book.background = imageLink
+                            console.log(JSON.stringify(dataBook.Book))
+                            dataBook.updateImageLink(imageLink, page.navigationContext.bookISBN)
+
+                            console.info("saved complete");
                         });
-                    console.log(imageLink)
-                    dataBook.Book.imagelink=imageLink
-                    dataBook.Book.background=imageLink
-                    console.log(JSON.stringify(dataBook.Book))
-                    dataBook.updateImageLink(imageLink,page.navigationContext.bookISBN)
-					
-					console.info("saved complete");
-                });
-            }
-            else {
-                imageSrc.visibility = 'hidden';
-            }
+                }
+                else {
+                    imageSrc.visibility = 'hidden';
+                }
+            });
+            list.items = selection;
+        }).catch(function (e) {
+            console.log(e);
         });
-        list.items = selection;
-    }).catch(function (e) {
-        console.log(e);
-    });
 }
+
 function onLogoTap(args) {
     var topmost = frameModule.topmost();
-    var naviagationOptions={
-        moduleName:"pages/add-note/add-note-page",
+    var naviagationOptions = {
+        moduleName: "pages/add-note/add-note-page",
     }
-    topmost.navigate(naviagationOptions); 
+    topmost.navigate(naviagationOptions);
 }
-function getDataFromParent(args){
+
+function getDataFromParent(args) {
     console.log(args)
 }
-exports.getDataFromParent= getDataFromParent
-exports.onLogoTap= onLogoTap;
-exports.changeImageBook = changeImageBook
+
+function MainActiveTap(args) {
+    var lock = page.getViewById("lock");
+    if (dataBook.Book.state == "2"){
+        lock.text = "\uf09c";
+        dataBook.Book.state = "1"
+        dataBook.updateMainState(dataBook.Book)
+        console.log(dataBook.Book.state)
+        page.getViewById("btnState").style = "background-color:white"
+    }
+    else{
+        dataBook.updateMainState(dataBook.Book)
+        lock.text = "\uf023";
+        dataBook.Book.state = "2"
+        page.getViewById("btnState").style = "background-color:red" 
+        console.log(dataBook.Book.state) 
+        setMainState.show()     
+    }
+    dataBook.updateState(dataBook.Book) 
+}
+
+exports.readISBN = readISBN;
+exports.getDataFromParent = getDataFromParent;
+exports.onLogoTap = onLogoTap;
+exports.MainActiveTap = MainActiveTap;
 exports.onProgressButtonTap = onProgressButtonTap;
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;
 exports.onStateButtonTap = onStateButtonTap;
+exports.onImageTap = onImageTap;
 exports.onSelectedIndexChanged = onSelectedIndexChanged;

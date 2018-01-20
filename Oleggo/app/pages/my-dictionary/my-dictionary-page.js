@@ -76,6 +76,13 @@ function searchWord(args){
          errorAlert("Failed to open database: " + err)
      })
 }
+function onLogoTap(args) {
+    var topmost = frameModule.topmost();
+    var naviagationOptions = {
+        moduleName: "pages/add-note/add-note-page",
+    }
+    topmost.navigate(naviagationOptions);
+}exports.onLogoTap = onLogoTap;
 
 exports.searchWord = searchWord
 exports.loadList = loadList

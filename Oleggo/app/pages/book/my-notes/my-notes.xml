@@ -2,25 +2,28 @@
 This is the component view that represents the 'Home' tab.
 Feel free to customize layouts and components to change how the tab view looks.
 -->
-<Page loaded="onLoaded">
+<Page loaded="onLoaded"
+cssFile="~/pages/book/my-notes/my-notes.css">
 	<GridLayout rows="*" columns="*" xmlns:lv="nativescript-pro-ui/listview" >
 		<ScrollView row="0" col="0">
 			<GridLayout rows="*" columns="*">
-				<StackLayout class="form">
+				<StackLayout class="form" style="margin:4 0">
 					
-					<lv:RadListView items="{{ NoteList }}" >
+					<lv:RadListView items="{{ NoteList }}" style="font-family: FontAwesome;">
 						<lv:RadListView.listViewLayout>
 							<lv:ListViewStaggeredLayout spanCount="1"/>
 						</lv:RadListView.listViewLayout>
 						<lv:RadListView.itemTemplate>
-							<StackLayout class="input-field" id="campo" >
-								<Label class="label" text="{{ when }}" ></Label>
-								<TextView id="{{ key + 'text' }}" hint="Enter some notes" text="{{ note }}" ></TextView>
-								<Label class="label" text="{{ book }}"></Label>
-								<StackLayout orientation="horizontal" style="horizontal-align:center; margin:5 0 0 0">
-								<Button id="{{ key }}" text="Save"  tap="modifyNote"/>
-								<Button id="{{ key }}" text="Delete"  tap="removeNote"/>
-								<Button id="{{ key }}" text="Remove"  tap="notFavoriteNote"/>
+							<StackLayout class="input-field" id="campo" style="margin:4 8 0 8;">	
+								<Label  text="{{ when }}" style="font-weight:normal"></Label>
+								<TextView id="{{ key + 'text' }}" hint="Enter some notes" text="{{ note }}"></TextView>
+								<StackLayout orientation="horizontal" style="margin:0;padding:0">
+									<Label  text="{{ book + ', page '+ page }}" style="margin:0;padding:1;" textWrap="true"></Label>
+								</StackLayout>
+								<StackLayout orientation="horizontal" style="horizontal-align:right;margin:4 0 0 0;padding:0">
+									<Button id="{{ key }}" text="&#xf014;"  tap="removeNote"/>
+									<Button id="{{ key }}" text="&#xf040;"  tap="modifyNote"/>
+									<Button id="{{ 'fav' + key }}" text="&#xf006;"  tap="FavoriteNote" style="color:#F46F3D;"/>
 								</StackLayout>
 							</StackLayout>
 						</lv:RadListView.itemTemplate>

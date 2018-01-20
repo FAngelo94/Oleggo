@@ -1,21 +1,21 @@
 const observableModule = require("data/observable");
 const ObservableArray = require("data/observable-array").ObservableArray;
 
-function MyDictionaryViewModel(db) {
+function MyDictionaryViewModel(db,isbn) {
     //Pass the ObservableArray to the page
     const viewModel = observableModule.fromObject({
 		DictionaryList: new ObservableArray([])
     })
-	var temp=readDictionaryDB(db)
+	var temp=readDictionaryDB(db,isbn)
 	viewModel.DictionaryList=viewModel.DictionaryList.concat(temp)
 	console.info(JSON.stringify(viewModel.DictionaryList))
     return viewModel
 }
 
-function readDictionaryDB(db)
+function readDictionaryDB(db,isbn)
 {
 	var quotes = []
-    db.all("SELECT * FROM dictionary group by word order by word", function (error, rows) {
+    db.all("SELECT * FROM dictionary where ISBN=? group by word order by word",[isbn], function (error, rows) {
         if (error) {
             console.log("SELECT ERROR", error)
             return ("SELECT ERROR" + error)

@@ -190,6 +190,14 @@ function errorAlert(e) {
         console.log("Alert closed");
     });
 }
+function onLogoTap(args) {
+    var topmost = frameModule.topmost();
+    var naviagationOptions = {
+        moduleName: "pages/add-note/add-note-page",
+    }
+    topmost.navigate(naviagationOptions);
+}exports.onLogoTap = onLogoTap;
+
 exports.listen = listen;
 exports.addQuote = addQuote;
 exports.lookForWord = lookForWord;

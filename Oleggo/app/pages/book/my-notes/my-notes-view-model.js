@@ -1,22 +1,22 @@
 const observableModule = require("data/observable");
 const ObservableArray = require("data/observable-array").ObservableArray;
 
-function MyNotesViewModel(db) {
+function MyNotesViewModel(db,isbn) {
 	//Pass the ObservableArray to the page
     const viewModel = observableModule.fromObject({
 		NoteList: new ObservableArray([])
     })
-	var temp=readQuotesDB(db)
+	var temp=readQuotesDB(db,isbn)
 	viewModel.NoteList=viewModel.NoteList.concat(temp)
 	console.info(JSON.stringify(viewModel.NoteList))
     return viewModel
 }
 
 
-function readQuotesDB(db)
+function readQuotesDB(db,isbn)
 {
 	var quotes = []
-    db.all("SELECT * FROM quotes join books where quotes.ISBN=books.ISBN", function (error, rows) {
+    db.all("SELECT * FROM quotes join books where quotes.ISBN=? AND quotes.ISBN=books.ISBN",[isbn], function (error, rows) {
         if (error) {
             console.log("SELECT ERROR", error)
             return ("SELECT ERROR" + error)
@@ -25,15 +25,17 @@ function readQuotesDB(db)
             for (var row in rows) {
                 console.log("RESULT", rows[row])
                 var res = (rows[row].toString()).split(",")
-                var quote = {
-                    book: res[8]+", page "+res[3],
+                var quote =
+                {
+                    book: res[8]+", "+res[9],
+                    page: res[3],
 					note:res[2],
-					when:res[5],
+                    when:res[5],
+                    favorite:res[4],
 					key:res[0]
                 }
                 quotes.push(quote);
-				console.info(rows[row].toString())
-                    
+				console.info(rows[row].toString()) 
             }
             return quotes
         }

@@ -27,19 +27,19 @@ Feel free to customize layouts and components to change how your app drawer look
             <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'MyDictionary' ? ' selected': '') }}"
                 route="pages/my-dictionary/my-dictionary-page" tap="onNavigationItemTap">
                 <Label row="0" col="0" text="&#xf002;" class="fa" />
-                <Label row="0" col="1" text="My Dictionary" class="p-r-10" />
+                <Label row="0" col="1" text="Dictionary" class="p-r-10" />
+            </GridLayout>
+
+            <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'AddNote' ? ' selected': '') }}"
+                route="pages/add-note/add-note-page" tap="onNavigationItemTap">
+                <Label row="0" col="0" text="&#xf040;" class="fa" />
+                <Label row="0" col="1" text="New Entry" class="p-r-10" />
             </GridLayout>
 
             <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'AddNewBooks' ? ' selected': '') }}"
                 route="pages/add-new-books/add-new-books-page" tap="onNavigationItemTap">
                 <Label row="0" col="0" text="&#xf1e5;" class="fa" />
                 <Label row="0" col="1" text="New Book" class="p-r-10" />
-            </GridLayout>
-			
-			<GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'AddNote' ? ' selected': '') }}"
-                route="pages/add-note/add-note-page" tap="onNavigationItemTap">
-                <Label row="0" col="0" text="&#xf040;" class="fa" />
-                <Label row="0" col="1" text="New Entry" class="p-r-10" />
             </GridLayout>
 
             <StackLayout class="hr-light"></StackLayout>

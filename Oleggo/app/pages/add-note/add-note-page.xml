@@ -17,6 +17,10 @@
             tap="onDrawerButtonTap"
             ios.position="left">
         </ActionItem>
+        <ActionItem 
+			icon="res://icono"
+			android.position="right">
+        </ActionItem>
         <Label class="action-bar-title" text="Add Notes" ></Label>
     </ActionBar>
 
