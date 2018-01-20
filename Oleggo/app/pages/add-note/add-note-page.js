@@ -5,8 +5,6 @@ var dialogs = require("ui/dialogs");
 var Toast = require("nativescript-toast");
 var labelNote;
 var labelPage;
-var wordAdded = Toast.makeText("Word Added Successfully!");
-var quoteAdded = Toast.makeText("Quote Added Successfully");
 
 // require the plugin
 var SpeechRecognition = require("nativescript-speech-recognition").SpeechRecognition;
@@ -17,6 +15,14 @@ var SpeechRecognitionTranscription = require("nativescript-speech-recognition").
 var wd = require("~/shared/word-definition")
 
 var DB = require("~/shared/db/db")
+
+//Toasts
+var wordAdded     = Toast.makeText("Word Added Successfully!");
+var wordNotValid = Toast.makeText("Word isn't written");
+var quoteAdded    = Toast.makeText("Quote Added Successfully");
+var quoteNotValid = Toast.makeText("Quote isn't written");
+
+var selectMainActive = Toast.makeText("Choose a main active book before!");
 
 /* ***********************************************************
  * Use the "onNavigatingTo" handler to initialize the page binding context.
@@ -68,20 +74,32 @@ function listen(args) {
 }
 
 function addQuote(args) {
-    (new Sqlite("OleggoDB.db")).then((db) => {
-            db.all(DB.readISBNMainActiveBook()).then(rows => {
-                var ISBN = rows[0][1];
-                console.info("ISBN="+ISBN);
-                addQuoteDB(ISBN);
-            }, error => {
-                console.info("SELECT ERROR" + error);
-                errorAlert("SELECT ERROR" + error)
-            });
-        },
-        err => {
-            console.info("Failed to open database", err);
-            errorAlert("Failed to open database: " + err)
-        })
+	if(labelNote.text!="")
+	{
+		(new Sqlite("OleggoDB.db")).then((db) => {
+				db.all(DB.readISBNMainActiveBook(), function(err, rows)
+				{
+					if(rows!="")
+					{
+						var ISBN = rows[0][1];
+						console.info("ISBN="+ISBN);
+						addQuoteDB(ISBN);
+					}
+					else
+					{
+						selectMainActive.show()
+					}
+				})
+			},
+			err => {
+				console.info("Failed to open database", err);
+				errorAlert("Failed to open database: " + err)
+			})
+	}
+	else
+	{
+		quoteNotValid.show()
+	}
 }
 
 function addQuoteDB(ISBN) {
@@ -106,37 +124,49 @@ function addQuoteDB(ISBN) {
 }
 
 function lookForWord(args) {
-    (new Sqlite("OleggoDB.db")).then((db) => {
-        db.all(DB.readISBNMainActiveBook()).then(rows => {
-            var ISBN = rows[0][1];
-            console.info("ISBN="+ISBN);
-            wordDefinition(ISBN);
-        }, error => {
-            console.info("SELECT ERROR" + error);
-            errorAlert("SELECT ERROR" + error)
-        });
-    },
-    err => {
-        console.info("Failed to open database", err);
-        errorAlert("Failed to open database: " + err)
-    })
+	if(labelNote.text!="")
+	{
+		(new Sqlite("OleggoDB.db")).then((db) => {
+			db.all(DB.readISBNMainActiveBook(),function(err, rows)
+			{
+				if(rows!="")
+				{
+					var ISBN = rows[0][1];
+					console.info("ISBN="+ISBN);
+					wordDefinition(ISBN,labelNote.text);
+				}
+				else
+				{
+					selectMainActive.show()
+				}
+			})
+		},
+		err => {
+			console.info("Failed to open database", err);
+			errorAlert("Failed to open database: " + err)
+		})
+	}
+	else
+	{
+		wordNotValid.show()
+	}
 }
 
-function wordDefinition(ISBN) {
-    wd.getDef(labelNote.text, "en", null, (definition) => {
+function wordDefinition(ISBN, wordSerch) {
+    wd.getDef(wordSerch, "en", null, (definition) => {
         console.info("definition=" + definition.definition)
-        lookForWordDB(ISBN, definition.definition)
+        lookForWordDB(ISBN, wordSerch,definition.definition)
 
     });
 
 }
 
-function lookForWordDB(ISBN, meaning) {
+function lookForWordDB(ISBN, wordSerch,meaning) {
     (new Sqlite("OleggoDB.db")).then(db => {
         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
         console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
         console.info("meaning=" + meaning)
-        db.execSQL(DB.insertNewWord(), [ISBN, labelNote.text, meaning]).then(id => {
+        db.execSQL(DB.insertNewWord(), [ISBN, wordSerch, meaning]).then(id => {
             labelNote.text = ""
             wordAdded.show()
             console.info("INSERT RESULT" + id)
