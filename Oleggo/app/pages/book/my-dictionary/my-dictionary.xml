@@ -2,7 +2,8 @@
 This is the component view that represents the 'Search' tab.
 Feel free to customize layouts and components to change how the tab view looks.
 -->
-<GridLayout rows="*" columns="*" xmlns:lv="nativescript-pro-ui/listview" loaded="loadList">
+<Page loaded="loadList">
+<GridLayout rows="*" columns="*" xmlns:lv="nativescript-pro-ui/listview">
 	<ScrollView row="0" col="0">
 		<GridLayout rows="*" columns="*">
 			<StackLayout class="form">
@@ -25,3 +26,4 @@ Feel free to customize layouts and components to change how the tab view looks.
 		</GridLayout>
 	</ScrollView>
 </GridLayout>
+</Page>

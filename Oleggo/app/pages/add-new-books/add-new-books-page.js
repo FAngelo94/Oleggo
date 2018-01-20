@@ -181,6 +181,7 @@ function addBookDB(data) {
                 for (var row in rows) {
                     console.info("RESULT", rows[row]);
                 }
+
             }, error => {
                 console.info("SELECT ERROR", error);
             });
@@ -192,6 +193,11 @@ function addBookDB(data) {
         console.info("Failed to open database", err);
         errorAlert("Failed to open database: " + err)
     })
+    var topmost = frameModule.topmost();
+    var naviagationOptions={
+        moduleName:"pages/home/home-page",
+    }
+    topmost.navigate(naviagationOptions); 
 }
 
 function errorAlert(err) {
