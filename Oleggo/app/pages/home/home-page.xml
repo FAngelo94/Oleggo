@@ -18,6 +18,7 @@
         <!-- 
         Use the ActionItem for IOS with position set to left. Using the NavigationButton as a side-drawer button in iOS is not possible, because its function is to always navigate back in the application.
         -->
+
         <ActionItem icon="res://navigation/menu" 
             android:visibility="collapsed" 
             tap="onDrawerButtonTap"
@@ -25,12 +26,11 @@
         </ActionItem>
 		
 		<ActionItem 
-			icon="res://logo"
-			tap="onDelete"
-			ios.systemIcon="16" 
-			ios.position="right" 
-			android.position="right"/>
-		
+			icon="res://icono"
+			tap="onLogoTap"
+			android.position="right">
+        </ActionItem>
+        
         <Label class="action-bar-title" text="Oleggo"></Label>
     </ActionBar>
 
@@ -82,12 +82,12 @@
                 To add a new TabView item, simply add a new <TabViewItem> component to the <TabView.items> collection.
                 Assign the <TabViewItem> component a "title" that will be displayed as the text of the tab item button. 
                 -->
-                    <TabViewItem title="My Library">
+                    <TabViewItem title="Library">
                         <TabViewItem.view>
                             <my-library:my-library/>
                         </TabViewItem.view>
                     </TabViewItem>
-                    <TabViewItem title="My Favorite Notes">
+                    <TabViewItem title="Favorite Notes">
                         <TabViewItem.view>
                             <my-notes:my-notes/>
                         </TabViewItem.view>

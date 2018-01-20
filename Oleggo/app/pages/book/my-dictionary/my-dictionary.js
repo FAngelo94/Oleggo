@@ -38,6 +38,10 @@ function removeWord(args){
     })
 	setUpModel()
 }
+function getDataFromParent(args){
+    console.log(args)
+}
+exports.getDataFromParent= getDataFromParent
 
 exports.loadList = loadList
 exports.removeWord = removeWord

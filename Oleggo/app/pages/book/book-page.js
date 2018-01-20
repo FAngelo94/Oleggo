@@ -70,6 +70,9 @@ function errorAlert(e) {
 
 function onSelectedIndexChanged(args) {
     const tabView = args.object;
+    console.log("new index"+args.newIndex)
+    if(args.newIndex==0)
+    page.getViewById("tab-"+args.newIndex).exports.getDataFromParent("hola")
     /*   const bindingContext = tabView.bindingContext;
       const selectedTabViewItem = tabView.items[args.newIndex];
 
@@ -179,7 +182,18 @@ function startSelection(context, isSingle) {
         console.log(e);
     });
 }
-
+function onLogoTap(args) {
+    var topmost = frameModule.topmost();
+    var naviagationOptions={
+        moduleName:"pages/add-note/add-note-page",
+    }
+    topmost.navigate(naviagationOptions); 
+}
+function getDataFromParent(args){
+    console.log(args)
+}
+exports.getDataFromParent= getDataFromParent
+exports.onLogoTap= onLogoTap;
 exports.changeImageBook = changeImageBook
 exports.onProgressButtonTap = onProgressButtonTap;
 exports.onNavigatingTo = onNavigatingTo;

@@ -87,7 +87,10 @@ function notFavoriteNote(args) {
         errorAlert("Failed to open database: " + err)
     })
 }
-
+function getDataFromParent(args){
+    console.log(args)
+}
+exports.getDataFromParent= getDataFromParent
 exports.notFavoriteNote = notFavoriteNote
 exports.removeNote = removeNote
 exports.modifyNote = modifyNote

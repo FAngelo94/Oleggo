@@ -12,6 +12,7 @@ Mobile Application (Uni)
 * Image Picker = https://github.com/NativeScript/nativescript-imagepicker - https://docs.nativescript.org/cookbook/image-source
 * ISBN search = https://openlibrary.org/developers/api      -
                 http://xisbn.worldcat.org/xisbnadmin/doc/api.htm
+* Word-definition = https://www.npmjs.com/package/word-definition
 * Toast = https://github.com/TobiasHennig/nativescript-toast
 * Usefull Plugins = https://github.com/TobiasHennig
 * RGB to Hex color converter = https://www.rapidtables.com/convert/color/rgb-to-hex.html
