@@ -26,9 +26,11 @@ function readQuotesDB(db)
                 console.log("RESULT", rows[row])
                 var res = (rows[row].toString()).split(",")
                 var quote = {
-                    book: res[8]+", page "+res[3],
+                    book: res[8]+", "+res[9],
+                    page: res[3],
 					note:res[2],
-					when:res[5],
+                    when:res[5],
+                    favorite:res[4],
 					key:res[0]
                 }
                 quotes.push(quote);

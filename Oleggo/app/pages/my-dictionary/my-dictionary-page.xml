@@ -70,7 +70,7 @@
 						<StackLayout class="form">
 							
                             <StackLayout orientation="horizontal" style="font-family: FontAwesome;margin:0 0 0 8;">
-                                <TextView id="word" hint="Write the word or it beginning" width="80%"></TextView>	
+                                <TextView id="word" hint="Write the word to search" width="80%"></TextView>	
                                 <Button text="&#xf002;" tap="searchWord" style="font-family: FontAwesome;"/>
                             </StackLayout>
 
