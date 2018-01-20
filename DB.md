@@ -1,6 +1,7 @@
 # Database of Oleggo
 Tables and camps in the tables:
 * ### Books
+    * __id__
     * __ISBN__
     * Title
     * Author
@@ -16,6 +17,7 @@ Tables and camps in the tables:
     * Meaning
     
 * ### Quotes
+    * __id__
     * __ISBN__
     * Quote
     * Page
