@@ -22,6 +22,13 @@
             tap="onDrawerButtonTap"
             ios.position="left">
         </ActionItem>
+		
+		<ActionItem 
+			icon="res://icono"
+			tap="onLogoTap"
+			android.position="right">
+        </ActionItem>
+		
         <!--ActionItem id="exampleMenuButton" icon="res://logo" automationText="ExampleMenu" /-->
         <Label class="action-bar-title" text="Reading Books"></Label>
     </ActionBar>

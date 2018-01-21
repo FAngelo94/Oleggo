@@ -69,6 +69,15 @@ function onNavigatingTo(args) {
     // page.bindingContext = new BookViewModel();
 }
 
+function onLogoTap(args) {
+    var topmost = frameModule.topmost();
+    var naviagationOptions={
+        moduleName:"pages/add-note/add-note-page",
+    }
+    topmost.navigate(naviagationOptions); 
+}
+exports.onLogoTap= onLogoTap;
+
 function errorAlert(e) {
     dialogs.alert({
         title: "Error",
