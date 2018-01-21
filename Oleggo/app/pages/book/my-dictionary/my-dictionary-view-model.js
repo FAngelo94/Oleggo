@@ -25,8 +25,9 @@ function readDictionaryDB(db,isbn)
                 console.log("RESULT", rows[row])
                 console.log(rows[row])
                 var quote = {
-					word:rows[row][2],
-					meaning:rows[row][3]
+                    id:row[0],
+					word:row[2],
+					meaning:row[3]
                 }
                 quotes.push(quote);
 				console.info(rows[row].toString())

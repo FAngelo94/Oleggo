@@ -26,8 +26,8 @@ function removeWord(args){
 	(new Sqlite("OleggoDB.db")).then(db => {
         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
         console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-        var word=args.object.id
-		db.execSQL("DELETE FROM dictionary WHERE word = ?", [word]).then(id => {
+        var id=args.object.id
+		db.execSQL("DELETE FROM dictionary WHERE id=?", [id]).then(id => {
             console.info("INSERT RESULT" + id);
         }, error => {
             console.info("INSERT ERROR" + error);
