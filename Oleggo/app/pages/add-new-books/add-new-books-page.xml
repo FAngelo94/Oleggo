@@ -65,7 +65,10 @@
         Always wrap content in a layout component.
         -->
         <nsDrawer:RadSideDrawer.mainContent>
-            <StackLayout style="font-family: FontAwesome;">
+        <Gradient:Gradient  direction="to top left" 
+                        colors="rgba(248,153,42,1),rgba(239,90,50,1), rgba(240,73,94,1)"
+                        orientation="vertical" >
+        <StackLayout style="font-family: FontAwesome;height:96%" class="StackLayout1">
             <Label  text="&#xf02a; Scan Book barcode" style="horizontal-align:center;font-weight:bold; font-size:24px;margin:20 8 0 8"></Label>
 				
                     <Gradient:Gradient  direction="to top left" 
@@ -79,6 +82,7 @@
                 <TextField id="isbn" maxLength="13" hint="Insert ISBN" keyboardType="number"></TextField>
 				<Button text="&#xf002; Search ISBN" class="btn btn-primary" tap="readISBN" style="horizontal-align:center"/>
             </StackLayout>
+        </Gradient:Gradient>
         </nsDrawer:RadSideDrawer.mainContent>
     </nsDrawer:RadSideDrawer>
 </Page>

@@ -3,6 +3,7 @@
     xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
     xmlns:myDrawer="shared/my-drawer"
     cssFile="~/pages/add-note/add-note-page.css"
+    xmlns:Gradient="nativescript-gradient"
     xmlns="http://www.nativescript.org/tns.xsd">
  
     <ActionBar class="action-bar">
@@ -61,8 +62,10 @@
         Always wrap content in a layout component.
         -->
         <nsDrawer:RadSideDrawer.mainContent>
-           
-           <ScrollView orientation="vertical">
+           <Gradient:Gradient  direction="to top left" 
+                colors="rgba(248,153,42,1),rgba(239,90,50,1), rgba(240,73,94,1)"
+                orientation="vertical" >
+                <ScrollView orientation="vertical">
                 <StackLayout id="campo" style="font-family: FontAwesome;margin:8 8 8 8;">
                     <TextView id="speakText" hint="Enter the word or note"></TextView>
                     <TextView id="page" hint="Enter the page of the book (optionally)"></TextView>
@@ -73,6 +76,8 @@
                     </StackLayout>            
                 </StackLayout>
             </ScrollView>
+        </Gradient:Gradient>
+           
         </nsDrawer:RadSideDrawer.mainContent>
     </nsDrawer:RadSideDrawer>
 </Page>
