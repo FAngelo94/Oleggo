@@ -70,7 +70,7 @@ function insertNewBook(){
 exports.insertNewBook = insertNewBook
 
 function readAllBooks(){
-	return "SELECT * FROM books";
+	return "SELECT * FROM books order by title";
 }
 exports.readAllBooks = readAllBooks
 function readAllActiveBooks(){
