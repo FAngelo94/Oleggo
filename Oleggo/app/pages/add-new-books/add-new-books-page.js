@@ -5,6 +5,7 @@ var dialogs = require("ui/dialogs");
 var BarcodeScanner = require("nativescript-barcodescanner").BarcodeScanner;
 var http = require("http");
 var Sqlite = require("nativescript-sqlite");
+var DB = require("~/shared/db/db")
 
 var Toast = require("nativescript-toast");
 
@@ -57,7 +58,7 @@ function read_qr() {
     barcodescanner.scan({
         formats: "AZTEC,CODE_39,CODE_93,CODE_128,DATA_MATRIX,EAN_8,EAN_13,ITF,PDF_417,QR_CODE,UPC_E,CODABAR,MAXICODE,RSS_14,UPC_A", // Pass in of you want to restrict scanning to certain types
         cancelLabel: "EXIT. Also, try the volume buttons!", // iOS only, default 'Close'
-        cancelLabelBackgroundColor: "#333333", // iOS only, default '#000000' (black)
+        cancelLabelBackgroundColor: "#F98735", // iOS only, default '#000000' (black)
         message: "Use the volume buttons for extra light", // Android only, default is 'Place a barcode inside the viewfinder rectangle to scan it.'
         showFlipCameraButton: true, // default false
         preferFrontCamera: false, // default false
@@ -208,7 +209,7 @@ function addBookDB(data) {
     (new Sqlite("OleggoDB.db")).then(db => {
         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
         console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-        db.execSQL("INSERT INTO books (ISBN,title,author,pages,bookmark,state,imagelink) VALUES (?, ?, ?, ?, ?, ?, ?)", [data.ISBN, data.title, data.authors, data.pageCount, "0", "0", data.imageLink]).then(id => {
+        db.execSQL(DB.insertNewBook(), [data.ISBN, data.title, data.authors, data.pageCount, "0", "0", data.imageLink]).then(id => {
             console.info("INSERT RESULT", id);
 			var topmost = frameModule.topmost();
 			var naviagationOptions={
@@ -216,7 +217,7 @@ function addBookDB(data) {
 			}
 			topmost.navigate(naviagationOptions); 
             
-			db.all("SELECT * FROM books").then(rows => {
+			db.all(DB.readAllBooks()).then(rows => {
                 for (var row in rows) {
                     console.info("RESULT", rows[row]);
                 }
