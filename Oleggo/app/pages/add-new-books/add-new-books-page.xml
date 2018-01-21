@@ -4,6 +4,7 @@
     xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
     xmlns:myDrawer="shared/my-drawer"
     cssFile="~/pages/add-new-books/add-new-books.css"
+    xmlns:Gradient="nativescript-gradient"
     xmlns="http://www.nativescript.org/tns.xsd"
 	>
 
@@ -66,7 +67,15 @@
         <nsDrawer:RadSideDrawer.mainContent>
             <StackLayout style="font-family: FontAwesome;">
             <Label  text="&#xf02a; Scan Book barcode" style="horizontal-align:center;font-weight:bold; font-size:24px;margin:20 8 0 8"></Label>
-				<Button text="&#xf030;" tap="openQR" class="cam"/>
+				
+                    <Gradient:Gradient  direction="to top left" 
+                        colors="rgba(248,153,42,1),rgba(239,90,50,1), rgba(240,73,94,1)"
+                        orientation="vertical" 
+                        verticalAlignment="center"
+                        borderRadius="20"
+                        style="margin: 16 30 50; ">
+                    <Button text="&#xf030;" class="cam" tap="openQR"/>
+                    </Gradient:Gradient>
                 <TextField id="isbn" maxLength="13" hint="Insert ISBN" keyboardType="number"></TextField>
 				<Button text="&#xf002; Search ISBN" class="btn btn-primary" tap="readISBN" style="horizontal-align:center"/>
             </StackLayout>
