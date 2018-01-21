@@ -98,7 +98,10 @@ function FavoriteNote(args) {
         errorAlert("Failed to open database: " + err)
     })
 }
-
+function onPageChange (args){
+	setUpModel()
+}
+exports.onPageChange =onPageChange
 exports.FavoriteNote = FavoriteNote
 exports.removeNote = removeNote
 exports.modifyNote = modifyNote

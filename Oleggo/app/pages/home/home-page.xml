@@ -84,12 +84,12 @@
                 -->
                     <TabViewItem title="Library">
                         <TabViewItem.view>
-                            <my-library:my-library/>
+                            <my-library:my-library id="tab-0"/>
                         </TabViewItem.view>
                     </TabViewItem>
                     <TabViewItem title="Favorite Notes">
                         <TabViewItem.view>
-                            <my-notes:my-notes/>
+                            <my-notes:my-notes id="tab-1"/>
                         </TabViewItem.view>
                     </TabViewItem>
                 </TabView.items>

@@ -10,7 +10,9 @@ var Toast = require("nativescript-toast");
 let page;
 let dataBook;
 
-var setMainState = Toast.makeText("Set as main active");
+var setMainState = Toast.makeText("Now the book is main active");
+var setactiveState = Toast.makeText("Now the book is active");
+var progressUpdate = Toast.makeText("Progress updated");
 
 function loaded(args) {
     page = args.object;
@@ -109,6 +111,7 @@ function onStateButtonTap(args) {
     case "0":
         dataBook.Book.state = "1"
         page.getViewById("btnState").text = "\uf02e";
+		setactiveState.show()   
         break;
     case "1":
         dataBook.Book.state = "0"
@@ -136,6 +139,7 @@ function onProgressButtonTap(args) {
             if (parseInt(newBookmark) > parseInt(dataBook.Book.pages)) {
                 newBookmark = dataBook.Book.pages
             }
+			progressUpdate.show()
             dataBook.Book.bookmark = newBookmark
             dataBook.Book.progress = Math.round((newBookmark / dataBook.Book.pages) * 100)
             console.log(JSON.stringify(page.bindingContext._map))

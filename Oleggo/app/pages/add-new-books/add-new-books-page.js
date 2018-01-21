@@ -21,7 +21,7 @@ const OPENLIBRARY_API_BOOK = '/api/books';
 
 const WORLDCAT_API_BASE = 'http://xisbn.worldcat.org';
 const WORLDCAT_API_BOOK = '/webservices/xid/isbn';
-
+var bookfail= Toast.makeText("Enter ISBN first!");
 var page;
 /* ***********************************************************
  * Use the "onNavigatingTo" handler to initialize the page binding context.
@@ -133,7 +133,7 @@ function readISBN(args) {
         });
     }
     else {
-        errorAlert("Enter a ISBN first")
+       bookfail.show()
     }
 }
 

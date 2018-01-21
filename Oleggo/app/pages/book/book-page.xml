@@ -61,7 +61,7 @@
                                 <Page id="tab-1">
                                     <AbsoluteLayout style="background-color:#434B5B;margin:0;padding:0;width:100%;">
                                         <Image src="{{Book.background}}" class="imgBack" stretch="aspectFill" left="0" top="0" />
-                                        <StackLayout orientation="vertical" left="0" top="40" style="margin:0;padding:0;width:100%">
+                                        <StackLayout orientation="vertical" left="0" top="35" style="margin:0;padding:0;width:100%">
                                             <StackLayout orientation="vertical" style="color: white;">
                                                 <DockLayout stretchLastChild="true" style="width:100%;padding:10 0 12 0;">
                                                     <StackLayout dock="left" style="vertical-align: bottom;margin:0 0 0 10; width:80;color:#839E9D;">
@@ -81,10 +81,10 @@
                                                 
                                                 <StackLayout orientation="vertical" style="padding:0 0 10 0;color: white;">
 
-                                                    <Label text="{{Book.title}}" class="BookTitle" style="horizontal-align: center;" textWrap="true"/>
+                                                    <Label text="{{Book.title}}" class="BookTitle" style="horizontal-align: center;" tap="onImageTap" textWrap="true"/>
                                                     <Label text="{{Book.author}}" class="BookAuthor" style="horizontal-align: center;" textWrap="true"/>
                                                                             
-                                                    <StackLayout orientation="horizontal" style="horizontal-align: center; padding:10 0 15 0;" width="75%">
+                                                    <StackLayout orientation="horizontal" style="horizontal-align: center; padding:10 0 15 0;margin:0" width="75%">
                                                         
                                                         <StackLayout class="Btn">
                                                             <Gradient:Gradient  direction="to top right" 
@@ -93,7 +93,7 @@
                                                                 borderRadius="50"
                                                                 verticalAlignment="center"
                                                                 style="width:50; height:50;">
-                                                                <Label  text="&#xf0ae;" tap="onProgressButtonTap"  style="text-align: center; vertical-align: center;font-size: 25px"></Label>
+                                                                <Label  text="&#xf0ae;" tap="onProgressButtonTap"  style="text-align: center; vertical-align: center;font-size: 20px"></Label>
                                                             </Gradient:Gradient>   
                                                         </StackLayout>
                                                         
@@ -116,7 +116,7 @@
                                                                 borderRadius="50"
                                                                 verticalAlignment="center"
                                                                 style="width:50; height:50;">
-                                                                <Label  text="&#xf09c;" tap="MainActiveTap" id="lock"  style="text-align: center; vertical-align: center;font-size: 25px"></Label>
+                                                                <Label  text="&#xf09c;" tap="MainActiveTap" id="lock"  style="text-align: center; vertical-align: center;font-size: 20px"></Label>
                                                             </Gradient:Gradient>   
                                                         </StackLayout>
 

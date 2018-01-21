@@ -18,9 +18,9 @@ var DB = require("~/shared/db/db")
 
 //Toasts
 var wordAdded     = Toast.makeText("Word Added Successfully!");
-var wordNotValid = Toast.makeText("Word isn't written");
-var quoteAdded    = Toast.makeText("Quote Added Successfully");
-var quoteNotValid = Toast.makeText("Quote isn't written");
+var wordNotValid = Toast.makeText("Enter a word first!");
+var quoteAdded    = Toast.makeText("Note Added Successfully!");
+var quoteNotValid = Toast.makeText("Enter a note first!");
 
 var selectMainActive = Toast.makeText("Choose a main active book before!");
 

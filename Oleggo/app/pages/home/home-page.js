@@ -2,20 +2,15 @@ const frameModule = require("ui/frame");
 var Sqlite = require("nativescript-sqlite");
 const HomeViewModel = require("./home-view-model");
 
-/* ***********************************************************
- * Use the "onNavigatingTo" handler to initialize the page binding context.
- *************************************************************/
+ var page;
+ 
 function onNavigatingTo(args) {
-    /* ***********************************************************
-     * The "onNavigatingTo" event handler lets you detect if the user navigated with a back button.
-     * Skipping the re-initialization on back navigation means the user will see the
-     * page in the same data state that he left it in before navigating.
-     *************************************************************/
+	
     if (args.isBackNavigation) {
         return;
     }
 
-    const page = args.object;
+    page = args.object;
 	page.bindingContext = new HomeViewModel();
     (new Sqlite("OleggoDB.db")).then(db => {
         db.execSQL("CREATE TABLE IF NOT EXISTS books(id INTEGER PRIMARY KEY AUTOINCREMENT, ISBN TEXT unique, title TEXT, author TEXT, pages TEXT, bookmark TEXT, state TEXT, imagelink TEXT)").then(id => {
@@ -60,7 +55,9 @@ function onDelete() {
  * https://docs.nativescript.org/cookbook/ui/tab-view#using-selectedindexchanged-event-from-xml
  *************************************************************/
 function onSelectedIndexChanged(args) {
-    	
+	if (args.newIndex == 1) {
+		page.getViewById("tab-" + args.newIndex).exports.onPageChange()
+	}
 }
 function onLogoTap(args) {
     var topmost = frameModule.topmost();
