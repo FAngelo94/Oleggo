@@ -70,6 +70,8 @@
                     <TextView id="speakText" hint="Enter the word or note"></TextView>
                     <TextView id="page" hint="Enter the page of the book (optionally)"></TextView>
                     <Button text="&#xf130;"  tap="listen" class="mic"/>
+                    <Label  text="&#xf02a; Scan Book barcode" style="horizontal-align:center;font-weight:bold; font-size:24px;margin:20 8 0 8"></Label>
+           
                     <StackLayout class="input-field" orientation="horizontal">
                         <Button text="&#xf10d; &#xf10e; Add Note"  class="btn-op" tap="addQuote" width="50%"/>
                         <Button text="&#xf1ab; Get definition" class="btn-op" tap="lookForWord" width="50%"/>

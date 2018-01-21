@@ -4,20 +4,22 @@ Feel free to customize layouts and components to change how the tab view looks.
 -->
 <Page 
 	xmlns:lv="nativescript-pro-ui/listview" 
-		cssFile="~/pages/home/my-notes/my-notes.css"
-		loaded="onLoaded">
-	<GridLayout rows="*" columns="*">
-		<ScrollView row="0" col="0">
-			<GridLayout rows="*" columns="*">
-				<StackLayout class="form">
+	cssFile="~/pages/home/my-notes/my-notes.css"
+	xmlns:Gradient="nativescript-gradient"
+	loaded="onLoaded">
+	<Gradient:Gradient  direction="to top left" 
+		colors="rgba(248,153,42,1),rgba(239,90,50,1), rgba(240,73,94,1)"
+		orientation="vertical" >
+		<ScrollView class="stk">
+				<StackLayout>
 					
 					<lv:RadListView items="{{ NoteList }}" style="font-family: FontAwesome;">
 							<lv:RadListView.listViewLayout>
 								<lv:ListViewStaggeredLayout spanCount="1"/>
 							</lv:RadListView.listViewLayout>
 							<lv:RadListView.itemTemplate>
-								<StackLayout class="input-field" id="campo" style="margin:4 8 0 8;">	
-									<Label  text="{{ when }}" style="font-weight:normal"></Label>
+								<StackLayout class="input-field" id="campo" style="margin:4 8 0 8;padding:5">	
+									<Label  text="{{ when }}" style="font-weight:normal;"></Label>
 									<TextView id="{{ key + 'text' }}" hint="Enter some notes" text="{{ note }}"></TextView>
 									<StackLayout orientation="horizontal" style="margin:0;padding:0">
 										<Label  text="{{ book + ', page '+ page }}" style="margin:0;padding:1;" textWrap="true"></Label>
@@ -33,7 +35,6 @@ Feel free to customize layouts and components to change how the tab view looks.
 					</lv:RadListView>  
 					
 				</StackLayout>
-			</GridLayout>
 		</ScrollView>
-	</GridLayout>
+	</Gradient:Gradient>	
 </Page>

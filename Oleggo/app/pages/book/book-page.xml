@@ -60,7 +60,7 @@
                                 <Page id="tab-1">
                                     <AbsoluteLayout style="background-color:#434B5B;margin:0;padding:0;width:100%;">
                                         <Image src="{{Book.background}}" class="imgBack" stretch="aspectFill" left="0" top="0" />
-                                        <StackLayout orientation="vertical" left="0" top="50" style="margin:0;padding:0;width:100%">
+                                        <StackLayout orientation="vertical" left="0" top="40" style="margin:0;padding:0;width:100%">
                                             <StackLayout orientation="vertical" style="color: white;">
                                                 <DockLayout stretchLastChild="true" style="width:100%;padding:10 0 20 0;">
                                                     <StackLayout dock="left" style="vertical-align: bottom;margin:0 0 0 10; width:80;color:#839E9D;">

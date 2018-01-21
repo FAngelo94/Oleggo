@@ -68,19 +68,18 @@
         <Gradient:Gradient  direction="to top left" 
                         colors="rgba(248,153,42,1),rgba(239,90,50,1), rgba(240,73,94,1)"
                         orientation="vertical" >
-        <StackLayout style="font-family: FontAwesome;height:96%" class="StackLayout1">
-            <Label  text="&#xf02a; Scan Book barcode" style="horizontal-align:center;font-weight:bold; font-size:24px;margin:20 8 0 8"></Label>
-				
-                    <Gradient:Gradient  direction="to top left" 
-                        colors="rgba(248,153,42,1),rgba(239,90,50,1), rgba(240,73,94,1)"
-                        orientation="vertical" 
-                        verticalAlignment="center"
-                        borderRadius="20"
-                        style="margin: 16 30 50; ">
-                    <Button text="&#xf030;" class="cam" tap="openQR"/>
-                    </Gradient:Gradient>
+            <StackLayout style="font-family: FontAwesome;height:96%" class="StackLayout1">
                 <TextField id="isbn" maxLength="13" hint="Insert ISBN" keyboardType="number"></TextField>
-				<Button text="&#xf002; Search ISBN" class="btn btn-primary" tap="readISBN" style="horizontal-align:center"/>
+                <Button text="&#xf002; Search ISBN" class="btn btn-primary" tap="readISBN" style="horizontal-align:center"/>
+                <Gradient:Gradient  direction="to top left" 
+                    colors="rgba(248,153,42,1),rgba(239,90,50,1), rgba(240,73,94,1)"
+                    orientation="vertical" 
+                    verticalAlignment="center"
+                    borderRadius="20"
+                    style="margin: 16 30 5; ">
+                    <Button text="&#xf030;" class="cam" tap="openQR"/>
+                </Gradient:Gradient>
+                <Label  text="&#xf02a; Scan Book barcode" style="horizontal-align:center;font-weight:bold; font-size:24px;margin:20 8 0 8"></Label>
             </StackLayout>
         </Gradient:Gradient>
         </nsDrawer:RadSideDrawer.mainContent>
