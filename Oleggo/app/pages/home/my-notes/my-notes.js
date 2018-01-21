@@ -62,13 +62,32 @@ function removeNote(args) {
 	setUpModel()
 }
 
-function notFavoriteNote(args) {
-
-	(new Sqlite("OleggoDB.db")).then(db => {
+function FavoriteNote(args) {
+    (new Sqlite("OleggoDB.db")).then(db => {
         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
         console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-        var id=args.object.id
-		db.execSQL(DB.removeFromFavoriteQuote(), ["0", id]).then(id => {
+        console.log(args.object.id)
+        var obj = args.object.id.replace('fav', '')
+        var fav;
+        for (i = 0; i < page.bindingContext.NoteList.length; i++) {
+            if (page.bindingContext.NoteList[i].key == obj) {
+                var star = page.getViewById(args.object.id);
+                if (page.bindingContext.NoteList[i].favorite == '1') {
+                    page.bindingContext.NoteList[i].favorite = '0'
+                    fav = "0"
+                    star.text = "\uf006";
+                }
+                else {
+                    page.bindingContext.NoteList[i].favorite = '1'
+                    fav = "1"
+                    star.text = "\uf005";
+                }
+                console.log(JSON.stringify(page.bindingContext.NoteList[i]))
+                break;
+            }
+        }
+
+        db.execSQL(DB.updateFavoriteQuote(), [fav, obj]).then(id => {
             console.info("INSERT RESULT" + id);
         }, error => {
             console.info("INSERT ERROR" + error);
@@ -80,7 +99,7 @@ function notFavoriteNote(args) {
     })
 }
 
-exports.notFavoriteNote = notFavoriteNote
+exports.FavoriteNote = FavoriteNote
 exports.removeNote = removeNote
 exports.modifyNote = modifyNote
 exports.onLoaded=onLoaded

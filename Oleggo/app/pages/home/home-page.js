@@ -60,11 +60,7 @@ function onDelete() {
  * https://docs.nativescript.org/cookbook/ui/tab-view#using-selectedindexchanged-event-from-xml
  *************************************************************/
 function onSelectedIndexChanged(args) {
-    const tabView = args.object;
-    const bindingContext = tabView.bindingContext;
-    const selectedTabViewItem = tabView.items[args.newIndex];
-
-    bindingContext.set("title", selectedTabViewItem.title);
+    	
 }
 function onLogoTap(args) {
     var topmost = frameModule.topmost();
