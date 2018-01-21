@@ -64,6 +64,11 @@ function deleteWordById(){
 exports.deleteWordById = deleteWordById
 
 //BOOKS
+function insertNewBook(){
+	return "INSERT INTO books (ISBN,title,author,pages,bookmark,state,imagelink) VALUES (?, ?, ?, ?, ?, ?, ?)";
+}
+exports.insertNewBook = insertNewBook
+
 function readAllBooks(){
 	return "SELECT * FROM books";
 }
