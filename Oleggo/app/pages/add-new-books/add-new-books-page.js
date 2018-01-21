@@ -6,6 +6,10 @@ var BarcodeScanner = require("nativescript-barcodescanner").BarcodeScanner;
 var http = require("http");
 var Sqlite = require("nativescript-sqlite");
 
+var Toast = require("nativescript-toast");
+
+var ISBNPresentYet     = Toast.makeText("Error! An equal ISBN is already present in DB!");
+
 const defaultOptions = {
     timeout: 2500,
     method: "GET"
@@ -88,7 +92,34 @@ function readISBN(args) {
         resolve(isbn.text, (err, book) => {
             if (err) {
                 console.info('Book not found ' + err)
-                errorAlert('Book not found. ' + err)
+                //errorAlert('Book not found. ' + err)
+				let content = {
+					title: "Book not found. ",
+					message: "Insert the title manually",
+					defaultText: "Title",
+					inputType: dialogs.inputType.text,
+					okButtonText: "continue",
+					cancelButtonText: "cancel"
+				};
+				dialogs.prompt(content).then((r) => {
+					console.log("Dialog result: " + r.result + ", text: " + r.text);
+						if (r.result === true) {
+							if (r.text !='') {
+								var book = {
+									"ISBN": isbn,
+									'title': r.text,
+									'authors': "",
+									'imageLink': "~/images/empty.png",
+								};
+								
+								tryAddAuthor(book.title + "\nAuthor: ", book);
+							}
+							else {
+								errorAlert("Author is not valid");
+							}
+						}
+					});
+				
             }
             else {
                 console.info('Book found: ' + JSON.stringify(book))
@@ -106,6 +137,8 @@ function readISBN(args) {
 }
 
 function tryAddAuthor(data, book) {
+
+	console.info("TRY ADD AUTHOR")
 
     let content = {
         title: "Book response",
@@ -177,7 +210,13 @@ function addBookDB(data) {
         console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
         db.execSQL("INSERT INTO books (ISBN,title,author,pages,bookmark,state,imagelink) VALUES (?, ?, ?, ?, ?, ?, ?)", [data.ISBN, data.title, data.authors, data.pageCount, "0", "0", data.imageLink]).then(id => {
             console.info("INSERT RESULT", id);
-            db.all("SELECT * FROM books").then(rows => {
+			var topmost = frameModule.topmost();
+			var naviagationOptions={
+				moduleName:"pages/home/home-page",
+			}
+			topmost.navigate(naviagationOptions); 
+            
+			db.all("SELECT * FROM books").then(rows => {
                 for (var row in rows) {
                     console.info("RESULT", rows[row]);
                 }
@@ -185,19 +224,15 @@ function addBookDB(data) {
             }, error => {
                 console.info("SELECT ERROR", error);
             });
+			
         }, error => {
-            console.info("INSERT ERROR", error);
+            ISBNPresentYet.show()
         });
 
     }, err => {
         console.info("Failed to open database", err);
         errorAlert("Failed to open database: " + err)
     })
-    var topmost = frameModule.topmost();
-    var naviagationOptions={
-        moduleName:"pages/home/home-page",
-    }
-    topmost.navigate(naviagationOptions); 
 }
 
 function errorAlert(err) {
