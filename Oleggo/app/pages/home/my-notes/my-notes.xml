@@ -7,7 +7,7 @@ Feel free to customize layouts and components to change how the tab view looks.
 	cssFile="~/pages/home/my-notes/my-notes.css"
 	xmlns:Gradient="nativescript-gradient"
 	loaded="onLoaded">
-	<Gradient:Gradient  direction="to top left" 
+	<Gradient:Gradient  direction="to top right" 
 		colors="rgba(248,153,42,1),rgba(239,90,50,1), rgba(240,73,94,1)"
 		orientation="vertical" >
 		<ScrollView class="stk">

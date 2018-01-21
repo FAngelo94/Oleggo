@@ -69,13 +69,22 @@
                 <StackLayout id="campo" style="font-family: FontAwesome;margin:8 8 8 8;">
                     <TextView id="speakText" hint="Enter the word or note"></TextView>
                     <TextView id="page" hint="Enter the page of the book (optionally)"></TextView>
-                    <Button text="&#xf130;"  tap="listen" class="mic"/>
-                    <Label  text="&#xf02a; Scan Book barcode" style="horizontal-align:center;font-weight:bold; font-size:24px;margin:20 8 0 8"></Label>
+                    <StackLayout class="mic2">
+                            <Gradient:Gradient  direction="to top right" 
+                                colors="rgba(248,153,42,1),rgba(239,90,50,1), rgba(240,73,94,1)"
+                                orientation="vertical" 
+                                borderRadius="50"
+                                verticalAlignment="center"
+                                style="width:80; height:80;">
+                                <Label  text="&#xf130;"  tap="listen"  style="horizontal-align:center; vertical-align:center"></Label>
+                            </Gradient:Gradient>   
+                    </StackLayout> 
+                    <Label  text="Tap to talk" style="horizontal-align:center;font-weight:bold; color:#B2B5BB;font-size:16px;margin:0 8 25"></Label>
            
                     <StackLayout class="input-field" orientation="horizontal">
                         <Button text="&#xf10d; &#xf10e; Add Note"  class="btn-op" tap="addQuote" width="50%"/>
                         <Button text="&#xf1ab; Get definition" class="btn-op" tap="lookForWord" width="50%"/>
-                    </StackLayout>            
+                    </StackLayout>     
                 </StackLayout>
             </ScrollView>
         </Gradient:Gradient>

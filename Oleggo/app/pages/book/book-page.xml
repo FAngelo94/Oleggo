@@ -6,6 +6,7 @@
     navigatingTo="onNavigatingTo"  
     xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
     xmlns:myDrawer="shared/my-drawer"
+    xmlns:Gradient="nativescript-gradient"
     xmlns="http://www.nativescript.org/tns.xsd"
 	
 	xmlns:my-notes="/pages/book/my-notes"
@@ -62,7 +63,7 @@
                                         <Image src="{{Book.background}}" class="imgBack" stretch="aspectFill" left="0" top="0" />
                                         <StackLayout orientation="vertical" left="0" top="40" style="margin:0;padding:0;width:100%">
                                             <StackLayout orientation="vertical" style="color: white;">
-                                                <DockLayout stretchLastChild="true" style="width:100%;padding:10 0 20 0;">
+                                                <DockLayout stretchLastChild="true" style="width:100%;padding:10 0 12 0;">
                                                     <StackLayout dock="left" style="vertical-align: bottom;margin:0 0 0 10; width:80;color:#839E9D;">
                                                         <Label text="{{QuotesLength}}"  style="horizontal-align: center;"/>
                                                         <Label text="Notes"  style="horizontal-align: center;"/> 
@@ -84,9 +85,41 @@
                                                     <Label text="{{Book.author}}" class="BookAuthor" style="horizontal-align: center;" textWrap="true"/>
                                                                             
                                                     <StackLayout orientation="horizontal" style="horizontal-align: center; padding:10 0 15 0;" width="75%">
-                                                        <Button text="&#xf0ae;" tap="onProgressButtonTap" style="font-family: FontAwesome;"/>   
-                                                        <Button text="B" id="btnState" tap="onStateButtonTap" style="height: 60;width: 60;"/> 
-                                                        <Button text="&#xf09c;" tap="MainActiveTap" id="lock" style="font-family: FontAwesome;" />
+                                                        
+                                                        <StackLayout class="Btn">
+                                                            <Gradient:Gradient  direction="to top right" 
+                                                                colors="rgba(248,153,42,1),rgba(239,90,50,1), rgba(240,73,94,1)"
+                                                                orientation="vertical" 
+                                                                borderRadius="50"
+                                                                verticalAlignment="center"
+                                                                style="width:50; height:50;">
+                                                                <Label  text="&#xf0ae;" tap="onProgressButtonTap"  style="text-align: center; vertical-align: center;font-size: 25px"></Label>
+                                                            </Gradient:Gradient>   
+                                                        </StackLayout>
+                                                        
+                                                        
+                                                        <StackLayout class="mic2">
+                                                            <Gradient:Gradient  direction="to top right" 
+                                                                colors="rgba(248,153,42,1),rgba(239,90,50,1), rgba(240,73,94,1)"
+                                                                orientation="vertical" 
+                                                                borderRadius="50"
+                                                                verticalAlignment="center"
+                                                                style="width:80; height:80;">
+                                                                <Label  text="&#xf130;" id="btnState" tap="onStateButtonTap" class="mainbook" style="text-align: center; vertical-align: center;"></Label>
+                                                            </Gradient:Gradient>   
+                                                        </StackLayout>
+
+                                                        <StackLayout class="Btn">
+                                                            <Gradient:Gradient  direction="to top right" 
+                                                                colors="rgba(248,153,42,1),rgba(239,90,50,1), rgba(240,73,94,1)"
+                                                                orientation="vertical" 
+                                                                borderRadius="50"
+                                                                verticalAlignment="center"
+                                                                style="width:50; height:50;">
+                                                                <Label  text="&#xf09c;" tap="MainActiveTap" id="lock"  style="text-align: center; vertical-align: center;font-size: 25px"></Label>
+                                                            </Gradient:Gradient>   
+                                                        </StackLayout>
+
                                                     </StackLayout>
 
                                                     <Label text="{{Book.pages +' pages'}}" style="text-align:right;padding:0;margin:0;font-size: 12;" width="75%"/>

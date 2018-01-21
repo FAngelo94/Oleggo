@@ -27,12 +27,15 @@ function loaded(args) {
         page.getViewById("tab-2").exports.getDataFromParent(page.navigationContext.bookISBN)
    
         if (dataBook.Book.state == 0) {
-            page.getViewById("btnState").style = "background-color:#FF4082"
+            
+            page.getViewById("btnState").text = "\uf097";
         }
         else {
-            page.getViewById("btnState").style = "background-color:white"
+            page.getViewById("btnState").text = "\uf02e";
+            page.getViewById("btnState").style = "color:white"
             if (dataBook.Book.state == 2) {
-                page.getViewById("btnState").style = "background-color:red"
+                page.getViewById("btnState").style = "color:rgba(239,90,50,1)"
+                page.getViewById("btnState").style = "background-color:whitesmoke;border-color:rgba(239,90,50,1);border-width: 4px"
             }
         }
         var lock = page.getViewById("lock");
@@ -105,16 +108,17 @@ function onStateButtonTap(args) {
     switch (dataBook.Book.state) {
     case "0":
         dataBook.Book.state = "1"
-        page.getViewById("btnState").style = "background-color:white"
+        page.getViewById("btnState").text = "\uf02e";
         break;
     case "1":
         dataBook.Book.state = "0"
-        page.getViewById("btnState").style = "background-color:#FF4082"
+        page.getViewById("btnState").text = "\uf097";
         break;
     case "2":
         MainActiveTap()
         dataBook.Book.state = "0"
-        page.getViewById("btnState").style = "background-color:#FF4082"
+        page.getViewById("btnState").text = "\uf097";
+        page.getViewById("btnState").style = "color:white"
         break;
     }
     console.log(dataBook.Book.state)
@@ -214,14 +218,19 @@ function MainActiveTap(args) {
         lock.text = "\uf09c";
         dataBook.Book.state = "1"
         dataBook.updateMainState(dataBook.Book)
-        console.log(dataBook.Book.state)
-        page.getViewById("btnState").style = "background-color:white"
+        console.log("lock"+dataBook.Book.state)
+        page.getViewById("btnState").text = "\uf02e";
+        page.getViewById("btnState").style = "background-color:rgba(239,90,50,0)"
+        page.getViewById("btnState").style = "color:white;border-width: 0px"
+
     }
     else{
         dataBook.updateMainState(dataBook.Book)
         lock.text = "\uf023";
         dataBook.Book.state = "2"
-        page.getViewById("btnState").style = "background-color:red" 
+        page.getViewById("btnState").text = "\uf02e";
+        page.getViewById("btnState").style = "color:rgba(239,90,50,1)" 
+        page.getViewById("btnState").style = "background-color:whitesmoke;border-color:rgba(239,90,50,1);border-width: 4px"
         console.log(dataBook.Book.state) 
         setMainState.show()     
     }
