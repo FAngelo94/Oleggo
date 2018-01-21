@@ -1,6 +1,8 @@
 const observableModule = require("data/observable");
 const ObservableArray = require("data/observable-array").ObservableArray;
 
+var DB = require("~/shared/db/db")
+
 function MyNotesViewModel(db) {
 	//Pass the ObservableArray to the page
     const viewModel = observableModule.fromObject({
@@ -12,11 +14,10 @@ function MyNotesViewModel(db) {
     return viewModel
 }
 
-
 function readQuotesDB(db)
 {
 	var quotes = []
-    db.all("SELECT * FROM quotes join books where quotes.ISBN=books.ISBN and favorite=1", function (error, rows) {
+    db.all(DB.readFavoriteQuotes(), function (error, rows) {
         if (error) {
             console.log("SELECT ERROR", error)
             return ("SELECT ERROR" + error)
@@ -24,7 +25,7 @@ function readQuotesDB(db)
         else {
             for (var row in rows) {
                 console.log("RESULT", rows[row])
-                var res = (rows[row].toString()).split(",")
+                var res = rows[row]
                 var quote = {
                     book: res[8]+", "+res[9],
                     page: res[3],

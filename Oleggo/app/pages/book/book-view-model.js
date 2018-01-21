@@ -2,6 +2,8 @@ const observableModule = require("data/observable");
 const ObservableArray = require("data/observable-array").ObservableArray;
 var Sqlite = require("nativescript-sqlite");
 
+var DB = require("~/shared/db/db")
+
 function BookViewModel(database, isbn) {
     console.log("Model");
     let viewModeldata = {
@@ -26,9 +28,9 @@ function BookViewModel(database, isbn) {
         (new Sqlite("OleggoDB.db")).then(db => {
             // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
             console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-            db.execSQL("UPDATE books SET bookmark=? WHERE id=?", [data.bookmark, data.id]).then(id => {
+            db.execSQL(DB.updateBookmark(), [data.bookmark, data.id]).then(id => {
                 console.log("UPDATE RESULT", id);
-                db.all("SELECT * FROM books").then(rows => {
+                db.all(DB.readAllBooks()).then(rows => {
                     for (var row in rows) {
                         console.log("RESULT", rows[row]);
                     }
@@ -47,9 +49,9 @@ function BookViewModel(database, isbn) {
         (new Sqlite("OleggoDB.db")).then(db => {
             // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
             console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-            db.execSQL("UPDATE books SET state=? WHERE id=?", [data.state, data.id]).then(id => {
+            db.execSQL(DB.updateState(), [data.state, data.id]).then(id => {
                 console.log("UPDATE RESULT", id);
-                db.all("SELECT * FROM books WHERE id=?", [data.id]).then(rows => {
+                db.all(DB.readBookByID(), [data.id]).then(rows => {
                     for (var row in rows) {
                         console.log("RESULT", rows[row]);
                     }
@@ -68,7 +70,7 @@ function BookViewModel(database, isbn) {
         (new Sqlite("OleggoDB.db")).then(db => {
             // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
             console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-            db.all("SELECT * FROM books WHERE state=2").then(rows => {
+            db.all(DB.readISBNMainActiveBook()).then(rows => {
                 for (var row in rows) {
                     console.log("RESULT Main", rows[row]);
                     if(rows[row]){
@@ -116,7 +118,7 @@ function BookViewModel(database, isbn) {
 
 function readBooksDB(database, isbn) {
     var book = {}
-    database.all("SELECT * FROM books WHERE ISBN=?", [isbn], function (error, rows) {
+    database.all(DB.readBookByISBN(), [isbn], function (error, rows) {
         if (error) {
             console.log("SELECT ERROR", error);
             return ("SELECT ERROR" + error)
@@ -154,15 +156,14 @@ function readBooksDB(database, isbn) {
 
 function readQuotesDB(database, isbn) {
     var quotes = []
-    database.all("SELECT * FROM quotes WHERE ISBN=?", [isbn], function (error, rows) {
+    database.all(DB.readQuotesByISBN(), [isbn], function (error, rows) {
         if (error) {
             console.log("SELECT ERROR", error);
             return ("SELECT ERROR" + error)
         }
         else {
             for (var row in rows) {
-                console.log("RESULT", rows[row]);
-                var res = (rows[row].toString()).split(",");
+                console.log("RESULT", rows[row])
                 quote = {
                     quote: rows[row][2],
                     page: rows[row][3],
@@ -180,7 +181,7 @@ function readQuotesDB(database, isbn) {
 
 function readDiccDB(database, isbn) {
     var dicc = []
-    database.all("SELECT * FROM dictionary WHERE ISBN=?", [isbn], function (error, rows) {
+    database.all(DB.readWordsByISBN(), [isbn], function (error, rows) {
         if (error) {
             console.log("SELECT ERROR", error);
             return ("SELECT ERROR" + error)

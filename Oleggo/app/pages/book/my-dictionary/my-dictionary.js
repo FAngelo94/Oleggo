@@ -2,6 +2,8 @@ const frameModule = require("ui/frame");
 var Sqlite = require( "nativescript-sqlite" );
 const MyDictionaryViewModel = require("./my-dictionary-view-model");
 
+var DB = require("~/shared/db/db")
+
 var page;
 var ISBN;
 
@@ -27,7 +29,7 @@ function removeWord(args){
         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
         console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
         var id=args.object.id
-		db.execSQL("DELETE FROM dictionary WHERE id=?", [id]).then(id => {
+		db.execSQL(DB.deleteWordById(), [id]).then(id => {
             console.info("INSERT RESULT" + id);
         }, error => {
             console.info("INSERT ERROR" + error);

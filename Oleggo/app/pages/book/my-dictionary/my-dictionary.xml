@@ -15,7 +15,7 @@
 									<Label  text="{{ word }}" style="font-size:20px;"></Label>
 									<Label  text="{{ meaning }}" textWrap="true" style="margin:8;padding:1;font-size:16px;font-weight:normal;font-style: italic;"></Label>
 								</StackLayout>
-								<Button id="{{ word }}" text="&#xf014;"  tap="removeWord"/>
+								<Button id="{{ id }}" text="&#xf014;"  tap="removeWord"/>
 							</StackLayout>
 						</lv:RadListView.itemTemplate>
 					</lv:RadListView>  
