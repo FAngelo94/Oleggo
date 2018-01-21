@@ -18,9 +18,9 @@ function onNavigatingTo(args) {
     const page = args.object;
 	page.bindingContext = new HomeViewModel();
     (new Sqlite("OleggoDB.db")).then(db => {
-        db.execSQL("CREATE TABLE IF NOT EXISTS books(id INTEGER PRIMARY KEY AUTOINCREMENT, ISBN TEXT unique, title TEXT, author TEXT, pages TEXT, bookmark TEXT, state TEXT, imagelink TEXT)").then(id => {
+        db.execSQL("CREATE TABLE IF NOT EXISTS books(id INTEGER PRIMARY KEY AUTOINCREMENT, ISBN TEXT, title TEXT, author TEXT, pages TEXT, bookmark TEXT, state TEXT, imagelink TEXT)").then(id => {
             console.log("table  Books created")
-            db.execSQL("CREATE TABLE IF NOT EXISTS dictionary(id INTEGER PRIMARY KEY AUTOINCREMENT, isbn TEXT unique, word TEXT, meaning TEXT)").then(id => {
+            db.execSQL("CREATE TABLE IF NOT EXISTS dictionary(id INTEGER PRIMARY KEY AUTOINCREMENT, isbn TEXT, word TEXT, meaning TEXT)").then(id => {
                 console.log("table  Dictionary created")
 
                 db.execSQL("CREATE TABLE IF NOT EXISTS quotes(id INTEGER PRIMARY KEY AUTOINCREMENT, isbn TEXT unique, quote TEXT, page TEXT, favorite TEXT, date TEXT)").then(id => {
