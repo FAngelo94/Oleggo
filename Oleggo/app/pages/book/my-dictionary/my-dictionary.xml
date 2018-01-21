@@ -12,7 +12,7 @@
 						<lv:RadListView.itemTemplate>
 							<StackLayout orientation="horizontal" style="font-family: FontAwesome;">
 								<StackLayout class="input-field" id="campo" style="font-family: FontAwesome;" width="80%">
-									<Label  text="{{ word }}" style="font-size:20px;"></Label>
+									<Label  text="{{ word }}" style="font-size:20px;padding:2;"></Label>
 									<Label  text="{{ meaning }}" textWrap="true" style="margin:8;padding:1;font-size:16px;font-weight:normal;font-style: italic;"></Label>
 								</StackLayout>
 								<Button id="{{ id }}" text="&#xf014;"  tap="removeWord"/>

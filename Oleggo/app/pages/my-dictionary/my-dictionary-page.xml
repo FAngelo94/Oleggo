@@ -68,31 +68,28 @@
 		<Gradient:Gradient  direction="to top left" 
                 colors="rgba(248,153,42,1),rgba(239,90,50,1), rgba(240,73,94,1)"
                 orientation="vertical" >
-				<ScrollView >
-						<StackLayout class="form">
-							
-                            <StackLayout orientation="horizontal" style="font-family: FontAwesome;margin:0 0 0 8;">
-                                <TextView id="word" hint="Write the word to search" width="80%" margin="5"></TextView>	
-                                <Button text="&#xf002;" tap="searchWord" style="font-family: FontAwesome;"/>
-                            </StackLayout>
-
-							<lv:RadListView items="{{ DictionaryList }}" >
-								<lv:RadListView.listViewLayout>
-									<lv:ListViewStaggeredLayout spanCount="1"/>
-								</lv:RadListView.listViewLayout>
-								<lv:RadListView.itemTemplate>
-									<StackLayout orientation="horizontal" style="font-family: FontAwesome;">
-                                        <StackLayout class="input-field" id="campo" style="font-family: FontAwesome;" width="80%">
-                                            <Label  text="{{ word }}" style="font-size:20px;"></Label>
-                                            <Label  text="{{ meaning }}" textWrap="true" style="margin:8;padding:1;font-size:16px;font-weight:normal;font-style: italic;"></Label>
+                <StackLayout class="stk">
+                    <StackLayout orientation="horizontal" style="font-family: FontAwesome;margin:0 0 0 8;">
+                                    <TextView id="word" hint="Write the word to search" width="80%" margin="5"></TextView>	
+                                    <Button text="&#xf002;" tap="searchWord" style="font-family: FontAwesome;"/>
+                    </StackLayout>
+                    <ScrollView >
+                                <lv:RadListView items="{{ DictionaryList }}" >
+                                    <lv:RadListView.listViewLayout>
+                                        <lv:ListViewStaggeredLayout spanCount="1"/>
+                                    </lv:RadListView.listViewLayout>
+                                    <lv:RadListView.itemTemplate>
+                                        <StackLayout orientation="horizontal" style="font-family: FontAwesome;margin:0 5 0 5">
+                                            <StackLayout class="input-field" id="campo" style="font-family: FontAwesome;" width="85%">
+                                                <Label  text="{{ word }}" style="font-size:20px;padding:0 0 1 2; margin:0 5 "></Label>
+                                                <Label  text="{{ meaning }}" textWrap="true" style="margin:8;padding:1;font-size:16px;font-weight:normal;font-style: italic;"></Label>
+                                            </StackLayout>
+                                            <Button id="{{ word }}" text="&#xf014;"  tap="removeWord"/>
                                         </StackLayout>
-                                        <Button id="{{ word }}" text="&#xf014;"  tap="removeWord"/>
-                                    </StackLayout>
-								</lv:RadListView.itemTemplate>
-							</lv:RadListView>  
-							  
-						</StackLayout>
-				</ScrollView>
+                                    </lv:RadListView.itemTemplate>
+                                </lv:RadListView>  
+                    </ScrollView>
+                </StackLayout>
         </Gradient:Gradient>
 			
 			

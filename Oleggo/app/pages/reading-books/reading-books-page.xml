@@ -7,6 +7,7 @@
     xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
     xmlns:myDrawer="shared/my-drawer"
     xmlns:lv="nativescript-pro-ui/listview"
+    xmlns:Gradient="nativescript-gradient"
     xmlns="http://www.nativescript.org/tns.xsd">
 
     <ActionBar class="action-bar">
@@ -69,8 +70,11 @@
         Always wrap content in a layout component.
         -->
         <nsDrawer:RadSideDrawer.mainContent>
-            <StackLayout orientation="vertical">
-                <ScrollView orientation="horizontal" style="margin: 50 0 0 0; height: 80%">
+        <Gradient:Gradient  direction="to top left" 
+            colors="rgba(248,153,42,1),rgba(239,90,50,1), rgba(240,73,94,1)"
+            orientation="vertical" >
+            <StackLayout orientation="vertical" class="stk">
+                <ScrollView orientation="horizontal" style="margin: 15% 0 0 0; height: 80%">
                     <lv:RadListView items="{{ BookList }}">
                         <lv:RadListView.listViewLayout>
                             <lv:ListViewLinearLayout scrollDirection="Horizontal"/>
@@ -90,7 +94,10 @@
                         </lv:RadListView.itemTemplate>
                     </lv:RadListView> 
                 </ScrollView>
-        </StackLayout>
+            </StackLayout>
+                
+        </Gradient:Gradient>
+            
         </nsDrawer:RadSideDrawer.mainContent>
     </nsDrawer:RadSideDrawer>
 </Page>

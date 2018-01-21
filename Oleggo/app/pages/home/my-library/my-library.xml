@@ -2,21 +2,33 @@
 This is the component view that represents the 'Search' tab.
 Feel free to customize layouts and components to change how the tab view looks.
 -->
-<GridLayout rows="*" columns="*" xmlns:lv="nativescript-pro-ui/listview" loaded="loaded" style="padding:5">
-	<lv:RadListView items="{{ BookList }}">
-		<lv:RadListView.listViewLayout>
-			<lv:ListViewStaggeredLayout spanCount="3"/>
-		</lv:RadListView.listViewLayout>
-		<lv:RadListView.itemTemplate>
-			<GridLayout rows="*,auto">
-				<StackLayout class="btn-img" row="0" orientation="horizontal" tap="onImageBookTap" id="{{ISBN}}">
-					<Image src="{{ imagelink }}" stretch="aspectFill"/>
-				</StackLayout>
-				<StackLayout row="1" class="BookContainer" orientation="vertical" tap="onImageBookTap" id="{{ISBN}}">
-					<Label text="{{ title }}" class="BookTitle" textWrap="true" />
-					<Label text="{{ author, 'by ' + author }}" class="BookAuthor" textWrap="true"/>
-				</StackLayout>
-			</GridLayout>
-		</lv:RadListView.itemTemplate>
-	</lv:RadListView>  
-</GridLayout>
+<Page
+	xmlns:lv="nativescript-pro-ui/listview"
+	loaded="loaded"
+
+    cssFile="~/pages/home/my-library/my-library.css"
+    xmlns:Gradient="nativescript-gradient"
+	>
+	<Gradient:Gradient  direction="to top left" 
+		colors="rgba(248,153,42,1),rgba(239,90,50,1), rgba(240,73,94,1)"
+		orientation="vertical" >
+		<GridLayout rows="*" columns="*" style="padding:10" class="stk">
+			<lv:RadListView items="{{ BookList }}">
+				<lv:RadListView.listViewLayout>
+					<lv:ListViewStaggeredLayout spanCount="3"/>
+				</lv:RadListView.listViewLayout>
+				<lv:RadListView.itemTemplate>
+					<GridLayout rows="*,auto">
+						<StackLayout class="btn-img" row="0" orientation="horizontal" tap="onImageBookTap" id="{{ISBN}}">
+							<Image src="{{ imagelink }}" stretch="aspectFill"/>
+						</StackLayout>
+						<StackLayout row="1" class="BookContainer" orientation="vertical" tap="onImageBookTap" id="{{ISBN}}">
+							<Label text="{{ title }}" class="BookTitle" textWrap="true" />
+							<Label text="{{ author, 'by ' + author }}" class="BookAuthor" textWrap="true"/>
+						</StackLayout>
+					</GridLayout>
+				</lv:RadListView.itemTemplate>
+			</lv:RadListView>  
+		</GridLayout>
+	</Gradient:Gradient>
+</Page>
