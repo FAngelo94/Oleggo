@@ -33,7 +33,7 @@ Image {
 }
 
 .BookTitle {
-    padding: 0 0 0 0;
+    padding: 0 0 4 0;
     font-size: 22;
     color: white;
     text-align: center
@@ -43,5 +43,6 @@ Image {
     padding: 0 0 10 0;
     color: #F98735;
     font-size: 20;
+    font-weight: normal;
     text-align: center
 }

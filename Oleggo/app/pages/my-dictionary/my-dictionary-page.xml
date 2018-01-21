@@ -2,6 +2,7 @@
     navigatingTo="onNavigatingTo"  
     xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
     xmlns:myDrawer="shared/my-drawer"
+    cssFile="~/pages/my-dictionary/my-dictionary.css"
     xmlns="http://www.nativescript.org/tns.xsd">
 
     <ActionBar class="action-bar">
@@ -17,7 +18,12 @@
             tap="onDrawerButtonTap"
             ios.position="left">
         </ActionItem>
-        <Label class="action-bar-title" text="My Dictionary"></Label>
+        <ActionItem 
+			icon="res://icono"
+			tap="onLogoTap"
+			android.position="right">
+        </ActionItem>
+        <Label class="action-bar-title" text="Dictionary" style="color:white"></Label>
     </ActionBar>
 
     <!--
@@ -63,20 +69,23 @@
 					<GridLayout rows="*" columns="*">
 						<StackLayout class="form">
 							
-							<TextView id="word" hint="Write the words or its beginning"></TextView>		
-							<Button text="Search" class="btn btn-primary btn-active" tap="searchWord"/>
-							
+                            <StackLayout orientation="horizontal" style="font-family: FontAwesome;margin:0 0 0 8;">
+                                <TextView id="word" hint="Write the word to search" width="80%"></TextView>	
+                                <Button text="&#xf002;" tap="searchWord" style="font-family: FontAwesome;"/>
+                            </StackLayout>
+
 							<lv:RadListView items="{{ DictionaryList }}" >
 								<lv:RadListView.listViewLayout>
 									<lv:ListViewStaggeredLayout spanCount="1"/>
 								</lv:RadListView.listViewLayout>
 								<lv:RadListView.itemTemplate>
-									<StackLayout class="input-field" id="campo" weight="500px">
-										<Label class="label" text="{{ word }}" ></Label>
-										<Label class="label" text="{{ meaning }}" textWrap="true"></Label>
-										<Button id="{{ word }}" text="Remove" class="btn btn-primary btn-active" tap="removeWord"/>
-									
-									</StackLayout>
+									<StackLayout orientation="horizontal" style="font-family: FontAwesome;">
+                                        <StackLayout class="input-field" id="campo" style="font-family: FontAwesome;" width="80%">
+                                            <Label  text="{{ word }}" style="font-size:20px;"></Label>
+                                            <Label  text="{{ meaning }}" textWrap="true" style="margin:8;padding:1;font-size:16px;font-weight:normal;font-style: italic;"></Label>
+                                        </StackLayout>
+                                        <Button id="{{ word }}" text="&#xf014;"  tap="removeWord"/>
+                                    </StackLayout>
 								</lv:RadListView.itemTemplate>
 							</lv:RadListView>  
 							  

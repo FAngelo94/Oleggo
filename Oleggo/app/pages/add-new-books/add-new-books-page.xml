@@ -18,6 +18,11 @@
             android:visibility="collapsed" 
             tap="onDrawerButtonTap"
             ios.position="left">
+        <ActionItem 
+			icon="res://icono"
+			tap="onLogoTap"
+			android.position="right">
+        </ActionItem>
         </ActionItem>
         <Label class="action-bar-title" text="Add New Books"></Label>
     </ActionBar>

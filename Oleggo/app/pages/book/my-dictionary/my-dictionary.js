@@ -3,6 +3,7 @@ var Sqlite = require( "nativescript-sqlite" );
 const MyDictionaryViewModel = require("./my-dictionary-view-model");
 
 var page;
+var ISBN;
 
 function loadList(args){
 	page = args.object
@@ -12,7 +13,7 @@ function loadList(args){
 function setUpModel(){
 	(new Sqlite("OleggoDB.db")).then((db) => {
          console.log("gotDB")
-         var temp = new MyDictionaryViewModel(db)
+         var temp = new MyDictionaryViewModel(db,ISBN)
 		 console.info("temp="+temp)
          page.bindingContext = temp
      }, err => {
@@ -39,7 +40,8 @@ function removeWord(args){
 	setUpModel()
 }
 function getDataFromParent(args){
-    console.log(args)
+    console.log("dicc"+args)
+    ISBN=args;
 }
 exports.getDataFromParent= getDataFromParent
 

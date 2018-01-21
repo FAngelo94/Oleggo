@@ -31,52 +31,25 @@
 			android.position="right">
         </ActionItem>
 
-        <Label class="action-bar-title" text="Oleggo" textWrap="true"></Label>
+        <Label class="action-bar-title" text="Oleggo" textWrap="true" style="color:white"></Label>
     </ActionBar>
 
-    <!--
-    RadSideDrawer is a UI component part of the Progress NativeScript UI set of components.
-    Learn more about the RadSideDrawer UI component and how it can be customized in this documentation article:
-    http://docs.telerik.com/devtools/nativescript-ui/Controls/NativeScript/SideDrawer/getting-started
-    The RadSideDrawer component is designed to be used as a root element to the <Page> and
-    it shouldn't have any other siblings other than the <ActionBar> component.
-    -->
     <nsDrawer:RadSideDrawer id="sideDrawer" showOverNavigation="true" >
-        <!--
-        Use the RadSideDrawer.drawerTransition component to change the open/close animation of the drawer.
-        -->
+
         <nsDrawer:RadSideDrawer.drawerTransition>
             <nsDrawer:SlideInOnTopTransition/>
         </nsDrawer:RadSideDrawer.drawerTransition>
 
-        <!--
-        Use the RadSideDrawer.drawerContent component to display the content of the app drawer on this page.
-        Always wrap content in a layout component.
-        -->
         <nsDrawer:RadSideDrawer.drawerContent>
             <StackLayout>
-                <!--
-                Use {N} custom components to reuse UI across your mobile app.
-                The MyDrawer custom component defined in "/shared/my-drawer" holds the contents of the app drawer.
-                Learn more about custom components and how they can be used in this documentation article:
-                http://docs.nativescript.org/ui/basics#custom-components
-                -->
                 <myDrawer:MyDrawer/>
             </StackLayout>
         </nsDrawer:RadSideDrawer.drawerContent>
 
-        <!--
-        Use the RadSideDrawer.mainContent component to display the content of the page when you have an app drawer.
-        Always wrap content in a layout component.
-        -->
         <nsDrawer:RadSideDrawer.mainContent>
 
             <TabView style="font-family: FontAwesome; font-weight: bold;" selectedIndexChanged="onSelectedIndexChanged" selectedIndex="1" androidSelectedTabHighlightColor="#FF7E00">
                 <TabView.items>
-                <!--
-                To add a new TabView item, simply add a new <TabViewItem> component to the <TabView.items> collection.
-                Assign the <TabViewItem> component a "title" that will be displayed as the text of the tab item button. 
-                -->
                     <TabViewItem title="&#xf040; Notes">
                         <TabViewItem.view>
                             <my-notes:my-notes id="tab-0"/>
@@ -85,49 +58,49 @@
                     <TabViewItem title="&#xf05a; INFO">
                         <TabViewItem.view>
                                 <Page id="tab-1">
-                                <AbsoluteLayout style="background-color:#434B5B;margin:0;padding:0;width:100%;">
-                                    <Image src="{{Book.background}}" class="imgBack" stretch="aspectFill" left="0" top="0" />
-                                    <StackLayout orientation="vertical" left="0" top="50" style="margin:0;padding:0;width:100%">
-                                        <StackLayout orientation="vertical" style="color: white;">
-                                            <DockLayout stretchLastChild="true" style="width:100%;padding:10 0 20 0;">
-                                                <StackLayout dock="left" style="vertical-align: bottom;margin:0 0 0 10; width:80;color:#839E9D;">
-                                                    <Label text="{{QuotesLength}}"  style="horizontal-align: center;"/>
-                                                    <Label text="Notes"  style="horizontal-align: center;"/> 
-                                                </StackLayout>
+                                    <AbsoluteLayout style="background-color:#434B5B;margin:0;padding:0;width:100%;">
+                                        <Image src="{{Book.background}}" class="imgBack" stretch="aspectFill" left="0" top="0" />
+                                        <StackLayout orientation="vertical" left="0" top="50" style="margin:0;padding:0;width:100%">
+                                            <StackLayout orientation="vertical" style="color: white;">
+                                                <DockLayout stretchLastChild="true" style="width:100%;padding:10 0 20 0;">
+                                                    <StackLayout dock="left" style="vertical-align: bottom;margin:0 0 0 10; width:80;color:#839E9D;">
+                                                        <Label text="{{QuotesLength}}"  style="horizontal-align: center;"/>
+                                                        <Label text="Notes"  style="horizontal-align: center;"/> 
+                                                    </StackLayout>
+                                                    
+                                                    <StackLayout dock="right" style="vertical-align: bottom;margin:0 10 0 0; width:80;color:#839E9D">
+                                                        <Label text="{{DiccLength}}"  style="horizontal-align: center;"/>
+                                                        <Label text="Dictionary"  style="horizontal-align: center;"/> 
+                                                    </StackLayout>
+                                                    
+                                                    <StackLayout  style="horizontal-align: center;" >
+                                                        <Image src="{{Book.imagelink}}" stretch="aspectFit" tap="onImageTap"/>
+                                                    </StackLayout>
+                                                </DockLayout>
                                                 
-                                                <StackLayout dock="right" style="vertical-align: bottom;margin:0 10 0 0; width:80;color:#839E9D">
-                                                    <Label text="{{DiccLength}}"  style="horizontal-align: center;"/>
-                                                    <Label text="Dictionary"  style="horizontal-align: center;"/> 
-                                                </StackLayout>
-                                                
-                                                <StackLayout  style="horizontal-align: center;">
-                                                    <Image src="{{Book.imagelink}}" stretch="aspectFit"/>
-                                                </StackLayout>
-                                            </DockLayout>
-                                            
-                                            <StackLayout orientation="vertical" style="padding:0 0 10 0;color: white;">
+                                                <StackLayout orientation="vertical" style="padding:0 0 10 0;color: white;">
 
-                                                <Label text="{{Book.title}}" class="BookTitle" style="horizontal-align: center;" textWrap="true"/>
-                                                <Label text="{{Book.author}}" class="BookAuthor" style="horizontal-align: center;" textWrap="true"/>
-                                                                        
-                                                <StackLayout orientation="horizontal" style="horizontal-align: center; padding:10 0 15 0;" width="75%">
-                                                    <Button text="&#xf0ae;" tap="onProgressButtonTap" style="font-family: FontAwesome;"/>   
-                                                    <Button text="B" id="btnState" tap="onStateButtonTap" style="height: 60;width: 60;"/> 
-                                                    <Button text="&#xf03e;" tap="changeImageBook" style="font-family: FontAwesome;" />
+                                                    <Label text="{{Book.title}}" class="BookTitle" style="horizontal-align: center;" textWrap="true"/>
+                                                    <Label text="{{Book.author}}" class="BookAuthor" style="horizontal-align: center;" textWrap="true"/>
+                                                                            
+                                                    <StackLayout orientation="horizontal" style="horizontal-align: center; padding:10 0 15 0;" width="75%">
+                                                        <Button text="&#xf0ae;" tap="onProgressButtonTap" style="font-family: FontAwesome;"/>   
+                                                        <Button text="B" id="btnState" tap="onStateButtonTap" style="height: 60;width: 60;"/> 
+                                                        <Button text="&#xf09c;" tap="MainActiveTap" id="lock" style="font-family: FontAwesome;" />
+                                                    </StackLayout>
+
+                                                    <Label text="{{Book.pages +' pages'}}" style="text-align:right;padding:0;margin:0;font-size: 12;" width="75%"/>
+
+                                                    <StackLayout orientation="horizontal" style="horizontal-align:center;margin:0" width="75%">
+                                                        <Label text="{{Book.progress}}" style="text-align:right;font-weight:bold" width="12%"/>
+                                                        <Label text="%" style="font-size: 16;padding:0 5 0 0;font-weight:bold" width="10%"/>
+                                                        <Progress value="{{Book.progress}}" width="78%" /> 
+                                                    </StackLayout>
+
                                                 </StackLayout>
-
-                                                <Label text="{{Book.pages +' pages'}}" style="text-align:right;padding:0;margin:0;font-size: 12;" width="75%"/>
-
-                                                <StackLayout orientation="horizontal" style="horizontal-align:center;margin:0" width="75%">
-                                                    <Label text="{{Book.progress}}" style="text-align:right;font-weight:bold" width="12%"/>
-                                                    <Label text="%" style="font-size: 16;padding:0 5 0 0;font-weight:bold" width="10%"/>
-                                                    <Progress value="{{Book.progress}}" width="78%" /> 
-                                                </StackLayout>
-
                                             </StackLayout>
                                         </StackLayout>
-                                    </StackLayout>
-                                </AbsoluteLayout>
+                                    </AbsoluteLayout>
                                 </Page>
                         </TabViewItem.view>
                     </TabViewItem>
