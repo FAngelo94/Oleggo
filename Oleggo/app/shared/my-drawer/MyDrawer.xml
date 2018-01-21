@@ -5,8 +5,7 @@ Feel free to customize layouts and components to change how your app drawer look
 <GridLayout rows="auto, *" class="sidedrawer sidedrawer-left" loaded="onLoaded"
     xmlns:myDrawer="shared/my-drawer">
     <StackLayout class="sidedrawer-header">
-        <Label class="sidedrawer-header-image fa" text="&#xf097;" />
-        <Label class="sidedrawer-header-brand" text="Oleggo" />
+        <Image src="res://name" class="sidedrawer-header-image fa" stretch="aspectFit"  width=" 80%" height=" 170px" style="background-color:transparent; border-radius: 0%;"/>
         <Label class="footnote" text="Your notes always with you!" />
     </StackLayout>
 

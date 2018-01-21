@@ -3,6 +3,7 @@
     navigatingTo="onNavigatingTo"  
     xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
     xmlns:myDrawer="shared/my-drawer"
+    cssFile="~/pages/add-new-books/add-new-books.css"
     xmlns="http://www.nativescript.org/tns.xsd"
 	>
 
@@ -63,10 +64,11 @@
         Always wrap content in a layout component.
         -->
         <nsDrawer:RadSideDrawer.mainContent>
-            <StackLayout>
-				<Button text="Read QR Code ISBN" tap="openQR" class="btn btn-primary"/>
-				<TextField id="isbn" maxLength="13" hint="Insert ISBN" keyboardType="number"></TextField>
-				<Button text="Send ISBN" class="btn btn-primary" tap="readISBN"/>
+            <StackLayout style="font-family: FontAwesome;">
+            <Label  text="&#xf02a; Scan Book barcode" style="horizontal-align:center;font-weight:bold; font-size:24px;margin:20 8 0 8"></Label>
+				<Button text="&#xf030;" tap="openQR" class="cam"/>
+                <TextField id="isbn" maxLength="13" hint="Insert ISBN" keyboardType="number"></TextField>
+				<Button text="&#xf002; Search ISBN" class="btn btn-primary" tap="readISBN" style="horizontal-align:center"/>
             </StackLayout>
         </nsDrawer:RadSideDrawer.mainContent>
     </nsDrawer:RadSideDrawer>

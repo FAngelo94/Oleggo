@@ -2,6 +2,7 @@
     navigatingTo="onNavigatingTo"  
     xmlns:nsDrawer="nativescript-pro-ui/sidedrawer"
     xmlns:myDrawer="shared/my-drawer"
+    cssFile="~/pages/add-note/add-note-page.css"
     xmlns="http://www.nativescript.org/tns.xsd">
  
     <ActionBar class="action-bar">
@@ -60,13 +61,18 @@
         Always wrap content in a layout component.
         -->
         <nsDrawer:RadSideDrawer.mainContent>
-            <StackLayout class="input-field" id="campo" weight="500px">
-				<TextView id="speakText" hint="Enter a note"></TextView>
-				<TextView id="page" hint="Enter the page of note (optionally)"></TextView>
-				<Button text="Press and speak" class="btn btn-primary btn-active" tap="listen"/>
-				<Button text="Add Quote" class="btn btn-primary btn-active" tap="addQuote"/>
-				<Button text="Look for the Word" class="btn btn-primary btn-active" tap="lookForWord"/>
-            </StackLayout>
+           
+           <ScrollView orientation="vertical">
+                <StackLayout id="campo" style="font-family: FontAwesome;margin:8 8 8 8;">
+                    <TextView id="speakText" hint="Enter the word or quote"></TextView>
+                    <TextView id="page" hint="Enter the page of the book (optionally)"></TextView>
+                    <Button text="&#xf130;"  tap="listen" class="mic"/>
+                    <StackLayout class="input-field" orientation="horizontal">
+                        <Button text="&#xf10d; &#xf10e; Add Quote"  class="btn-op" tap="addQuote" width="50%"/>
+                        <Button text="&#xf1ab; Get definition" class="btn-op" tap="lookForWord" width="50%"/>
+                    </StackLayout>            
+                </StackLayout>
+            </ScrollView>
         </nsDrawer:RadSideDrawer.mainContent>
     </nsDrawer:RadSideDrawer>
 </Page>
