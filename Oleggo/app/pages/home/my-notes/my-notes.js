@@ -8,14 +8,15 @@ var DB = require("~/shared/db/db")
 var page;
 function onLoaded(args) {
 	page = args.object
-	setUpModel()
+    setUpModel()
+    console.log("load")
 }
 
 function setUpModel(){
 	(new Sqlite("OleggoDB.db")).then((db) => {
          console.log("gotDB")
          var temp = new MyNotesViewModel(db)
-		 console.info("temp="+temp)
+		// console.info("temp="+temp)
          page.bindingContext = temp
      }, err => {
          console.info("Failed to open database", err)
@@ -99,7 +100,7 @@ function FavoriteNote(args) {
     })
 }
 function onPageChange (args){
-	setUpModel()
+	//setUpModel()
 }
 exports.onPageChange =onPageChange
 exports.FavoriteNote = FavoriteNote
