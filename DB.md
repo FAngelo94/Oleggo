@@ -23,3 +23,4 @@ Tables and camps in the tables:
     * Page
     * Favorite (0=Not Favorite[defalut],   1=Favorite)
     * When
+ 
