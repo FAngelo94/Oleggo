@@ -107,7 +107,7 @@ function readISBN(args) {
 						if (r.result === true) {
 							if (r.text !='') {
 								var book = {
-									"ISBN": isbn,
+									"ISBN": isbn.text,
 									'title': r.text,
 									'authors': "",
 									'imageLink': "~/images/empty.png",
