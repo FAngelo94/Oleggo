@@ -14,15 +14,15 @@ function updateFavoriteQuote(){
 exports.updateFavoriteQuote = updateFavoriteQuote
 
 function readQuotes(){
-	return "SELECT * FROM quotes join books where quotes.ISBN=? AND quotes.ISBN=books.ISBN";
+	return "SELECT * FROM quotes join books where quotes.ISBN=? AND quotes.ISBN=books.ISBN ORDER BY id DESC";
 }
 exports.readQuotes = readQuotes
 function readFavoriteQuotes(){
-	return "SELECT * FROM quotes join books where quotes.ISBN=books.ISBN and favorite=1";
+	return "SELECT * FROM quotes join books where quotes.ISBN=books.ISBN and favorite=1 ORDER BY id DESC";
 }
 exports.readFavoriteQuotes = readFavoriteQuotes
 function readQuotesByISBN(){
-	return "SELECT * FROM quotes WHERE ISBN=?";
+	return "SELECT * FROM quotes WHERE ISBN=? ORDER BY id DESC";
 }
 exports.readQuotesByISBN = readQuotesByISBN
 
