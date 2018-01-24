@@ -30,41 +30,63 @@ function setUpModel() {
 
 function modifyNote(args) {
 
-    (new Sqlite("OleggoDB.db")).then(db => {
-        // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
-        //console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-        var id = args.object.id
-        var quote = page.getViewById(id + "text")
-        db.execSQL(DB.updateQuote(), [quote.text, id]).then(id => {
-            saveChanges.show()
-            //console.info("INSERT RESULT" + id);
-        }, error => {
-            //console.info("INSERT ERROR" + error);
-        });
+    args.object.animate({
+        opacity: 0,
+        duration: 100
+    }).then(function () {
+        // Drastically increase the size of the logo
+        return args.object.animate({
+            opacity: 1,
+            duration: 100
+        }).then(function () {
+            (new Sqlite("OleggoDB.db")).then(db => {
+                // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
+                //console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+                var id = args.object.id
+                var quote = page.getViewById(id + "text")
+                db.execSQL(DB.updateQuote(), [quote.text, id]).then(id => {
+                    saveChanges.show()
+                    //console.info("INSERT RESULT" + id);
+                }, error => {
+                    //console.info("INSERT ERROR" + error);
+                });
 
-    }, err => {
-        //console.info("Failed to open database", err);
-        errorAlert("Failed to open database: " + err)
+            }, err => {
+                //console.info("Failed to open database", err);
+                errorAlert("Failed to open database: " + err)
+            })
+        })
     })
 }
 
 function removeNote(args) {
+    args.object.animate({
+        opacity: 0,
+        duration: 100
+    }).then(function () {
+        // Drastically increase the size of the logo
+        return args.object.animate({
+            opacity: 1,
+            duration: 100
+        }).then(function () {
 
-    (new Sqlite("OleggoDB.db")).then(db => {
-        // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
-        //console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-        var id = args.object.id
-        db.execSQL(DB.removeQuote(), [id]).then(id => {
-            //console.info("INSERT RESULT" + id);
-        }, error => {
-            //console.info("INSERT ERROR" + error);
-        });
+            (new Sqlite("OleggoDB.db")).then(db => {
+                // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
+                //console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+                var id = args.object.id
+                db.execSQL(DB.removeQuote(), [id]).then(id => {
+                    //console.info("INSERT RESULT" + id);
+                }, error => {
+                    //console.info("INSERT ERROR" + error);
+                });
 
-    }, err => {
-        //console.info("Failed to open database", err);
-        errorAlert("Failed to open database: " + err)
+            }, err => {
+                //console.info("Failed to open database", err);
+                errorAlert("Failed to open database: " + err)
+            })
+            setUpModel()
+        })
     })
-    setUpModel()
 }
 
 function FavoriteNote(args) {
@@ -109,17 +131,17 @@ function getDataFromParent(args) {
     ISBN = args;
 }
 
-function onPageChange(){
+function onPageChange() {
     for (i = 0; i < page.bindingContext.NoteList.length; i++) {
         //console.log("entre")
         if (page.bindingContext.NoteList[i].favorite == '1') {
-            var name=("fav" + page.bindingContext.NoteList[i].key).toString()
+            var name = ("fav" + page.bindingContext.NoteList[i].key).toString()
             var star = page.getViewById(name);
             star.text = "\uf005";
         }
     }
 }
-exports.onPageChange= onPageChange
+exports.onPageChange = onPageChange
 exports.getDataFromParent = getDataFromParent
 exports.FavoriteNote = FavoriteNote
 exports.removeNote = removeNote

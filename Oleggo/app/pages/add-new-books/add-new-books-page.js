@@ -455,9 +455,13 @@ function resolve(isbn, callback) {
 }
 
 function onLogoTap(args) {
+    
     var topmost = frameModule.topmost();
     var naviagationOptions = {
         moduleName: "pages/add-note/add-note-page",
+        transition: {
+            name: "fade"
+        }
     }
     topmost.navigate(naviagationOptions);
 }

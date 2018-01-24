@@ -75,20 +75,14 @@ function onNavigatingTo(args) {
 }
 
 function onLogoTap(args) {
-    args.object.animate({
-        opacity: 0,
-        duration: 250
-    }).then(function () {
-        // Drastically increase the size of the logo
-        return args.object.animate({
-            opacity: 1,
-            duration: 250
-        });
-    })
 
     var topmost = frameModule.topmost();
     var naviagationOptions={
         moduleName:"pages/add-note/add-note-page",
+        transition: {
+            name: "fade"
+        }
+
     }
     topmost.navigate(naviagationOptions); 
 }

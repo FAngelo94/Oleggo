@@ -9,14 +9,14 @@ function loaded(args) {
     page = args.object;
     var message = page.getViewById("logo");
     message.animate({
-        scale: { x: 3, y: 3 },
+        scale: { x: 3.5, y: 3.5 },
         duration: 10
     })
      .then(function () {
         message.animate({
             opacity: 1,
             duration: 800
-        }).then(function(){
+        }) .then(function(){
             message.animate({
                 scale: { x: 1, y: 1 },
                 translate: { x: -120, y: 0 },
@@ -35,14 +35,14 @@ function loaded(args) {
                     moduleName:"pages/home/home-page",
                     transition: {
                         name: "fade",
-                        duration: 1000
+                        duration: 500
                     }
                 }
-                setTimeout(function(){
+                 setTimeout(function(){
                     topmost.navigate(naviagationOptions); 
-                },1470)
+                },1470) 
                 
-        })
+        })  
     })
 }
 

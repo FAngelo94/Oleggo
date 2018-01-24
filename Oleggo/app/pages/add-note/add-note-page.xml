@@ -76,7 +76,7 @@
                                 borderRadius="50"
                                 verticalAlignment="center"
                                 style="width:80; height:80;">
-                                <Label  text="&#xf130;"  tap="listen"  style="horizontal-align:center; vertical-align:center;padding:0 22"></Label>
+                                <Label  text="&#xf130;"  tap="listen"  style="horizontal-align:center; vertical-align:center;"></Label>
                             </Gradient:Gradient>   
                     </StackLayout> 
                     <Label  text="Tap to talk" style="horizontal-align:center;font-weight:bold; color:#B2B5BB;font-size:16px;margin:0 8 25"></Label>

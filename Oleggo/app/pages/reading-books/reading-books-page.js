@@ -63,6 +63,16 @@ exports.onImageBookTap = function (args) {
         })
     })
 }
+function onLogoTap(args) {
+    var topmost = frameModule.topmost();
+    var naviagationOptions = {
+        moduleName: "pages/add-note/add-note-page",
+        transition: {
+            name: "fade"
+        }
+    }
+    topmost.navigate(naviagationOptions);
+}exports.onLogoTap = onLogoTap;
 
 exports.onNavigatingTo = onNavigatingTo;
 exports.onDrawerButtonTap = onDrawerButtonTap;

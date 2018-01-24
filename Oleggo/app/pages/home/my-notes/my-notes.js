@@ -1,66 +1,90 @@
 const MyNotesViewModel = require("./my-notes-view-model");
-var Sqlite = require( "nativescript-sqlite" );
+var Sqlite = require("nativescript-sqlite");
 var Toast = require("nativescript-toast");
 
 var saveChanges = Toast.makeText("Modification Saved Successfully!");
 var DB = require("~/shared/db/db")
 
 var page;
+
 function onLoaded(args) {
-	page = args.object
+    page = args.object
     setUpModel()
     //console.log("load")
 }
 
-function setUpModel(){
-	(new Sqlite("OleggoDB.db")).then((db) => {
-         //console.log("gotDB")
-         var temp = new MyNotesViewModel(db)
-		// console.info("temp="+temp)
-         page.bindingContext = temp
-     }, err => {
-         console.info("Failed to open database", err)
-         errorAlert("Failed to open database: " + err)
-     })
+function setUpModel() {
+    (new Sqlite("OleggoDB.db")).then((db) => {
+        //console.log("gotDB")
+        var temp = new MyNotesViewModel(db)
+        // console.info("temp="+temp)
+        page.bindingContext = temp
+    }, err => {
+        console.info("Failed to open database", err)
+        errorAlert("Failed to open database: " + err)
+    })
 }
 
 function modifyNote(args) {
+    args.object.animate({
+        opacity: 0,
+        duration: 100
+    }).then(function () {
+        // Drastically increase the size of the logo
+        return args.object.animate({
+            opacity: 1,
+            duration: 100
+        }).then(function () {
 
-	(new Sqlite("OleggoDB.db")).then(db => {
-        // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
-        console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-        var id=args.object.id
-		var quote=page.getViewById(id+"text")
-		db.execSQL(DB.updateQuote(), [quote.text, id]).then(id => {
-            saveChanges.show()
-			console.info("INSERT RESULT" + id);
-        }, error => {
-            console.info("INSERT ERROR" + error);
-        });
+            (new Sqlite("OleggoDB.db")).then(db => {
+                // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
+                console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+                var id = args.object.id
+                var quote = page.getViewById(id + "text")
+                db.execSQL(DB.updateQuote(), [quote.text, id]).then(id => {
+                    saveChanges.show()
+                    console.info("INSERT RESULT" + id);
+                }, error => {
+                    console.info("INSERT ERROR" + error);
+                });
 
-    }, err => {
-        console.info("Failed to open database", err);
-        errorAlert("Failed to open database: " + err)
+            }, err => {
+                console.info("Failed to open database", err);
+                errorAlert("Failed to open database: " + err)
+            })
+        })
     })
 }
 
 function removeNote(args) {
 
-	(new Sqlite("OleggoDB.db")).then(db => {
-        // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
-        console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-        var id=args.object.id
-		db.execSQL(DB.removeQuote(), [id]).then(id => {
-            console.info("INSERT RESULT" + id);
-        }, error => {
-            console.info("INSERT ERROR" + error);
-        });
+    args.object.animate({
+        opacity: 0,
+        duration: 100
+    }).then(function () {
+        // Drastically increase the size of the logo
+        return args.object.animate({
+            opacity: 1,
+            duration: 100
+        }).then(function () {
 
-    }, err => {
-        console.info("Failed to open database", err);
-        errorAlert("Failed to open database: " + err)
+            (new Sqlite("OleggoDB.db")).then(db => {
+                // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
+                console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+                var id = args.object.id
+                db.execSQL(DB.removeQuote(), [id]).then(id => {
+                    console.info("INSERT RESULT" + id);
+                }, error => {
+                    console.info("INSERT ERROR" + error);
+                });
+
+            }, err => {
+                console.info("Failed to open database", err);
+                errorAlert("Failed to open database: " + err)
+            })
+            setUpModel()
+        })
     })
-	setUpModel()
 }
 
 function FavoriteNote(args) {
@@ -99,11 +123,12 @@ function FavoriteNote(args) {
         errorAlert("Failed to open database: " + err)
     })
 }
-function onPageChange (args){
-	//setUpModel()
+
+function onPageChange(args) {
+    //setUpModel()
 }
-exports.onPageChange =onPageChange
+exports.onPageChange = onPageChange
 exports.FavoriteNote = FavoriteNote
 exports.removeNote = removeNote
 exports.modifyNote = modifyNote
-exports.onLoaded=onLoaded
+exports.onLoaded = onLoaded

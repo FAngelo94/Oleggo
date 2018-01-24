@@ -7,8 +7,8 @@
    <Gradient:Gradient direction="to top right" colors="rgba(248,143,42,1),rgba(239,90,50,1), rgba(229,73,74,1)" verticalAlignment="center" orientation="vertical" style="color: white;width:100%;height:100%;">
     
         <StackLayout orientation="horizontal" style="horizontal-align:center;margin:0" width="100%" height="100%">
-            <Image src="res://logo" stretch="aspectFit" style=" height: 70;margin:-20 0 0 120" opacity="0" id="logo"/>
-            <Image src="res://text" stretch="aspectFit" style=" height: 90;margin:0 0 0 -140" opacity="0" id="logo1" verticalAlignment="center"/>
+            <Image src="res://logo" stretch="aspectFit" style=" height: 70;margin:-30 0 0 105" opacity="0" id="logo"/>
+            <Image src="res://text" stretch="aspectFit" style=" height: 80;margin:0 0 0 -120" opacity="0" id="logo1" verticalAlignment="center"/>
         </StackLayout>
     </Gradient:Gradient>                        
 </Page>
