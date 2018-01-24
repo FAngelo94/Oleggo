@@ -133,6 +133,7 @@ function addQuoteDB(ISBN) {
         db.execSQL(DB.insertQuote(), [ISBN, labelNote.text, labelPage.text, "0", d]).then(id => {
             quoteAdded.show()
             labelNote.text = ""
+			labelPage.text = ""
             //console.info("INSERT RESULT" + id);
         }, error => {
             //console.info("INSERT ERROR" + error);
@@ -165,6 +166,7 @@ function lookForWord(args) {
 					var ISBN = rows[0][1];
 					//console.info("ISBN="+ISBN);
 					wordDefinition(ISBN,labelNote.text);
+					labelNote.text=""
 				}
 				else
 				{
