@@ -37,3 +37,14 @@ https://www.typescriptlang.org/play/
   * Elevator pitch (shor t video, 30-60 seconds)
   * A demo (real device or simulator)
 * Synergies are encouraged
+
+### ISBN examples
+0345368754
+0690047592
+0440784743
+1932425098
+978-9968-673-69-3 
+0375424466 (no image)
+0590307223
+0689842325
+0590394770 (no image)
