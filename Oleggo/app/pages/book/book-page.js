@@ -19,9 +19,9 @@ function loaded(args) {
      (new Sqlite("OleggoDB.db")).then((db) => {
         var temp = new BookViewModel(db, page.navigationContext.bookISBN)
 
-        //console.log(JSON.stringify(temp.Book))
-        console.log(JSON.stringify(temp.Dictionary))
-        console.log(JSON.stringify(temp.Quotes))
+        ////console.log(JSON.stringify(temp.Book))
+        //console.log(JSON.stringify(temp.Dictionary))
+        //console.log(JSON.stringify(temp.Quotes))
         dataBook = temp
         page.bindingContext = temp
 
@@ -42,11 +42,11 @@ function loaded(args) {
         }
         var lock = page.getViewById("lock");
         if (dataBook.Book.state == 2) { 
-            console.log("lock")
+            //console.log("lock")
             lock.text = "\uf023";
         }
         else {
-            console.log("unlock")
+            //console.log("unlock")
             lock.text = "\uf09c"; 
         }
     }, err => {
@@ -75,6 +75,17 @@ function onNavigatingTo(args) {
 }
 
 function onLogoTap(args) {
+    args.object.animate({
+        opacity: 0,
+        duration: 250
+    }).then(function () {
+        // Drastically increase the size of the logo
+        return args.object.animate({
+            opacity: 1,
+            duration: 250
+        });
+    })
+
     var topmost = frameModule.topmost();
     var naviagationOptions={
         moduleName:"pages/add-note/add-note-page",
@@ -89,7 +100,7 @@ function errorAlert(e) {
         message: e,
         okButtonText: "continue"
     }).then(() => {
-        console.log("Alert closed");
+        //console.log("Alert closed");
     });
 }
 
@@ -124,32 +135,48 @@ function onStateButtonTap(args) {
         page.getViewById("btnState").style = "color:white"
         break;
     }
-    console.log(dataBook.Book.state)
+    //console.log(dataBook.Book.state)
     dataBook.updateState(dataBook.Book)
 }
 
 function onProgressButtonTap(args) {
 
-    var fullscreen = true
-    var context = page.bindingContext._map.Book
+    args.object.animate({
+        opacity: 0,
+        duration: 100
+    }).then(function () {
+        // Drastically increase the size of the logo
+        return args.object.animate({
+            opacity: 1,
+            duration: 100
+        }).then(function(){
+            var fullscreen = true
+            var context = page.bindingContext._map.Book
+        
+            page.showModal("pages/book-progress/book-progress-page", context, function (newBookmark, set) {
+                //console.log(newBookmark + "/" + set);
+                if (set === true && newBookmark != "" && newBookmark > 0) {
+                    if (parseInt(newBookmark) > parseInt(dataBook.Book.pages)) {
+                        newBookmark = dataBook.Book.pages
+                    }
+                    progressUpdate.show()
+                    dataBook.Book.bookmark = newBookmark
+                    dataBook.Book.progress = Math.round((newBookmark / dataBook.Book.pages) * 100)
+                    //console.log(JSON.stringify(page.bindingContext._map))
+                    dataBook.updateBookmark(dataBook.Book)
+                }
+        
+            }, fullscreen);
+        })
+    })
+    
 
-    page.showModal("pages/book-progress/book-progress-page", context, function (newBookmark, set) {
-        console.log(newBookmark + "/" + set);
-        if (set === true && newBookmark != "" && newBookmark > 0) {
-            if (parseInt(newBookmark) > parseInt(dataBook.Book.pages)) {
-                newBookmark = dataBook.Book.pages
-            }
-			progressUpdate.show()
-            dataBook.Book.bookmark = newBookmark
-            dataBook.Book.progress = Math.round((newBookmark / dataBook.Book.pages) * 100)
-            console.log(JSON.stringify(page.bindingContext._map))
-            dataBook.updateBookmark(dataBook.Book)
-        }
 
-    }, fullscreen);
 }
 
 function onImageTap(args) {
+    
+    
     var context = imagepicker.create({ mode: "single" });
     console.info(context)
     startSelection(context, true);
@@ -185,10 +212,10 @@ function startSelection(context, isSingle) {
                                 }, function (error) {
                                     // Failed to remove the file.
                                 });
-                            console.log(imageLink)
+                            //console.log(imageLink)
                             dataBook.Book.imagelink = imageLink
                             dataBook.Book.background = imageLink
-                            console.log(JSON.stringify(dataBook.Book))
+                            //console.log(JSON.stringify(dataBook.Book))
                             dataBook.updateImageLink(imageLink, page.navigationContext.bookISBN)
 
                             console.info("saved complete");
@@ -200,20 +227,26 @@ function startSelection(context, isSingle) {
             });
             list.items = selection;
         }).catch(function (e) {
-            console.log(e);
+            //console.log(e);
         });
 }
 
 function onLogoTap(args) {
+    
+    
     var topmost = frameModule.topmost();
     var naviagationOptions = {
         moduleName: "pages/add-note/add-note-page",
+        transition: {
+            name: "fade",
+            curve: "easeInOut"
+        }
     }
     topmost.navigate(naviagationOptions);
 }
 
 function getDataFromParent(args) {
-    console.log(args)
+    //console.log(args)
 }
 
 function MainActiveTap(args) {
@@ -222,7 +255,7 @@ function MainActiveTap(args) {
         lock.text = "\uf09c";
         dataBook.Book.state = "1"
         dataBook.updateMainState(dataBook.Book)
-        console.log("lock"+dataBook.Book.state)
+        //console.log("lock"+dataBook.Book.state)
         page.getViewById("btnState").text = "\uf02e";
         page.getViewById("btnState").style = "background-color:rgba(239,90,50,0)"
         page.getViewById("btnState").style = "color:white;border-width: 0px"
@@ -235,7 +268,7 @@ function MainActiveTap(args) {
         page.getViewById("btnState").text = "\uf02e";
         page.getViewById("btnState").style = "color:rgba(239,90,50,1)" 
         page.getViewById("btnState").style = "background-color:whitesmoke;border-color:rgba(239,90,50,1);border-width: 4px"
-        console.log(dataBook.Book.state) 
+        //console.log(dataBook.Book.state) 
         setMainState.show()     
     }
     dataBook.updateState(dataBook.Book) 

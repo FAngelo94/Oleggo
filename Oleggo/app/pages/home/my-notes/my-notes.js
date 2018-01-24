@@ -9,12 +9,12 @@ var page;
 function onLoaded(args) {
 	page = args.object
     setUpModel()
-    console.log("load")
+    //console.log("load")
 }
 
 function setUpModel(){
 	(new Sqlite("OleggoDB.db")).then((db) => {
-         console.log("gotDB")
+         //console.log("gotDB")
          var temp = new MyNotesViewModel(db)
 		// console.info("temp="+temp)
          page.bindingContext = temp
@@ -67,7 +67,7 @@ function FavoriteNote(args) {
     (new Sqlite("OleggoDB.db")).then(db => {
         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
         console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-        console.log(args.object.id)
+        //console.log(args.object.id)
         var obj = args.object.id.replace('fav', '')
         var fav;
         for (i = 0; i < page.bindingContext.NoteList.length; i++) {
@@ -83,7 +83,7 @@ function FavoriteNote(args) {
                     fav = "1"
                     star.text = "\uf005";
                 }
-                console.log(JSON.stringify(page.bindingContext.NoteList[i]))
+                //console.log(JSON.stringify(page.bindingContext.NoteList[i]))
                 break;
             }
         }

@@ -14,25 +14,25 @@ function onNavigatingTo(args) {
 	page.bindingContext = new HomeViewModel();
     (new Sqlite("OleggoDB.db")).then(db => {
         db.execSQL("CREATE TABLE IF NOT EXISTS books(id INTEGER PRIMARY KEY AUTOINCREMENT, ISBN TEXT unique, title TEXT, author TEXT, pages TEXT, bookmark TEXT, state TEXT, imagelink TEXT)").then(id => {
-            console.log("table  Books created")
+            //console.log("table  Books created")
             db.execSQL("CREATE TABLE IF NOT EXISTS dictionary(id INTEGER PRIMARY KEY AUTOINCREMENT, isbn TEXT, word TEXT, meaning TEXT)").then(id => {
-                console.log("table  Dictionary created")
+                //console.log("table  Dictionary created")
 
                 db.execSQL("CREATE TABLE IF NOT EXISTS quotes(id INTEGER PRIMARY KEY AUTOINCREMENT, isbn TEXT, quote TEXT, page TEXT, favorite TEXT, date TEXT)").then(id => {
-                    console.log("table  Quotes created")
+                    //console.log("table  Quotes created")
  
                 }, error => {
-                    console.log("CREATE TABLE ERROR", error);
+                    //console.log("CREATE TABLE ERROR", error);
                 });
 
             }, error => {
-                console.log("CREATE TABLE ERROR", error);
+                //console.log("CREATE TABLE ERROR", error);
             });
         }, error => {
-            console.log("CREATE TABLE ERROR", error);
+            //console.log("CREATE TABLE ERROR", error);
         });
     }, error => {
-        console.log("OPEN DB ERROR", error);
+        //console.log("OPEN DB ERROR", error);
     });	
 }
 
@@ -46,7 +46,7 @@ function onDrawerButtonTap(args) {
     sideDrawer.showDrawer();
 }
 function onDelete() {
-    //console.log("hola")
+    ////console.log("hola")
 }
 
 /* ***********************************************************
@@ -63,6 +63,9 @@ function onLogoTap(args) {
     var topmost = frameModule.topmost();
     var naviagationOptions={
         moduleName:"pages/add-note/add-note-page",
+        transition: {
+            name: "fade"
+        }
     }
     topmost.navigate(naviagationOptions); 
 }
