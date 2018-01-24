@@ -19,14 +19,27 @@ function onLoaded(args) {
  *************************************************************/
 function onNavigationItemTap(args) {
     const component = args.object;
-    const componentRoute = component.route;
+    args.object.animate({
+        opacity: 0,
+        duration: 80
+    }).then(function () {
+        // Drastically increase the size of the logo
+        args.object.animate({
+            opacity: 1,
+            duration: 80
+        }).then(function () {
 
-    frameModule.topmost().navigate({
-        moduleName: componentRoute,
-        transition: {
-            name: "fade"
-        }
-    });
+            const componentRoute = component.route;
+
+            return frameModule.topmost().navigate({
+                moduleName: componentRoute,
+                transition: {
+                    name: "fade"
+                }
+            });
+        });
+    })
+
 }
 
 exports.onLoaded = onLoaded;

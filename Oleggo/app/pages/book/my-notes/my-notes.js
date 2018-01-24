@@ -18,12 +18,12 @@ function onLoaded(args) {
 
 function setUpModel() {
     (new Sqlite("OleggoDB.db")).then((db) => {
-        console.log("gotDB1")
+        //console.log("gotDB1")
         var temp = new MyNotesViewModel(db, ISBN)
-        console.info("notes temp=" + JSON.stringify(temp.NoteList))
+        //console.info("notes temp=" + JSON.stringify(temp.NoteList))
         page.bindingContext = temp
     }, err => {
-        console.info("Failed to open database", err)
+        //console.info("Failed to open database", err)
         errorAlert("Failed to open database: " + err)
     })
 }
@@ -32,18 +32,18 @@ function modifyNote(args) {
 
     (new Sqlite("OleggoDB.db")).then(db => {
         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
-        console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+        //console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
         var id = args.object.id
         var quote = page.getViewById(id + "text")
         db.execSQL(DB.updateQuote(), [quote.text, id]).then(id => {
             saveChanges.show()
-            console.info("INSERT RESULT" + id);
+            //console.info("INSERT RESULT" + id);
         }, error => {
-            console.info("INSERT ERROR" + error);
+            //console.info("INSERT ERROR" + error);
         });
 
     }, err => {
-        console.info("Failed to open database", err);
+        //console.info("Failed to open database", err);
         errorAlert("Failed to open database: " + err)
     })
 }
@@ -52,16 +52,16 @@ function removeNote(args) {
 
     (new Sqlite("OleggoDB.db")).then(db => {
         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
-        console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+        //console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
         var id = args.object.id
         db.execSQL(DB.removeQuote(), [id]).then(id => {
-            console.info("INSERT RESULT" + id);
+            //console.info("INSERT RESULT" + id);
         }, error => {
-            console.info("INSERT ERROR" + error);
+            //console.info("INSERT ERROR" + error);
         });
 
     }, err => {
-        console.info("Failed to open database", err);
+        //console.info("Failed to open database", err);
         errorAlert("Failed to open database: " + err)
     })
     setUpModel()
@@ -70,8 +70,8 @@ function removeNote(args) {
 function FavoriteNote(args) {
     (new Sqlite("OleggoDB.db")).then(db => {
         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
-        console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-        console.log(args.object.id)
+        //console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+        //console.log(args.object.id)
         var obj = args.object.id.replace('fav', '')
         var fav;
         for (i = 0; i < page.bindingContext.NoteList.length; i++) {
@@ -87,31 +87,31 @@ function FavoriteNote(args) {
                     fav = "1"
                     star.text = "\uf005";
                 }
-                console.log(JSON.stringify(page.bindingContext.NoteList[i]))
+                //console.log(JSON.stringify(page.bindingContext.NoteList[i]))
                 break;
             }
         }
 
         db.execSQL(DB.updateFavoriteQuote(), [fav, obj]).then(id => {
-            console.info("INSERT RESULT" + id);
+            //console.info("INSERT RESULT" + id);
         }, error => {
-            console.info("INSERT ERROR" + error);
+            //console.info("INSERT ERROR" + error);
         });
 
     }, err => {
-        console.info("Failed to open database", err);
+        //console.info("Failed to open database", err);
         errorAlert("Failed to open database: " + err)
     })
 }
 
 function getDataFromParent(args) {
-    console.log("notes" + args)
+    //console.log("notes" + args)
     ISBN = args;
 }
 
 function onPageChange(){
     for (i = 0; i < page.bindingContext.NoteList.length; i++) {
-        console.log("entre")
+        //console.log("entre")
         if (page.bindingContext.NoteList[i].favorite == '1') {
             var name=("fav" + page.bindingContext.NoteList[i].key).toString()
             var star = page.getViewById(name);

@@ -93,12 +93,12 @@
                                                                 borderRadius="50"
                                                                 verticalAlignment="center"
                                                                 style="width:50; height:50;">
-                                                                <Label  text="&#xf0ae;" tap="onProgressButtonTap"  style="text-align: center; vertical-align: center;font-size: 20px"></Label>
+                                                                <Label  text="&#xf0ae;" tap="onProgressButtonTap"  style="text-align: center; vertical-align: center;font-size: 20px;"></Label>
                                                             </Gradient:Gradient>   
                                                         </StackLayout>
                                                         
                                                         
-                                                        <StackLayout class="mic2">
+                                                        <StackLayout class="mic2" id="stkState">
                                                             <Gradient:Gradient  direction="to top right" 
                                                                 colors="rgba(248,153,42,1),rgba(239,90,50,1), rgba(240,73,94,1)"
                                                                 orientation="vertical" 
@@ -116,7 +116,7 @@
                                                                 borderRadius="50"
                                                                 verticalAlignment="center"
                                                                 style="width:50; height:50;">
-                                                                <Label  text="&#xf09c;" tap="MainActiveTap" id="lock"  style="text-align: center; vertical-align: center;font-size: 20px"></Label>
+                                                                <Label  text="&#xf09c;" tap="MainActiveTap" id="lock"  style="text-align: center; vertical-align: center;font-size: 20px;"></Label>
                                                             </Gradient:Gradient>   
                                                         </StackLayout>
 

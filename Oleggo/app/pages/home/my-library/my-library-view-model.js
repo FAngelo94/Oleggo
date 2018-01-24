@@ -5,7 +5,7 @@ var Sqlite = require("nativescript-sqlite");
 var DB = require("~/shared/db/db")
 
 function MyLibraryViewModel(database) {
-    console.log("Model");
+    //console.log("Model");
     
     const viewModel = observableModule.fromObject({
         BookList: new ObservableArray([])
@@ -13,7 +13,7 @@ function MyLibraryViewModel(database) {
     //viewModel.BookList = viewModel.BookList.concat(books2);
     var temp= readBooksDB(database)
     viewModel.BookList = viewModel.BookList.concat(temp)
-    console.log(JSON.stringify(viewModel.BookList))
+    //console.log(JSON.stringify(viewModel.BookList))
     return viewModel;
 }
 
@@ -22,12 +22,12 @@ function readBooksDB(database) {
     var books = []
     database.all(DB.readAllBooks(), function (error, rows) {
         if (error) {
-            console.log("SELECT ERROR", error);
+            //console.log("SELECT ERROR", error);
             return ("SELECT ERROR" + error)
         }
         else {
             for (var row in rows) {
-                console.log("RESULT", rows[row]);
+                //console.log("RESULT", rows[row]);
                 var book = {
                     id:rows[row][0],
                     ISBN:rows[row][1],
@@ -42,7 +42,7 @@ function readBooksDB(database) {
                     
             }
             return books
-            console.log(JSON.stringify(books))
+            //console.log(JSON.stringify(books))
         }
     })
     return books;

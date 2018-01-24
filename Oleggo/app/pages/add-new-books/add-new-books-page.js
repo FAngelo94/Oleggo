@@ -9,7 +9,7 @@ var DB = require("~/shared/db/db")
 
 var Toast = require("nativescript-toast");
 
-var ISBNPresentYet     = Toast.makeText("Error! An equal ISBN is already present in DB!");
+var ISBNPresentYet = Toast.makeText("Error! An equal ISBN is already present in DB!");
 
 const defaultOptions = {
     timeout: 2500,
@@ -21,7 +21,7 @@ const OPENLIBRARY_API_BOOK = '/api/books';
 
 const WORLDCAT_API_BASE = 'http://xisbn.worldcat.org';
 const WORLDCAT_API_BOOK = '/webservices/xid/isbn';
-var bookfail= Toast.makeText("Enter ISBN first!");
+var bookfail = Toast.makeText("Enter ISBN first!");
 var page;
 /* ***********************************************************
  * Use the "onNavigatingTo" handler to initialize the page binding context.
@@ -73,8 +73,8 @@ function read_qr() {
         (result) => {
             console.info("Scan format: " + result.format)
             console.info("Scan text:   " + result.text)
-			var isbn = viewModule.getViewById(page, "isbn")
-            isbn.text=result.text
+            var isbn = viewModule.getViewById(page, "isbn")
+            isbn.text = result.text
         },
         (error) => {
             console.info("No scan: " + error);
@@ -82,64 +82,86 @@ function read_qr() {
     );
 }
 
-function openQR(eventData) {
-    read_qr();
+function openQR(args) {
+    args.object.animate({
+        opacity: 0,
+        duration: 100
+    }).then(function () {
+        // Drastically increase the size of the logo
+        return args.object.animate({
+            opacity: 1,
+            duration: 100
+        }).then(function () {
+            read_qr();
+        })
+    })
 }
 
 function readISBN(args) {
-    let isbn = viewModule.getViewById(page, "isbn");
-    console.info(isbn.text);
-    if (isbn.text != "") {
-        resolve(isbn.text, (err, book) => {
-            if (err) {
-                console.info('Book not found ' + err)
-                //errorAlert('Book not found. ' + err)
-				let content = {
-					title: "Book not found. ",
-					message: "Insert the title manually",
-					defaultText: "Title",
-					inputType: dialogs.inputType.text,
-					okButtonText: "continue",
-					cancelButtonText: "cancel"
-				};
-				dialogs.prompt(content).then((r) => {
-					console.log("Dialog result: " + r.result + ", text: " + r.text);
-						if (r.result === true) {
-							if (r.text !='') {
-								var book = {
-									"ISBN": isbn.text,
-									'title': r.text,
-									'authors': "",
-									'imageLink': "~/images/empty.png",
-								};
-								
-								tryAddAuthor(book.title + "\nAuthor: ", book);
-							}
-							else {
-								errorAlert("Author is not valid");
-							}
-						}
-					});
-				
+    args.object.animate({
+        opacity: 0,
+        duration: 100
+    }).then(function () {
+        // Drastically increase the size of the logo
+        return args.object.animate({
+            opacity: 1,
+            duration: 100
+        }).then(function () {
+            let isbn = viewModule.getViewById(page, "isbn");
+            console.info(isbn.text);
+            if (isbn.text != "") {
+                resolve(isbn.text, (err, book) => {
+                    if (err) {
+                        console.info('Book not found ' + err)
+                        //errorAlert('Book not found. ' + err)
+                        let content = {
+                            title: "Book not found. ",
+                            message: "Insert the title manually",
+                            defaultText: "Title",
+                            inputType: dialogs.inputType.text,
+                            okButtonText: "continue",
+                            cancelButtonText: "cancel"
+                        };
+                        dialogs.prompt(content).then((r) => {
+                            //	console.log("Dialog result: " + r.result + ", text: " + r.text);
+                            if (r.result === true) {
+                                if (r.text != '') {
+                                    var book = {
+                                        "ISBN": isbn.text,
+                                        'title': r.text,
+                                        'authors': "",
+                                        'imageLink': "~/images/empty.png",
+                                    };
+
+                                    tryAddAuthor(book.title + "\nAuthor: ", book);
+                                }
+                                else {
+                                    errorAlert("Author is not valid");
+                                }
+                            }
+                        });
+
+                    }
+                    else {
+                        console.info('Book found: ' + JSON.stringify(book))
+                        if (book.authors == "Unknown") {
+                            tryAddAuthor(book.title + "\nAuthor: ", book);
+                        }
+                        else
+                            tryAddBook(book.title + "\nAuthor: " + book.authors + "\nPage count:", book);
+                    }
+                });
             }
             else {
-                console.info('Book found: ' + JSON.stringify(book))
-                if (book.authors == "Unknown") {
-                    tryAddAuthor(book.title + "\nAuthor: ", book);
-                }
-                else
-                    tryAddBook(book.title + "\nAuthor: " + book.authors + "\nPage count:", book);
+                bookfail.show()
             }
-        });
-    }
-    else {
-       bookfail.show()
-    }
+        })
+    })
 }
 
 function tryAddAuthor(data, book) {
 
-	console.info("TRY ADD AUTHOR")
+    console.info("TRY ADD AUTHOR")
 
     let content = {
         title: "Book response",
@@ -151,9 +173,9 @@ function tryAddAuthor(data, book) {
     };
 
     dialogs.prompt(content).then((r) => {
-        console.log("Dialog result: " + r.result + ", text: " + r.text);
+        // console.log("Dialog result: " + r.result + ", text: " + r.text);
         if (r.result === true) {
-            if (r.text !='') {
+            if (r.text != '') {
                 book.authors = r.text;
                 tryAddBook(book.title + "\nAuthor: " + book.authors + "\nPage count:", book);
             }
@@ -211,13 +233,18 @@ function addBookDB(data) {
         console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
         db.execSQL(DB.insertNewBook(), [data.ISBN, data.title, data.authors, data.pageCount, "0", "0", data.imageLink]).then(id => {
             console.info("INSERT RESULT", id);
-			var topmost = frameModule.topmost();
-			var naviagationOptions={
-				moduleName:"pages/home/home-page",
-			}
-			topmost.navigate(naviagationOptions); 
             
-			db.all(DB.readAllBooks()).then(rows => {
+            
+            var topmost = frameModule.topmost();
+            var naviagationOptions = {
+                moduleName: "pages/home/home-page",
+                transition:{
+                    name:"fade"
+                }
+            }
+            topmost.navigate(naviagationOptions);
+
+            db.all(DB.readAllBooks()).then(rows => {
                 for (var row in rows) {
                     console.info("RESULT", rows[row]);
                 }
@@ -225,7 +252,7 @@ function addBookDB(data) {
             }, error => {
                 console.info("SELECT ERROR", error);
             });
-			
+
         }, error => {
             ISBNPresentYet.show()
         });
@@ -251,10 +278,16 @@ function isNumeric(n) {
 }
 /* 
 good books
-    9780307474278
-    9780545139700
-    9780241968581
-    9780544003415
+    2,9780123456786,Buprenorphine
+    9788889352311,Divina commedia
+    1250077001,Furiuosly Happy
+    9780545139700,Harry Potter
+    9788871642482,L'arte di viaggiare
+    9783161484100,Logik der Forschung,
+    9789700903996,Matemagicas,
+    9780241968581,One Hundred Years
+    9780307474278,The Da Vinci Code
+    9780544003415,The Lord of the Rings
 */
 function _resolveOpenLibrary(isbn, callback) {
     var standardize = function standardize(book) {
@@ -272,8 +305,8 @@ function _resolveOpenLibrary(isbn, callback) {
             'previewLink': book.preview_url,
             'infoLink': book.info_url
         };
-        if(book.thumbnail_url){
-            standardBook.imageLink=book.thumbnail_url;
+        if (book.thumbnail_url) {
+            standardBook.imageLink = book.thumbnail_url;
         }
 
         if (book.details.publishers) {
@@ -420,13 +453,15 @@ function resolve(isbn, callback) {
         return callback(null, book);
     });
 }
+
 function onLogoTap(args) {
     var topmost = frameModule.topmost();
     var naviagationOptions = {
         moduleName: "pages/add-note/add-note-page",
     }
     topmost.navigate(naviagationOptions);
-}exports.onLogoTap = onLogoTap;
+}
+exports.onLogoTap = onLogoTap;
 
 exports.readISBN = readISBN;
 exports.openQR = openQR;

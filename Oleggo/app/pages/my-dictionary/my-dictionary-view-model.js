@@ -10,7 +10,7 @@ function MyDictionaryViewModel(db,word) {
     })
 	var temp=readDictionaryDB(db,word)
 	viewModel.DictionaryList=viewModel.DictionaryList.concat(temp)
-	console.info(JSON.stringify(viewModel.DictionaryList))
+	//console.info(JSON.stringify(viewModel.DictionaryList))
     return viewModel
 }
 
@@ -20,19 +20,19 @@ function readDictionaryDB(db,word)
 	var quotes = []
     db.all(DB.readWords(),[word], function (error, rows) {
         if (error) {
-            console.log("SELECT ERROR", error)
+            //console.log("SELECT ERROR", error)
             return ("SELECT ERROR" + error)
         }
         else {
             for (var row in rows) {
-                console.log("RESULT", rows[row])
-                console.log(rows[row])
+                //console.log("RESULT", rows[row])
+                //console.log(rows[row])
                 var quote = {
 					word:rows[row][2],
 					meaning:rows[row][3]
                 }
                 quotes.push(quote);
-				console.info(rows[row].toString())
+				//console.info(rows[row].toString())
                     
             }
             return quotes

@@ -43,7 +43,7 @@ function onNavigatingTo(args) {
     page.bindingContext = new AddNoteViewModel();
     speechRecognition.available().then(
         function (available) {
-            console.log(available ? "YES!" : "NO");
+            ////console.log(available ? "YES!" : "NO");
         }
     );
 }
@@ -59,13 +59,23 @@ function onDrawerButtonTap(args) {
 }
 
 function listen(args) {
-    console.info("listening...");
+    args.object.animate({
+        opacity: 0,
+        duration: 100
+    }).then(function () {
+        // Drastically increase the size of the logo
+        return args.object.animate({
+            opacity: 1,
+            duration: 100
+        });
+    })
+    //console.info("listening...");
     speechRecognition.startListening({
         returnPartialResults: true,
         // this callback will be invoked repeatedly during recognition
         onResult: function (transcription) {
-            console.info("User said: " + transcription.text);
-            console.info("User finished?: " + transcription.finished);
+            //console.info("User said: " + transcription.text);
+            //console.info("User finished?: " + transcription.finished);
             if (transcription.finished == true) {
                 labelNote.text = transcription.text;
             }
@@ -74,6 +84,17 @@ function listen(args) {
 }
 
 function addQuote(args) {
+    args.object.animate({
+        opacity: 0,
+        duration: 100
+    }).then(function () {
+        // Drastically increase the size of the logo
+        return args.object.animate({
+            opacity: 1,
+            duration: 100
+        });
+    })
+
 	if(labelNote.text!="")
 	{
 		(new Sqlite("OleggoDB.db")).then((db) => {
@@ -82,7 +103,7 @@ function addQuote(args) {
 					if(rows!="")
 					{
 						var ISBN = rows[0][1];
-						console.info("ISBN="+ISBN);
+						//console.info("ISBN="+ISBN);
 						addQuoteDB(ISBN);
 					}
 					else
@@ -92,7 +113,7 @@ function addQuote(args) {
 				})
 			},
 			err => {
-				console.info("Failed to open database", err);
+				//console.info("Failed to open database", err);
 				errorAlert("Failed to open database: " + err)
 			})
 	}
@@ -105,25 +126,35 @@ function addQuote(args) {
 function addQuoteDB(ISBN) {
     (new Sqlite("OleggoDB.db")).then(db => {
         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
-        console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+        //console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
         var d = new Date()
         d = d.toString()
         d = d.substring(0, 21)
         db.execSQL(DB.insertQuote(), [ISBN, labelNote.text, labelPage.text, "0", d]).then(id => {
             quoteAdded.show()
             labelNote.text = ""
-            console.info("INSERT RESULT" + id);
+            //console.info("INSERT RESULT" + id);
         }, error => {
-            console.info("INSERT ERROR" + error);
+            //console.info("INSERT ERROR" + error);
         });
 
     }, err => {
-        console.info("Failed to open database", err);
+        //console.info("Failed to open database", err);
         errorAlert("Failed to open database: " + err)
     })
 }
 
 function lookForWord(args) {
+    args.object.animate({
+        opacity: 0,
+        duration: 100
+    }).then(function () {
+        // Drastically increase the size of the logo
+        return args.object.animate({
+            opacity: 1,
+            duration: 100
+        });
+    })
 	if(labelNote.text!="")
 	{
 		(new Sqlite("OleggoDB.db")).then((db) => {
@@ -132,7 +163,7 @@ function lookForWord(args) {
 				if(rows!="")
 				{
 					var ISBN = rows[0][1];
-					console.info("ISBN="+ISBN);
+					//console.info("ISBN="+ISBN);
 					wordDefinition(ISBN,labelNote.text);
 				}
 				else
@@ -142,7 +173,7 @@ function lookForWord(args) {
 			})
 		},
 		err => {
-			console.info("Failed to open database", err);
+			//console.info("Failed to open database", err);
 			errorAlert("Failed to open database: " + err)
 		})
 	}
@@ -154,7 +185,7 @@ function lookForWord(args) {
 
 function wordDefinition(ISBN, wordSerch) {
     wd.getDef(wordSerch, "en", null, (definition) => {
-        console.info("definition=" + definition.definition)
+        //console.info("definition=" + definition.definition)
         lookForWordDB(ISBN, wordSerch,definition.definition)
 
     });
@@ -164,19 +195,19 @@ function wordDefinition(ISBN, wordSerch) {
 function lookForWordDB(ISBN, wordSerch,meaning) {
     (new Sqlite("OleggoDB.db")).then(db => {
         // This should ALWAYS be true, db object is open in the "Callback" if no errors occurred
-        console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
-        console.info("meaning=" + meaning)
+        //console.info("Are we open yet (Inside Callback)? ", db.isOpen() ? "Yes" : "No"); // Yes
+        //console.info("meaning=" + meaning)
         db.execSQL(DB.insertNewWord(), [ISBN, wordSerch, meaning]).then(id => {
             labelNote.text = ""
             wordAdded.show()
-            console.info("INSERT RESULT" + id)
+            //console.info("INSERT RESULT" + id)
 
         }, error => {
-            console.info("INSERT ERROR" + error)
+            //console.info("INSERT ERROR" + error)
         });
 
     }, err => {
-        console.info("Failed to open database", err);
+        //console.info("Failed to open database", err);
         errorAlert("Failed to open database: " + err)
     })
 }
@@ -187,7 +218,7 @@ function errorAlert(e) {
         message: e,
         okButtonText: "continue"
     }).then(() => {
-        console.log("Alert closed");
+        ////console.log("Alert closed");
     });
 }
 function onLogoTap(args) {

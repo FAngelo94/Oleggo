@@ -19,8 +19,9 @@ var viewModel = new  observableModule.fromObject({
 });
 
 function onShownModally(args) {
+
     page = args.object;
-    console.log("login-page.onShownModally, context: " + JSON.stringify(args.context));
+    //console.log("login-page.onShownModally, context: " + JSON.stringify(args.context));
     context = args.context;
     viewModel.id= context.id
     viewModel.ISBN= context.ISBN
@@ -38,17 +39,41 @@ function onShownModally(args) {
 }
 exports.onShownModally = onShownModally;
 
-function onFinishButtonTap() {
-    console.log("onFinishButtonTap");
-    closeCallback(page.bindingContext._map.pages,true);
+function onFinishButtonTap(args) {
+    //console.log("onFinishButtonTap");
+    args.object.animate({
+        opacity: 0,
+        duration: 100
+    }).then(function () {
+        // Drastically increase the size of the logo
+        args.object.animate({
+            opacity: 1,
+            duration: 100
+        }).then(function(){
+            closeCallback(page.bindingContext._map.pages,true);
+        })
+    })
+    
 }
 
-function onSetButtonTap() {
-    console.log("onSetButtonTap");
+function onSetButtonTap(args) {
+    //console.log("onSetButtonTap");
     //viewModel.bookmark=page.getViewById("newBookmark").text
     //viewModel.progress=Math.round((viewModel.bookmark/viewModel.pages)*100)
-    console.log(JSON.stringify(viewModel.get("bookmark")))
-    closeCallback(page.getViewById("newBookmark").text,true);
+    //console.log(JSON.stringify(viewModel.get("bookmark")))
+    args.object.animate({
+        opacity: 0,
+        duration: 100
+    }).then(function () {
+        // Drastically increase the size of the logo
+        args.object.animate({
+            opacity: 1,
+            duration: 100
+        }).then(function(){
+        closeCallback(page.getViewById("newBookmark").text,true);
+        })
+    })
+    
 }
 exports.onSetButtonTap = onSetButtonTap;
 exports.onFinishButtonTap = onFinishButtonTap

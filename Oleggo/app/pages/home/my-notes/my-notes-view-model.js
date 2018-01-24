@@ -10,7 +10,7 @@ function MyNotesViewModel(db) {
     })
 	var temp=readQuotesDB(db)
 	viewModel.NoteList=viewModel.NoteList.concat(temp)
-	console.info(JSON.stringify(viewModel.NoteList))
+	//console.info(JSON.stringify(viewModel.NoteList))
     return viewModel
 }
 
@@ -19,12 +19,12 @@ function readQuotesDB(db)
 	var quotes = []
     db.all(DB.readFavoriteQuotes(), function (error, rows) {
         if (error) {
-            console.log("SELECT ERROR", error)
+            //console.log("SELECT ERROR", error)
             return ("SELECT ERROR" + error)
         }
         else {
             for (var row in rows) {
-                console.log("RESULT", rows[row])
+                //console.log("RESULT", rows[row])
                 var res = rows[row]
                 var quote = {
                     book: res[8]+", "+res[9],
@@ -35,7 +35,7 @@ function readQuotesDB(db)
 					key:res[0]
                 }
                 quotes.push(quote);
-				console.info(rows[row].toString())
+				//console.info(rows[row].toString())
                     
             }
             return quotes
