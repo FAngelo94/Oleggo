@@ -39,12 +39,24 @@ https://www.typescriptlang.org/play/
 * Synergies are encouraged
 
 ### ISBN examples
-0345368754
-0690047592
-0440784743
-1932425098
-978-9968-673-69-3 
-0375424466 (no image)
-0590307223
-0689842325
-0590394770 (no image)
+* 0345368754
+* 0690047592
+* 0440784743
+* 1932425098
+* 978-9968-673-69-3 
+* 0375424466 (no image)
+* 0590307223
+* 0689842325
+* 0590394770 (no image)
+* 0590305476
+* 0590390538
+* 9780123456786,Buprenorphine
+* 9788889352311,Divina commedia
+* 1250077001,Furiuosly Happy
+* 9780545139700,Harry Potter
+* 9788871642482,L'arte di viaggiare
+* 9783161484100,Logik der Forschung,
+* 9789700903996,Matemagicas,
+* 9780241968581,One Hundred Years
+* 9780307474278,The Da Vinci Code
+* 9780544003415,The Lord of the Rings
