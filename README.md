@@ -1,5 +1,8 @@
 # OLeggo
-This is the application I develop in NativeScrit for the course of Design and Implementation of Mobile Application in Politecnico of Milan
+This is the application I develop in NativeScrit for the course of Design and Implementation of Mobile Application in Politecnico of Milan.
+
+I did it working in a team with:
+* https://github.com/jgalleg
 
 ### Useful links:
 
