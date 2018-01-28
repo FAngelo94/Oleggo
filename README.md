@@ -4,6 +4,9 @@ This is the application I develop in NativeScrit for the course of Design and Im
 I did it working in a team with:
 * https://github.com/jgalleg
 
+### Note: in order to download all things in the repository clone it and not dowload zip
+(Because there are some large file that are linked and uploaded directly)
+
 ### Useful links:
 
 * QR Code = https://market.nativescript.org/plugins/nativescript-barcodescanner
