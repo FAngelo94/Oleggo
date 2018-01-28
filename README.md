@@ -1,5 +1,5 @@
 # OLeggo
-Mobile Application (Uni)
+This is the application I develop in NativeScrit for the course of Design and Implementation of Mobile Application in Politecnico of Milan
 
 ### Useful links:
 
